@@ -1,0 +1,38 @@
+.contact-section-wrapper .contact{
+    color: #fff;
+    font-size: 14px;
+}
+
+.contact-section-wrapper .contact i{
+    padding-right: 8px;
+    color:orange;
+
+}
+
+.contact-section-wrapper .contact span{
+    transition: .4s ease-in;
+}
+
+.contact-section-wrapper .contact span:hover{
+    color:orange;
+}
+
+.contact-section-wrapper .social-network{
+    text-align: left;
+}
+
+.contact-section-wrapper .social-network a{
+    margin: 0 10px;
+    transition: .3s ease-in;
+    /* background-color: red; */
+}
+
+.contact-section-wrapper .social-network a {
+    color: #fff;
+    font-size: 20px;
+    /* background-color: red; */
+}
+
+.contact-section-wrapper .social-network a:hover{
+    color: orange;
+}

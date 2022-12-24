@@ -1,0 +1,19 @@
+@import url(../CSS/_contact.css);
+
+
+@font-face {
+  font-family: Vazeir;
+  src: url(../Fonts/Vazir-Medium.eot) format("eot"),
+    url(../Fonts/Vazir-Medium.woff) format("woff"),
+    url(../Fonts/Vazir-Medium.woff2) format("woff2");
+
+  font-style: normal;
+  font-weight: 700;
+}
+
+.container-fluid-custom {
+  background-color: rgb(12, 12, 56);
+  /* height: 45px; */
+  color: #fff;
+  padding: 11px;
+}
