@@ -4,7 +4,26 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: Vazeir;
+}
+body{
   direction: rtl;
+}
+
+figure{
+  position: relative;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+li,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .img-responsive {
@@ -13,18 +32,9 @@ body {
   display: block;
 }
 
-a {
-  text-decoration: none;
+.text-center{
+  text-align: center;
 }
-
-ul,
-li,
-ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-} 
-
 /* Start -- Margin and Padding Classes */
 
 .m-10 {
@@ -114,7 +124,7 @@ ol {
 
 
 /* Extra small devices (phones, 600px and down) -- XS */
- @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .xs-hidden{
     display: none;
   }
@@ -153,12 +163,12 @@ ol {
     width: 91.66%;
   }
   .col-xs-12 {
-    width: 12%;
+    width: 100%;
   }
 }  
 
 /* Small devices (portrait tablets and large phones, 600px and up) -- S  */
- @media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) {
   .col-s-1 {
     width: 8.33%;
   }
@@ -193,12 +203,12 @@ ol {
     width: 91.66%;
   }
   .col-s-12 {
-    width: 12%;
+    width: 100%;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) -- MD */
- @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .col-md-1 {
     width: 8.33%;
   }
@@ -233,9 +243,9 @@ ol {
     width: 91.66%;
   }
   .col-md-12 {
-    width: 12%;
+    width: 100%;
   }
-}  
+}   
 
 /* Large devices (laptops/desktops, 992px and up) -- L */
 @media only screen and (min-width: 992px) {
@@ -273,12 +283,12 @@ ol {
     width: 91.66%;
   }
   .col-l-12 {
-    width: 12%;
+    width: 100%;
   }
-} 
+}  
 
 /* Extra large devices (large laptops and desktops, 1200px and up) -- XL */
- @media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .col-xl-1 {
     width: 8.33%;
   }
@@ -313,11 +323,12 @@ ol {
     width: 91.66%;
   }
   .col-xl-12 {
-    width: 12%;
+    width: 100%;
   }
-} 
+}  
 
 
 
-
+/* ================================================
+================================================ */
 
