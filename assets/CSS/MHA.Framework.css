@@ -1,3 +1,7 @@
+ :root{
+  --var-contact-color:#24242e;
+ }
+ 
  *,
 body {
   padding: 0;

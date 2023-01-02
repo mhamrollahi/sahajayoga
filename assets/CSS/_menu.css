@@ -81,4 +81,7 @@
   .nav-section-wrapper a.nav-hide{
     display: none;
   }  
+  .nav-section-wrapper a{
+        font-size: 12px;
+  }
 }
