@@ -1,7 +1,7 @@
  :root{
   --var-contact-color:#24242e;
  }
- 
+
  *,
 body {
   padding: 0;
@@ -30,6 +30,10 @@ ul {
   list-style: none;
 }
 
+figure{
+  position: relative;
+}
+
 .img-responsive {
   width: 100%;
   height: auto;
@@ -40,7 +44,9 @@ ul {
   text-align: center;
 }
 /* Start -- Margin and Padding Classes */
-
+.m-0{
+  margin: 0!important;
+}
 .m-10 {
   margin: 10px;
 }
@@ -60,6 +66,9 @@ ul {
   margin: 200px;
 }
 
+.p-0{
+  padding: 0!important;
+}
 .p-10 {
   padding: 10px;
 }
