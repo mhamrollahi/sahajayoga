@@ -1,3 +1,7 @@
+:root{
+  --main-color:orange;
+  
+}
 @import url(../CSS/_contact.css);
 @import url(../CSS/_menu.css);
 @import url(../CSS/_nav.css);
