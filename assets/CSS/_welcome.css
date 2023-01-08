@@ -1,8 +1,6 @@
 /* Welcome Section style */
 .welcome-section-wrapper{
     min-height:45px ;
-    background-color: orange;
-}
-.welcome-section-wrapper h3{
-    /* color: ; */
+    background-color: var(--main-color-orange);
+    padding: 10px 0;
 }

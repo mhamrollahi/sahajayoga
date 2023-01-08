@@ -1,11 +1,14 @@
-:root{
-  --main-color:orange;
-  
-}
 @import url(../CSS/_contact.css);
 @import url(../CSS/_menu.css);
 @import url(../CSS/_nav.css);
 @import url(../CSS/_header.css);
+@import url(../CSS/_welcome.css);
+@import url(../CSS/_med.css);
+
+:root{
+  --main-color-orange:orange;
+  --main-font-color:#24242e;
+}
 
 
 @font-face {
@@ -23,4 +26,8 @@
   /* height: 45px; */
   color: #fff;
   padding: 11px;
+}
+
+.testclass{
+  background-color: var(--main-color);
 }
