@@ -6,9 +6,12 @@
 .overlay{
     width: 100%;
     min-height: 88vh;
-    background-color:rgba(0,0,0,0.25);
+    /* background-color:rgba(0,0,0,0.25); */
 }
 
+.header-section-wrapper .header-title{
+    color: #fff;
+}
 .header-section-wrapper .header-title h1{
     margin: 30px;
     padding-top: 100px;
@@ -43,7 +46,7 @@
     .header-section-wrapper .header-title{
         text-align: center;
         margin-right: 10px;
-        margin-top: 110px;
+        margin-top: 50px;
         border :none;;
         background-color: rgba(240, 241, 241,.3);
         width: 70%;
@@ -52,9 +55,9 @@
     }
     .header-section-wrapper .header-title h1{
         color: white;
-        margin: 10px;
+        margin: 5px;
         padding-top: 5px;
-        font-size: 14px;
+        font-size: 13px;
     }
     .header-section-wrapper .header-title h3{
         color: white;
@@ -72,12 +75,11 @@
 
 }
 
-
 @media screen  and (max-width:887px) and (min-width : 678px){
     .header-section-wrapper .header-title{
         text-align: center;
         margin-right: 10px;
-        margin-top: 100px;
+        margin-top: 80px;
         border :none;;
         background-color: rgba(240, 241, 241,.3);
         width: 55%;
@@ -88,7 +90,7 @@
         color: white;
         margin: 10px;
         padding-top: 5px;
-        font-size: 16px;
+        font-size: 15px;
     }
     .header-section-wrapper .header-title h3{
         color: white;
