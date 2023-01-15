@@ -1,12 +1,12 @@
 /* Header Image section */
 .img-header{
-    min-height: 86vh;
+    min-height: 88vh;
 }
 
 .overlay{
     width: 100%;
-    min-height: 86vh;
-    background-color:rgba(0,0,0,0.35);
+    min-height: 88vh;
+    background-color:rgba(0,0,0,0.25);
 }
 
 .header-section-wrapper .header-title h1{
@@ -22,13 +22,13 @@
 
 .header-section-wrapper .more-info{
     background-color: orange;
-    border: none;
+    border: 1px solid rgb(190, 126, 6);
     border-radius: 5px;
     font-size: 14px;
     padding: 10px;
     color:white;
     font-weight: bold;
-
+    transition: .5s ease-in;
 }
 
 .header-section-wrapper .header-title h3{
@@ -36,7 +36,8 @@
 }
 .header-section-wrapper .more-info:hover{
     background-color:rgb(190, 126, 6);
-}
+       border: 1px solid  orange;
+} 
 
 @media screen  and (max-width:678px){
     .header-section-wrapper .header-title{
@@ -65,6 +66,10 @@
         padding: 5px;
         border-radius: 2px;
     }
+    .header-section-wrapper .img-header{
+        min-height: 100%;
+    }
+
 }
 
 
@@ -95,6 +100,10 @@
         padding: 5px;
         border-radius: 2px;
     }
+    .header-section-wrapper .img-header{
+        min-height: 100%;
+    }
+
 }
 
 @media screen  and (max-width:1200px) and (min-width:887px){
@@ -108,11 +117,16 @@
         height: 75px;
         border-radius: 5px;
     }
+
+    .header-section-wrapper .img-header{
+        min-height: 100%;
+    }
+
     .header-section-wrapper .header-title h1{
         color: white;
         margin: 10px;
         padding-top: 5px;
-        font-size: 17px;
+        font-size: 16px;
     }
     .header-section-wrapper .header-title h3{
         color: white;
