@@ -24,11 +24,11 @@
 } */
 
 .header-section-wrapper .more-info{
-    background-color: orange;
-    border: 1px solid rgb(190, 126, 6);
+    background-color:var(--main-color-pink);
+    border: 1px solid #ca81b2;
     border-radius: 5px;
-    font-size: 14px;
-    padding: 10px;
+    font-size: 13px;
+    padding: 4px 8px;
     color:white;
     font-weight: bold;
     transition: .5s ease-in;
@@ -38,8 +38,9 @@
     padding-right: 350px;
 }
 .header-section-wrapper .more-info:hover{
-    background-color:rgb(190, 126, 6);
-       border: 1px solid  orange;
+    background-color:#f7ebf3;
+    color: var(--main-font-color);
+    /* border: 1px solid  orange; */
 } 
 
 @media screen  and (max-width:678px){
