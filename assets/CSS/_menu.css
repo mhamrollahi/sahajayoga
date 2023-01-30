@@ -16,14 +16,15 @@
 }
 
 .nav-section-wrapper .active {
-  border-bottom: 3px solid orange;
+  border-bottom: 3px solid var(--main-color-pink);
   padding-bottom: 16px;
 }
 
 .nav-section-wrapper a:not(:first-child,:last-child):hover {
-  border-bottom: 3px solid orange;
+  border-bottom: 3px solid var(--main-color-pink);
   padding-bottom: 16px;
-  transition: 0.5s cubic-bezier(0, 0, 0.75, 0.96);
+  transition: 0.4s cubic-bezier(0, 0, 0.7, 0.7);
+  /* transition: 0.5s cubic-bezier(0, 0, 0.75, 0.96); */
 }
 
 .nav-section-wrapper .log {

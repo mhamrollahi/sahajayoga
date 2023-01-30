@@ -5,7 +5,9 @@
 
 .contact-section-wrapper .contact i{
     padding-right: 8px;
-    color:orange;
+    /* color:orange; */
+    color:var(--main-color-pink);
+    vertical-align: -2px;
 
 }
 
@@ -14,7 +16,7 @@
 }
 
 .contact-section-wrapper .contact span:hover{
-    color:orange;
+    color:var(--main-color-pink); /*orange;*/
 }
 
 .contact-section-wrapper .social-network{
@@ -30,9 +32,10 @@
 .contact-section-wrapper .social-network a {
     color: #fff;
     font-size: 20px;
+    transition: .4s ease-out;
     /* background-color: red; */
 }
 
 .contact-section-wrapper .social-network a:hover{
-    color: orange;
+    color:var(--main-color-pink);
 }
