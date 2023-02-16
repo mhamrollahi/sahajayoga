@@ -8,6 +8,7 @@
 :root{
   --main-color-orange:orange;
   --main-color-pink:#d291bc;
+  --color-contact:#13212e;
   --color-pink-bg:#f7ebf3;
   --color-card-overlay:rgba(210,145,188, .4);
   --main-font-color:#24242e;
@@ -25,12 +26,8 @@
 }
 
 .container-fluid-custom {
-  background-color: rgb(12, 12, 56);
-  /* height: 45px; */
+  background-color:var(--color-contact);
+  height: 45px;
   color: #fff;
   padding: 11px;
-}
-
-.testclass{
-  background-color: var(--main-color);
 }
