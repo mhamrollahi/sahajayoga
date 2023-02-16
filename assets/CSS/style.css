@@ -8,6 +8,8 @@
 :root{
   --main-color-orange:orange;
   --main-color-pink:#d291bc;
+  --color-pink-bg:#f7ebf3;
+  --color-card-overlay:rgba(210,145,188, .4);
   --main-font-color:#24242e;
 }
 

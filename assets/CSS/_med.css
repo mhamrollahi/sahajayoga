@@ -1,12 +1,60 @@
 /* Style for Meditation section */
-.med-section-wrapper .card-info {
-    border: 1px solid rgb(221, 217, 217);
+.sahaj-course-section-wrapper .card {
+    box-shadow: 1px 1px 1px #b4b4b4;
     font-size: 14px;
-    margin: 10px;
-    padding: 5px;
+    margin: 20px;
+    /* padding: 5px; */
     color: #24242e;
     border-radius: 5px;
     min-height: 150px;
-    text-align: center;
+    cursor: pointer;
+    transition: .3s ease-in;
 }
 
+.sahaj-course-section-wrapper .card img{
+    width: 100%;
+    max-height:247px ;
+    display: block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+} 
+.sahaj-course-section-wrapper .card .card-title{
+    font-size: 16px;
+    text-align: right;
+    padding: 10px 15px 0px;
+    color: var(--main-color-pink);
+}
+#important-med::before{
+    content: url(/assets/Images/Thumbnail/Log1.png);
+    padding-left:4px;
+    vertical-align: -9px;
+}
+.sahaj-course-section-wrapper .card .card-description{
+    font-size: 13px;
+    padding: 0 16px;
+}
+.sahaj-course-section-wrapper .card .card-overlay{
+    background-color: var(--color-card-overlay);
+    width: 100%;
+    height: auto;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: .6s ease-in;
+}
+.sahaj-course-section-wrapper .card:hover .card-overlay{
+    opacity: 1;
+}
+.sahaj-course-section-wrapper .card .card-overlay p{
+    color: #fff;
+    font-size: 15px;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    width:90%;
+}
+.sahaj-course-section-wrapper .card:hover{
+    box-shadow: 1px 1px 4px rgb(87, 85, 85);
+}

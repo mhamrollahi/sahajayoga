@@ -30,7 +30,8 @@
 .nav-section-wrapper .log {
   background-image: url(../Images/Thumbnail/Log1.png);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position:  width: 32px;
+  height: 24px;right;
   width: 32px;
   height: 24px;
   vertical-align: -6px;
