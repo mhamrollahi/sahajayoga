@@ -2,7 +2,7 @@
 
 .nav-section-wrapper {
   overflow: hidden;
-  padding-top: 14px;
+  padding-top: 8px;
   background-color: #dbd7d7;
   z-index: 999;
 }
@@ -11,8 +11,9 @@
   float: right;
   color: rgb(46, 46, 46);
   text-align: center;
-  padding: 4px 16px;
+  padding: 1px 16px;
   font-size: 15px;
+  line-height: 30px;
 }
 
 .nav-section-wrapper .active {
@@ -30,11 +31,9 @@
 .nav-section-wrapper .log {
   background-image: url(../Images/Thumbnail/Log1.png);
   background-repeat: no-repeat;
-  background-position:  width: 32px;
-  height: 24px;right;
+  /* background-position:  32px; */
   width: 32px;
-  height: 24px;
-  vertical-align: -6px;
+  height: 25px;
   padding-right: 40px;
 }
 
@@ -48,6 +47,10 @@
   .nav-section-wrapper a:not(:first-child) {
     display: none;
   }
+.nav-section-wrapper{
+  padding-top: 0;
+  padding-bottom: 12px;
+}
 
   .nav-section-wrapper a.icon {
     /* font-size: 16px; */
@@ -61,7 +64,7 @@
 
   .nav-section-wrapper a.icon{
     position: absolute;
-    top: 55px;
+    top: 52px;
     left: 0px;
   }
 
@@ -74,9 +77,6 @@
     display: block;
     text-align: right;
   }
-
-  
-
 }
 
 @media screen and (max-width:930px) {
