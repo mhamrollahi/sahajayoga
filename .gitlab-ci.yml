@@ -1,0 +1,8 @@
+pages:
+ script:
+ - mkdir .public
+ - cd -r * .public
+ - mv .public public
+ artifacts:
+   paths:
+   - public
