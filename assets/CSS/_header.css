@@ -15,6 +15,7 @@
 .header-section-wrapper .header-title h1{
     margin: 30px;
     padding-top: 100px;
+    font-size: 36px;
 }
 
 /* .header-title span{
@@ -27,7 +28,7 @@
     background-color:var(--main-color-pink);
     border: 1px solid #ca81b2;
     border-radius: 5px;
-    font-size: 13px;
+    font-size: 16px;
     padding: 4px 8px;
     color:white;
     font-weight: bold;
@@ -46,19 +47,19 @@
 @media screen  and (max-width:678px){
     .header-section-wrapper .header-title{
         text-align: center;
-        margin-right: 10px;
-        margin-top: 50px;
-        border :none;;
-        background-color: rgba(240, 241, 241,.3);
-        width: 70%;
-        height: 75px;
+        margin-right: 5px;
+        margin-top: 5px;
+        border :none;
+        background-color: rgba(80, 153, 153, 0.3);
+        width: 80%;
+        height: 70px;
         border-radius: 5px;
     }
     .header-section-wrapper .header-title h1{
         color: white;
-        margin: 5px;
+        margin: 5px 2px;
         padding-top: 5px;
-        font-size: 13px;
+        font-size: 14px;
     }
     .header-section-wrapper .header-title h3{
         color: white;
@@ -76,27 +77,59 @@
 
 }
 
-@media screen  and (max-width:887px) and (min-width : 678px){
+@media screen  and (max-width:800px) and (min-width : 679px){
     .header-section-wrapper .header-title{
         text-align: center;
         margin-right: 10px;
-        margin-top: 80px;
-        border :none;;
-        background-color: rgba(240, 241, 241,.3);
-        width: 55%;
+        margin-top: 30px;
+        border :none;
+        background-color: rgba(80, 153, 153, 0.3);
+        width: 65%;
         height: 75px;
         border-radius: 5px;
     }
     .header-section-wrapper .header-title h1{
-        color: white;
+        color: rgb(255, 255, 255);
         margin: 10px;
         padding-top: 5px;
-        font-size: 15px;
+        font-size: 18px;
     }
     .header-section-wrapper .header-title h3{
         color: white;
         padding-right: 25px;
-        font-size: 14px;
+        font-size: 16px;
+    }
+    .header-section-wrapper .more-info{
+        font-size: 12px;
+        padding: 5px;
+        border-radius: 2px;
+    }
+    .header-section-wrapper .img-header{
+        min-height: 100%;
+    }
+}
+
+@media screen and (max-width:900px) and (min-width : 801px) {
+    .header-section-wrapper .header-title{
+        text-align: center;
+        margin-right: 10px;
+        margin-top: 80px;
+        border :none;
+        background-color: rgba(80, 153, 153, 0.3);
+        width: 65%;
+        height: 85px;
+        border-radius: 5px;
+    }
+        .header-section-wrapper .header-title h1{
+        color: rgb(255, 255, 255);
+        margin: 10px;
+        padding-top: 5px;
+        font-size: 20px;
+    }
+    .header-section-wrapper .header-title h3{
+        color: white;
+        padding-right: 25px;
+        font-size: 18px;
     }
     .header-section-wrapper .more-info{
         font-size: 12px;
@@ -109,14 +142,47 @@
 
 }
 
-@media screen  and (max-width:1200px) and (min-width:887px){
+/* @media screen  and (max-width:887px) and (min-width : 678px){
+    .header-section-wrapper .header-title{
+        text-align: center;
+        margin-right: 10px;
+        margin-top: 80px;
+        border :none;
+        background-color: rgba(69, 128, 128, 0.3);
+        width: 55%;
+        height: 75px;
+        border-radius: 5px;
+    }
+    .header-section-wrapper .header-title h1{
+        color: white;
+        margin: 10px;
+        padding-top: 5px;
+        font-size: 18px;
+    }
+    .header-section-wrapper .header-title h3{
+        color: white;
+        padding-right: 25px;
+        font-size: 16px;
+    }
+    .header-section-wrapper .more-info{
+        font-size: 12px;
+        padding: 5px;
+        border-radius: 2px;
+    }
+    .header-section-wrapper .img-header{
+        min-height: 100%;
+    }
+
+} */
+
+@media screen  and (max-width:1200px) and (min-width:901px){
     .header-section-wrapper .header-title{
         text-align: center;
         margin-right: 10px;
         margin-top: 110px;
-        border :none;;
-        background-color: rgba(240, 241, 241,.3);
-        width: 45%;
+        border :none;
+        background-color: rgba(69, 128, 128, 0.3);
+        width: 55%;
         height: 75px;
         border-radius: 5px;
     }
@@ -129,12 +195,12 @@
         color: white;
         margin: 10px;
         padding-top: 5px;
-        font-size: 16px;
+        font-size: 22px;
     }
     .header-section-wrapper .header-title h3{
         color: white;
         padding-right: 25px;
-        font-size: 14px;
+        font-size: 16px;
     }
     .header-section-wrapper .more-info{
         font-size: 13px;
