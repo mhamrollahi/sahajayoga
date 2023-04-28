@@ -4,14 +4,17 @@
 @import url(../CSS/_header.css);
 @import url(../CSS/_welcome.css);
 @import url(../CSS/_med.css);
+@import url(../CSS/_about-jsm.css);
 
 :root{
   --main-color-orange:orange;
   --main-color-pink:#d291bc;
+  --main-border-color:#ca81b2;
   --color-contact:#13212e;
   --color-pink-bg:#f7ebf3;
   --color-card-overlay:rgba(210,145,188, .4);
   --main-font-color:#24242e;
+  --background-color-hover-a:#f7ebf3;
 }
 
 
