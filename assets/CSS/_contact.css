@@ -20,7 +20,7 @@
 }
 
 .contact-section-wrapper .social-network{
-    text-align: left;
+    text-align: center;
 }
 
 .contact-section-wrapper .social-network a{
@@ -38,4 +38,10 @@
 
 .contact-section-wrapper .social-network a:hover{
     color:var(--main-color-pink);
+}
+
+@media screen and (max-width:600px){
+     .xs-hidden{
+        display: none;
+     }
 }
