@@ -1,5 +1,7 @@
 {
   "liveServer.settings.port": 5501,
   "editor.tabSize": 2,
-  "editor.fontFamily": "JetBrains Mono"
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.detectIndentation": true,
+  "editor.insertSpaces": true
 }
