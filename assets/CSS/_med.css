@@ -1,6 +1,7 @@
 /* Style for Meditation section */
-.sahaj-course-section-wrapper .card {
-    box-shadow: 1px 1px 1px #b4b4b4;
+.sahaj-course-section-wrapper .custom-card {
+    /* box-shadow: 1px 1px 1px #b4b4b4; */
+    box-shadow:0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
     font-size: 14px;
     margin: 20px;
     /* padding: 5px; */
@@ -11,14 +12,14 @@
     transition: .3s ease-in;
 }
 
-.sahaj-course-section-wrapper .card img{
+.sahaj-course-section-wrapper .custom-card img{
     width: 100%;
     max-height:247px ;
     display: block;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 } 
-.sahaj-course-section-wrapper .card .card-title{
+.sahaj-course-section-wrapper .custom-card .card-title{
     font-size: 16px;
     text-align: right;
     padding: 10px 15px 0px;
@@ -29,11 +30,11 @@
     padding-left:4px;
     vertical-align: -9px;
 }
-.sahaj-course-section-wrapper .card .card-description{
+.sahaj-course-section-wrapper .custom-card .card-description{
     font-size: 13px;
     padding: 0 16px;
 }
-.sahaj-course-section-wrapper .card .card-overlay{
+.sahaj-course-section-wrapper .custom-card .card-overlay{
     background-color: var(--color-card-overlay);
     width: 100%;
     height: auto;
@@ -44,10 +45,10 @@
     opacity: 0;
     transition: .6s ease-in;
 }
-.sahaj-course-section-wrapper .card:hover .card-overlay{
+.sahaj-course-section-wrapper .custom-card:hover .card-overlay{
     opacity: 1;
 }
-.sahaj-course-section-wrapper .card .card-overlay p{
+.sahaj-course-section-wrapper .custom-card .card-overlay p{
     color: #fff;
     font-size: 15px;
     top: 50%;
@@ -55,6 +56,19 @@
     transform:translate(-50%,-50%);
     width:90%;
 }
-.sahaj-course-section-wrapper .card:hover{
+.sahaj-course-section-wrapper .custom-card:hover{
     box-shadow: 1px 1px 4px rgb(87, 85, 85);
+    /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); */
+}
+.sahaj-course-section-wrapper .btn-more-info{
+    bottom: 10px;
+    left: 10px;
+    font-size: 12px;
+    padding: 3px 6px;
+    background-color:var(--main-color-pink);
+    border-color: pink;
+    transition: background-color .5s ease-in;
+}
+.sahaj-course-section-wrapper .btn-more-info:hover{
+    background-color: var(--main-hover-color);
 }

@@ -1,6 +1,5 @@
 /* Welcome Section style */
 .welcome-section-wrapper{
-    min-height:80px ;
+    min-height:90px ;
     background-color: var(--main-color-pink);
-    padding: 20px 0;
 }
