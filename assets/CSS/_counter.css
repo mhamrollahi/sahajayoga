@@ -1,0 +1,18 @@
+
+.counter-section-wrapper .counter-div{
+  background-image:linear-gradient(45deg, #d291bc 0%, rgba(255, 255, 255, 0) 100%) ;
+  width: 99%;
+  height: 100%;
+}
+
+#test2{
+  /* background-color: red; */
+  font-size: 12px;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  border: 3px solid #ccc;
+}

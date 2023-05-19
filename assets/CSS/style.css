@@ -5,19 +5,19 @@
 @import url(../CSS/_welcome.css);
 @import url(../CSS/_med.css);
 @import url(../CSS/_about-jsm.css);
+@import url(../CSS/_counter.css);
 
-:root{
-  --main-color-orange:orange;
-  --main-color-pink:#d291bc;
-  --main-hover-color:#b86f9f;
-  --main-border-color:pink;
-  --bg-color-contact:#232f3e;/* -- Old :#13212e */
-  --bg-color-pink:#f7ebf3;
-  --color-card-overlay:rgba(210,145,188, .4);
-  --main-font-color:#24242e;
-  --bg-color-hover-a:#f7ebf3;
+:root {
+  --main-color-orange: orange;
+  --main-color-pink: #d291bc;
+  --main-hover-color: #b86f9f;
+  --main-border-color: pink;
+  --bg-color-contact: #232f3e; /* -- Old :#13212e */
+  --bg-color-pink: #f7ebf3;
+  --color-card-overlay: rgba(210, 145, 188, 0.4);
+  --main-font-color: #24242e;
+  --bg-color-hover-a: #f7ebf3;
 }
-
 
 @font-face {
   font-family: Vazeir;
@@ -42,7 +42,7 @@ body {
 a {
   text-decoration: none;
 }
-figure{
+figure {
   position: relative;
 }
 li,
@@ -54,8 +54,17 @@ ul {
 }
 
 .container-fluid-custom {
-  background-color:var(--bg-color-contact);
+  background-color: var(--bg-color-contact);
   height: 50px;
   color: #fff;
   /* padding: 0; */
+}
+
+section.counter-section-wrapper{
+  height: 310px;
+  background-image: url(../Images/bg_3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:  50% 40%;
+  z-index: 0;
 }
