@@ -1,7 +1,3 @@
-.about-jsm-section-wrapper{
-    margin-top: 50px;
-    padding-left: 10px;
-}
 .about-jsm-section-wrapper .about-jsm-right-side img{
     border-radius: 5px;
 }
@@ -48,5 +44,9 @@
     }
     .about-jsm-section-wrapper .about-jsm-left-side h4{
         font-size: 1.2rem;
+    }
+    .about-jsm-section-wrapper .about-jsm-left-side p a{
+        font-size:.8rem ;
+        padding: 3px 8px;
     }
 }
