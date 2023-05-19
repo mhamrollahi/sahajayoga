@@ -38,7 +38,7 @@
     transition: all .4s ease-in;
 }
 .about-jsm-section-wrapper .about-jsm-left-side p a:hover{
-    background-color:var(--background-color-hover-a);
+    background-color:var(--bg-color-hover-a);
     color: var(--main-font-color);
 }
 @media  screen  and (max-width:768px){
