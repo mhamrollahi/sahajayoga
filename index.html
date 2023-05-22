@@ -135,7 +135,7 @@
   <!-- Start -- Welcome Section  -->
   <section class="container-fluid welcome-section-wrapper mt-5 mb-5">
     <div class="row">
-      <div class="col-12 text-center">
+      <div class="col-12 text-center ">
         <h3 class="pt-5">به آگاهی بدون فکر ، لذت درونی ، صلح و آرامش درونی </h3>
         <h2 class="pb-5">به ساهاجا یوگا خوش آمدید.</h2>
       </div>
@@ -286,7 +286,7 @@
   <!-- Start -- Counter Section  -->
   <section class="container-fluid img-fluid counter-section-wrapper mt-5 position-relative" id="counter-sec1">
     <div class="row">
-      <div class="col ">
+      <div class="col">
         <div class="counter-div position-absolute">
         </div>
       </div>
@@ -298,68 +298,7 @@
   <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br>
   <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br>
   <script src="assets/JS/bootstrap.bundle.min.js"></script>
-  <script>
-
-    let divCounter = document.getElementsByClassName('counter-div');
-    const counterSec1 = document.getElementById('counter-sec1');
-    const compSyles = window.getComputedStyle(counterSec1);
-    let posy = compSyles.getPropertyValue('background-position-y');
-
-    console.log('pos y =', posy);
-    const stylesheet = document.styleSheets[3];
-
-    console.log('styleSheets ==>', stylesheet);
-
-    const divParaRule = [...stylesheet.cssRules].find(
-      (r) => r.selectorText === "section.counter-section-wrapper"
-    );
-
-    // console.log('divParaRule = ', divParaRule);
-    // console.log('background-position == ', compSyles.getPropertyValue('background-position'));
-    // console.log('background-position-y == ', compSyles.getPropertyValue('background-position-y'));
-    posy = posy.replace('%', '');
-
-    console.log('document.body.scrollHeight ==', document.body.scrollHeight);
-
-    const maxHeight = document.body.scrollHeight - window.innerHeight;
-    console.log('window = ', (window.pageYOffset * 100) / maxHeight);
-
-    function test1() {
-      console.log('position y = ', posy);
-      divParaRule.style.setProperty('background-position-y', posy + '%')
-      posy = parseInt(posy) + 8;
-    }
-
-    window.addEventListener("scroll", (event) => {
-      let scroll = this.scrollY;
-      console.log('Scroll = ' + scroll)
-      console.log('pos y == ', posy);
-      console.log('window = ', (window.pageYOffset * 100) / maxHeight);
-      posy = Math.floor((window.pageYOffset * 100) / maxHeight);
-      console.log('pos y after == ', posy);
-      posy -= 40;
-      divParaRule.style.setProperty('background-position-y', posy + '%')
-
-      // if(scroll>=1700){
-      //   console.log('scroll = ' , scroll);
-      //   // posy = parseInt(posy) + 1;
-      //   // posy = Math.ceil((window.pageYOffset * 100) / maxHeight);
-      //   // alert('Scroll = ',scroll);
-      //   divParaRule.style.setProperty('background-position-y',posy+'%')
-      //   console.log('pos y ++ ',posy);
-      //   // maxHeight = document.body.scrollHeight - window.innerHeight;
-      //   // console.log('window = ', (window.pageYOffset * 100) / maxHeight);
-
-      // }else if (scroll >=1700 && scroll<=1800){
-      //   // posy = parseInt(posy) - 2;
-      //   divParaRule.style.setProperty('background-position-y',posy+'%');
-      //   console.log('pos y -- ',posy);
-      //   // maxHeight = document.body.scrollHeight - window.innerHeight;
-      //   // console.log('window = ', (window.pageYOffset * 100) / maxHeight);
-      // }
-
-    });
-  </script>
+  <script src="assets/JS/main.js"></script>
 
 </body>
 
