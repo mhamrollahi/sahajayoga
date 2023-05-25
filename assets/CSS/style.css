@@ -6,6 +6,7 @@
 @import url(../CSS/_med.css);
 @import url(../CSS/_about-jsm.css);
 @import url(../CSS/_counter.css);
+@import url(../css/_experince.css);
 
 :root {
   --main-color-orange: orange;
@@ -61,10 +62,9 @@ ul {
 }
 
 section.counter-section-wrapper{
-  height: 310px;
   background-image: url(../Images/bg_3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position:  50% 40%;
+  background-position:  50% 30%;
   z-index: 0;
 }

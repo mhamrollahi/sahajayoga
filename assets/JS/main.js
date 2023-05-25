@@ -40,3 +40,27 @@ window.addEventListener("scroll", (event) => {
   posy -= 40;
   divParaRule.style.setProperty('background-position-y', posy + '%')
 });
+
+//-------Start:Counter for Section 1
+
+const counters = document.querySelectorAll('.counter-s1');
+
+counters.forEach(counter => {
+  function updateCount(){
+    const target = +counter.getAttribute('data-count');
+    const count = +counter.innerHTML;
+
+    const inc = Math.floor((target - count )/100);
+
+    if(count < target && inc > 0){
+      counter.innerHTML = (count + inc);
+
+      setTimeout(updateCount,300)
+    }else{
+      counter.innerHTML  = target;
+    }
+  }
+  updateCount();
+})
+
+//-------End:Counter for Section 1
