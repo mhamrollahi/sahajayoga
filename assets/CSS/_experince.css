@@ -48,6 +48,10 @@
   display: block;
   width: 60%!important;
 }
+.experince-section-wrapper .owl-carousel-item-custom a:hover{
+  background-color:var(--bg-color-hover-a);
+  color: var(--main-font-color);
+}
 @media screen and (max-width:766px){
   .experince-section-wrapper .owl-carousel-item-custom{
     font-size: 13px;

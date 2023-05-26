@@ -1,0 +1,69 @@
+footer {
+  min-height: 230px;
+  background-color: var(--main-color-pink);
+}
+
+footer .footer-sahajayoga-title {
+  text-align: right;
+  /* padding-bottom: 13px; */
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+footer .footer-sahajayoga-title span {
+  padding-right: 50px;
+  font-size: 17px;
+  color: #fff;
+}
+footer .footer-sahajayoga-title .footer-sahaj-log {
+  background-image: url(../Images/Thumbnail/Log1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 32px;
+  height: 25px;
+  position: absolute;
+  margin-top: -5px;
+  /* padding-right: 40px; */
+}
+footer .footer-sahajyoga-body {
+  padding: 15px 12px;
+}
+
+footer .footer-sahajyoga-body h5 {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+footer .footer-service-title {
+  border-bottom: 1px solid #ddd;
+  color: #fff;
+  padding-top: 2px;
+}
+footer .footer-service-title span {
+  padding: 20px;
+}
+footer .footer-service-title i{
+  padding-right: 12px;
+  font-size: 18px;
+  transform: rotate(-30deg);
+}
+footer .footer-services ul {
+  padding: 10px 14px;
+}
+footer .footer-services ul li a {
+  padding-right: 5px;
+  font-size: 14px;
+  color: var(--main-font-color);
+  transition: all .6s ease-in;
+}
+
+footer .footer-services ul li::before {
+  content: "\276f";
+  /* padding-right: 2px; */
+  color: #ddd;
+  padding-left: 4px;
+  vertical-align: -3px;
+}
+footer .footer-services ul li a:hover{
+  padding-right: 20px;
+  color: #fff;
+}
