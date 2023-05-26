@@ -1,15 +1,21 @@
-function myFunction(){
-    var myDiv = document.getElementById("mynav");
-    myDiv.classList.toggle("responsive");
-}
+// function myFunction(){
+//     var myDiv = document.getElementById("mynav");
+//     myDiv.classList.toggle("responsive");
+// }
 
-let divCounter = document.getElementsByClassName('counter-div');
-const counterSec1 = document.getElementById('counter-sec1');
-const compSyles = window.getComputedStyle(counterSec1);
+// let divCounter = document.getElementsByClassName('counter-div');
+
+
+
+
+const counterSec1 = document.getElementById('countersec1');
+
+const compSyles = getComputedStyle(counterSec1);
 let posy = compSyles.getPropertyValue('background-position-y');
 
 console.log('pos y =', posy);
-const stylesheet = document.styleSheets[3];
+//باید شماره فایل استایل.سی اس اس رو بدیم ایندکس از صفر شروع می شه..
+const stylesheet = document.styleSheets[5];
 
 console.log('styleSheets ==>', stylesheet);
 
@@ -18,17 +24,14 @@ const divParaRule = [...stylesheet.cssRules].find(
 );
 
 posy = posy.replace('%', '');
+console.log('pos y2 =', posy);
+console.log('divPrarRule == ',divParaRule);
 
 console.log('document.body.scrollHeight ==', document.body.scrollHeight);
 
 const maxHeight = document.body.scrollHeight - window.innerHeight;
 console.log('window = ', (window.pageYOffset * 100) / maxHeight);
 
-function test1() {
-  console.log('position y = ', posy);
-  divParaRule.style.setProperty('background-position-y', posy + '%')
-  posy = parseInt(posy) + 8;
-}
 
 window.addEventListener("scroll", (event) => {
   let scroll = this.scrollY;
@@ -39,6 +42,7 @@ window.addEventListener("scroll", (event) => {
   console.log('pos y after == ', posy);
   posy -= 40;
   divParaRule.style.setProperty('background-position-y', posy + '%')
+  // divParaRule.style.setProperty('background-position-y') = "20px";
 });
 
 //-------Start:Counter for Section 1

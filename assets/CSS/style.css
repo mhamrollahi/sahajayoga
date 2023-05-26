@@ -1,6 +1,5 @@
 @import url(../CSS/_contact.css);
 @import url(../CSS/_menu.css);
-@import url(../CSS/_nav.css);
 @import url(../CSS/_header.css);
 @import url(../CSS/_welcome.css);
 @import url(../CSS/_med.css);
@@ -67,4 +66,15 @@ section.counter-section-wrapper{
   background-repeat: no-repeat;
   background-position:  50% 30%;
   z-index: 0;
+
+}
+.more-info{
+  background-color:var(--main-color-pink);
+  border: 1px solid var(--main-border-color);
+  font-size: 14px;
+  padding: 4px 10px;
+  color:white;
+  transition: .5s ease-in;
+  border-radius: 5px;
+  width: 60%;
 }
