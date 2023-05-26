@@ -68,13 +68,5 @@ section.counter-section-wrapper{
   z-index: 0;
 
 }
-.more-info{
-  background-color:var(--main-color-pink);
-  border: 1px solid var(--main-border-color);
-  font-size: 14px;
-  padding: 4px 10px;
-  color:white;
-  transition: .5s ease-in;
-  border-radius: 5px;
-  width: 60%;
+a.more-info{
 }
