@@ -1,11 +1,7 @@
-// function myFunction(){
-//     var myDiv = document.getElementById("mynav");
-//     myDiv.classList.toggle("responsive");
-// }
-
-// let divCounter = document.getElementsByClassName('counter-div');
-
-
+AOS.init({
+  duration: 800,
+  easing: 'slide'
+});
 
 
 const counterSec1 = document.getElementById('countersec1');
@@ -15,7 +11,7 @@ let posy = compSyles.getPropertyValue('background-position-y');
 
 console.log('pos y =', posy);
 //باید شماره فایل استایل.سی اس اس رو بدیم ایندکس از صفر شروع می شه..
-const stylesheet = document.styleSheets[5];
+const stylesheet = document.styleSheets[6];
 
 console.log('styleSheets ==>', stylesheet);
 
