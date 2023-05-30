@@ -1,6 +1,8 @@
 footer {
+  margin-top: 220px;
   min-height: 230px;
-  background-color: var(--main-color-pink);
+  background-image:linear-gradient(4deg, #f11caa 0%, rgba(255, 255, 255, .1) 100%) ;
+  /* background-color: var(--main-color-pink); #ee4cb8 */
 }
 
 footer .footer-sahajayoga-title {
