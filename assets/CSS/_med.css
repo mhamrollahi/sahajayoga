@@ -71,4 +71,5 @@
 }
 .sahaj-course-section-wrapper .btn-more-info:hover{
     background-color: var(--main-hover-color);
+    color: var(--main-font-color);
 }
