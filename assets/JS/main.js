@@ -64,3 +64,16 @@ counters.forEach(counter => {
 })
 
 //-------End:Counter for Section 1
+
+$(window).scroll(function(){
+  if($(this).scrollTop() >=250){
+      $('#scroll-top').fadeIn();
+  }else{
+      $('#scroll-top').fadeOut();
+  }
+});
+$('#scroll-top').click(function(){
+  $('body,html').animate({
+      scrollTop:0
+  },1000)
+});

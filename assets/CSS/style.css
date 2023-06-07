@@ -73,3 +73,33 @@ section.counter-section-wrapper{
 }
 a.more-info{
 }
+
+
+#scroll-top{
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  font-size: 16px;
+  width: 50px;
+  height: 50px;
+  background-color:var(--main-color-pink);
+  display: none;
+  /* margin: 30px; */
+  border-radius: 30px;
+  transition: all .4s linear;
+  z-index: 1;
+}
+#scroll-top i{
+  position: relative;
+  top: 14px;
+  right:18px;
+  color: #fff;
+  transition: all .5s linear;
+}
+#scroll-top i:hover{
+  top: 10px;
+}
+
+#scroll-top:hover{
+  background-color:  #a87497;
+}
