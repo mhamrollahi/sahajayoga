@@ -43,7 +43,7 @@
         margin-top: 5px;
         border :none;
         background-color: rgba(80, 153, 153, 0.3);
-        width: 80%;
+        width: 280px!important;
         height: 70px;
         border-radius: 5px;
     }
@@ -69,15 +69,15 @@
 
 }
 
-@media screen  and (max-width:800px) and (min-width : 679px){
+@media screen  and (max-width:800px) and (min-width : 678px){
     .header-section-wrapper .header-title{
         text-align: center;
         margin-right: 10px;
         margin-top: 30px;
         border :none;
         background-color: rgba(80, 153, 153, 0.3);
-        width: 65%;
-        height: 75px;
+        width: 300px!important;
+        height: 85px;
         border-radius: 5px;
     }
     .header-section-wrapper .header-title h1{
@@ -101,14 +101,14 @@
     }
 }
 
-@media screen and (max-width:900px) and (min-width : 801px) {
+@media screen and (max-width:900px) and (min-width : 800px) {
     .header-section-wrapper .header-title{
         text-align: center;
         margin-right: 10px;
         margin-top: 80px;
         border :none;
         background-color: rgba(80, 153, 153, 0.3);
-        width: 65%;
+        width: 350px!important;
         height: 85px;
         border-radius: 5px;
     }
@@ -136,13 +136,15 @@
 
 @media screen  and (max-width:1200px) and (min-width:901px){
     .header-section-wrapper .header-title{
+        /* width: 450px;
+        height: 120px; */
         text-align: center;
         margin-right: 10px;
         margin-top: 110px;
         border :none;
         background-color: rgba(69, 128, 128, 0.3);
-        width: 55%;
-        height: 75px;
+        width: 650px;
+        height: 105px;
         border-radius: 5px;
     }
 

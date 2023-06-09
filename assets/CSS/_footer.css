@@ -121,3 +121,9 @@ footer .footer-contact-us-body span{
 footer .footer-contact-us-body span:hover{
   color:#fff;
 }
+
+footer .footer-text-footer{
+  border-top: 1px solid #efefef;
+  padding-top: 10px;
+  font-size: 13px;
+}
