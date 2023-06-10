@@ -25,11 +25,12 @@
 .about-jsm-section-wrapper .about-jsm-left-side p a{
     position: absolute;
     left: 20px;
+    bottom: -10px;
     background-color: var(--main-color-pink);
-    padding: 5px 10px;
+    padding: 3px 10px;
     border-radius: 5px;
     color: #fff;
-    font-size: 16px;
+    font-size: 15px;
     border: 1px solid var(--main-border-color);
     transition: all .4s ease-in;
 }
@@ -47,6 +48,6 @@
     }
     .about-jsm-section-wrapper .about-jsm-left-side p a{
         font-size:.8rem ;
-        padding: 3px 8px;
+        padding: 1px 8px;
     }
 }

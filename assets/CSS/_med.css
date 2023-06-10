@@ -22,9 +22,10 @@
 .sahaj-course-section-wrapper .custom-card .card-title{
     font-size: 16px;
     text-align: right;
-    padding: 10px 15px 0px;
+    padding: 0px 1px 0px;
     color: var(--main-color-pink);
 }
+
 #important-med::before{
     content: url(/assets/Images/Thumbnail/Log1.png);
     padding-left:4px;
@@ -33,6 +34,10 @@
 .sahaj-course-section-wrapper .custom-card .card-description{
     font-size: 13px;
     padding: 0 16px;
+}
+
+.sahaj-course-section-wrapper .card-body p.card-text{
+    padding-top: 0;
 }
 .sahaj-course-section-wrapper .custom-card .card-overlay{
     background-color: var(--color-card-overlay);
