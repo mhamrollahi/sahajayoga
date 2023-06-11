@@ -38,9 +38,9 @@
   vertical-align: -9px;
 }
 #important-med3::before {
-  content: url(/assets/Images/Thumbnail/Important-med-32.jpg);
+  content: url(/assets/Images/Thumbnail/Important-med-25.jpg);
   padding-left: 4px;
-  vertical-align: -9px;
+  vertical-align: 0px;
 }
 #important-med4::before {
   content: url(/assets/Images/Thumbnail/Log1.png);
