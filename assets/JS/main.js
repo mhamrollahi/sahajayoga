@@ -9,33 +9,33 @@ const counterSec1 = document.getElementById('countersec1');
 const compSyles = getComputedStyle(counterSec1);
 let posy = compSyles.getPropertyValue('background-position-y');
 
-console.log('pos y =', posy);
+// console.log('pos y =', posy);
 //باید شماره فایل استایل.سی اس اس رو بدیم ایندکس از صفر شروع می شه..
 const stylesheet = document.styleSheets[6];
 
-console.log('styleSheets ==>', stylesheet);
+// console.log('styleSheets ==>', stylesheet);
 
 const divParaRule = [...stylesheet.cssRules].find(
   (r) => r.selectorText === "section.counter-section-wrapper"
 );
 
 posy = posy.replace('%', '');
-console.log('pos y2 =', posy);
-console.log('divPrarRule == ',divParaRule);
+// console.log('pos y2 =', posy);
+// console.log('divPrarRule == ',divParaRule);
 
-console.log('document.body.scrollHeight ==', document.body.scrollHeight);
+// console.log('document.body.scrollHeight ==', document.body.scrollHeight);
 
 const maxHeight = document.body.scrollHeight - window.innerHeight;
-console.log('window = ', (window.pageYOffset * 100) / maxHeight);
+// console.log('window = ', (window.pageYOffset * 100) / maxHeight);
 
 
 window.addEventListener("scroll", (event) => {
   let scroll = this.scrollY;
-  console.log('Scroll = ' + scroll)
-  console.log('pos y == ', posy);
-  console.log('window = ', (window.pageYOffset * 100) / maxHeight);
+  // console.log('Scroll = ' + scroll)
+  // console.log('pos y == ', posy);
+  // console.log('window = ', (window.pageYOffset * 100) / maxHeight);
   posy = Math.floor((window.pageYOffset * 100) / maxHeight);
-  console.log('pos y after == ', posy);
+  // console.log('pos y after == ', posy);
   posy -= 40;
   divParaRule.style.setProperty('background-position-y', posy + '%')
   // divParaRule.style.setProperty('background-position-y') = "20px";
