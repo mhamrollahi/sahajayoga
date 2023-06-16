@@ -1,15 +1,18 @@
 /* Welcome Section style */
 .welcome-section-wrapper{
-    height:110vh ;
+   
     /* background-color: var(--main-color-pink); */
     /* background-image:linear-gradient(#e464b9 50%, rgba(15, 12, 204,.7) 100%) ; */
-     background-image:linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),                linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-        linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
     /* background-image: linear-gradient(0.25turn, #ec8618 , #fff,#185c9b);
     background-image: linear-gradient(0.25turn, #ec8618 , #fff,#185c9b); */
 
     /* linear-gradient(to left top, blue, red); */
     overflow: hidden;
+}
+.welcome-section-wrapper .first-page{
+    background-image:linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),                linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+ height:100vh ;
 }
 .welcome-section-wrapper .first-page h4.first-page1{
     width: 900px;
@@ -28,10 +31,15 @@
 }
 
 .welcome-section-wrapper .second-page{
+    /* background-color: linear-gradient(0.25turn, #eccb0e , #fff,#185c9b)!important; */
+    background-color:red;
+    z-index: 3;
     font-size: 36px;
-    width: 900px;
-    margin: 30px auto;
-    /* visibility: hidden; */
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: -30vw;
+    padding: 30px ;
 }
 
 .welcome-section-wrapper .second-section{
