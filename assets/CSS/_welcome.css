@@ -9,32 +9,39 @@
     background-image: linear-gradient(0.25turn, #ec8618 , #fff,#185c9b); */
 
     /* linear-gradient(to left top, blue, red); */
+    overflow: hidden;
 }
 .welcome-section-wrapper .first-page h4.first-page1{
     width: 900px;
-    margin: 100px auto;
+    margin: 50px auto;
     font-size: 36px;
     overflow: hidden;
 }
 .welcome-section-wrapper .first-page h5.first-page2{
-    width: 1100px;
-    margin: 100px auto;
+    /* width: 1100px; */
+    margin: 10px auto;
     font-size: 38px;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+    position: absolute;
+    left: -90vw;
+    /* visibility: hidden; */
 }
 
-.welcome-section-wrapper .first-page .first-page3{
+.welcome-section-wrapper .second-page{
     font-size: 36px;
     width: 900px;
-    margin: 300px auto;
-    visibility: hidden;
-}
-.welcome-section-wrapper .second-section{
-    
-    background-image: linear-gradient(0.25turn, #ec8618 , #fff,#185c9b); 
+    margin: 30px auto;
+    /* visibility: hidden; */
 }
 
-.welcome-section-wrapper .third-section{
-    visibility: hidden;
+.welcome-section-wrapper .second-section{
+}
+
+.welcome-section-wrapper .third-page{
+    background-image: linear-gradient(0.25turn, #eccb0e , #fff,#185c9b);    font-size: 36px;
+    
+    width: 30vw;
+    height: 40vh;
+    position: fixed;
+
 }

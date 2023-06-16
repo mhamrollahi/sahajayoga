@@ -3,6 +3,7 @@ AOS.init({
   easing: 'slide'
 });
 
+document.body.style.overflowX= "hidden";
 
 const counterSec1 = document.getElementById('countersec1');
 
@@ -42,7 +43,7 @@ window.addEventListener("scroll", (event) => {
 });
 
 //-------Start:Counter for Section 1
-
+//-----------------------------------------------------------------
 const counters = document.querySelectorAll('.counter-s1');
 
 counters.forEach(counter => {
@@ -62,18 +63,19 @@ counters.forEach(counter => {
   }
   updateCount();
 })
-
+//-----------------------------------------------------------------
 //-------End:Counter for Section 1
 
 $(window).scroll(function(){
-  if($(this).scrollTop() >=250){
+  if($(this).scrollTop() >=350){
       $('#scroll-top').fadeIn();
   }else{
       $('#scroll-top').fadeOut();
   }
 });
 $('#scroll-top').click(function(){
-  $('body,html').animate({
-      scrollTop:0
-  },1000)
+  $('html, body').animate({scrollTop:0}, 'slow');
+    return false;
+
+  // $('body,html').animate({scrollTop:0},1500)
 });
