@@ -20,6 +20,7 @@
     width: 950px;
     height: 105px;
     line-height: 60px;
+    user-select: none;
 }
 
 .header-section-wrapper .more-info{
