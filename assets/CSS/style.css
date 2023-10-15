@@ -1,3 +1,4 @@
+@import url(../CSS/_fontiran.css);
 @import url(../CSS/_contact.css);
 @import url(../CSS/_menu.css);
 @import url(../CSS/_header.css);
@@ -38,7 +39,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Vazeir;
+  font-family: IRANSansXFaNum;
+  /* font-family: Vazeir; */
   scroll-behavior:smooth;
 }
 body {
