@@ -9,6 +9,7 @@
 @import url(../CSS/_footer.css);
 @import url(../CSS/_newsbj.css);
 @import url(../CSS/_faq.css);
+@import url(../CSS/_getrealization.css);
 
 :root {
   --main-color-orange: orange;
@@ -38,6 +39,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: Vazeir;
+  scroll-behavior:smooth;
 }
 body {
   direction: rtl;

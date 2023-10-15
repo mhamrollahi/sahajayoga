@@ -1,7 +1,7 @@
 footer {
   margin-top: 0px;
   min-height: 250px;
-  background-image:linear-gradient(4deg, #f11caa 0%, rgba(255, 255, 255, .1) 100%) ;
+  background-image:linear-gradient(180deg, #f11caa 0%, rgba(255, 255, 255, .1) 100%) ;
   /* background-color: var(--main-color-pink); #ee4cb8 */
 }
 

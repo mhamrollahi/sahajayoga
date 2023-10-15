@@ -2,7 +2,8 @@
 
 .nav-section-wrapper {
   padding-top: 2px;
-  background-color: #dbd7d7;
+  background-color: #f8edeb;
+  /* background-color: #dbd7d7; */
   z-index: 999;
 }
 

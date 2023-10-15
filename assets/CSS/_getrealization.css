@@ -1,0 +1,63 @@
+.get-realization-section-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../Images/freedom4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  object-fit: cover;
+}
+
+/* .get-realization-section-wrapper::after{
+  content: '';
+  position:absolute;
+  bottom: -110px;
+  right: 0;
+  width: 110%;
+  height: 100px;
+  background-image: linear-gradient(to top,var(--main-color-pink),transparent);
+  z-index:1;
+} */
+.get-realization-section-wrapper .title {
+  color: #9d8189;
+  text-align: center;
+  text-shadow: 2px 2px #d8e2dc;
+  /* text-shadow: 2px 2px rgb(44, 43, 43); */
+  font-size: 34px;
+  line-height: 48px;
+  padding: 20px;
+}
+
+.get-realization-section-wrapper .title1 {
+  margin-top: 70px!important;
+  font-weight: 700;
+  font-size: 38px;
+}
+.get-realization-section-wrapper .title2 {
+  line-height: 80px;
+  font-size: 40px;
+}
+.get-realization-section-wrapper .sec2 {
+  width: 100%;
+  min-height: 10vh;
+
+  background-image: url(../Images/freedom4.jpg)!important;
+  /* background-position: center;
+  background-size: cover; */
+  background-attachment:fixed ;
+  
+}
+
+@media screen and (max-width:670px){
+  .get-realization-section-wrapper .title {
+    font-size: 28px;
+  }
+  .get-realization-section-wrapper .title1 {
+    font-size: 30px;
+  }
+  .get-realization-section-wrapper .title2 {
+    font-size: 30px;
+  }
+
+  }
+}
