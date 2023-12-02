@@ -1,6 +1,11 @@
 .get-self-awareness-section-wrapper{
   min-height: 90vh;
   margin: 30px 40px;
-  line-height: 40px!important;
+  /* line-height: 50px!important; */
   text-align: justify;
+}
+
+.get-self-awareness-section-wrapper h3{
+  line-height: 50px;
+  
 }
