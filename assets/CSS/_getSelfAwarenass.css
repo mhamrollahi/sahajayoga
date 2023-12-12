@@ -1,11 +1,96 @@
-.get-self-awareness-section-wrapper{
+ .get-self-awareness-section-wrapper{
   min-height: 90vh;
-  margin: 30px 40px;
-  /* line-height: 50px!important; */
   text-align: justify;
+  color: var(--main-font-color);
 }
 
 .get-self-awareness-section-wrapper h3{
-  line-height: 50px;
+  line-height: 35px;
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+.get-self-awareness-section-wrapper h3 p.titre{
+  text-align: center;
+  font-weight: 700;
+  padding-top: 20px;
+  color: var(--main-font-color);
+  font-size: 24px;
+} 
+.get-self-awareness-section-wrapper p i.quote-left{
+  font-size: 24px;
+  vertical-align: 10px;
+  padding-left: 10px;
+}
+.get-self-awareness-section-wrapper p i.quote-right{
+  font-size: 24px;
+  vertical-align: -14px;
+  padding-right: 10px;
+}
+.get-self-awareness-section-wrapper p span q{
+  font-style: italic;
+  font-weight: 600;
+}
+
+.get-self-awareness-section-wrapper h5{
+  line-height: 30px;
+  font-size: 17px;
+  margin-top: 40px;
+}
+.get-self-awareness-section-wrapper h5 p:last-child{
+  color: var(--main-color-pink);
+  font-size: 30px;
+  font-weight: 600;
+  margin: 30px 0;
+}
+
+.get-self-awareness-section-wrapper h4{
+  text-align: center;
+  margin-top: 90px;
+}
+.get-self-awareness-section-wrapper h4 p.titre{
+  font-size: 18px;
+  text-align: start;
+}
+
+.get-self-awareness-section-wrapper .bg-self-awareness-even{
+  background-color: var(--bg-color-self-awareness-even);
+}
+.get-self-awareness-section-wrapper .bg-self-awareness-odd{
+  background-color: var(--bg-color-self-awareness-odd);
+}
+
+.get-self-awareness-section-wrapper .get-realization{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 20px;  
+  border-radius: 5px;
+}
+
+.get-self-awareness-section-wrapper .get-realization-even{
+  box-shadow: rgba(0, 0, 0, 0.075) 0px 0.125rem 0.25rem;
+  border-radius: 5px;
+}
+
+@media screen and (max-width:670px) {
+  .get-self-awareness-section-wrapper h3 p.titre{
+    font-weight: 600;
+    font-size: 20px;
+  }
+  .get-self-awareness-section-wrapper h3{
+    font-size: 16px;
+  }
+  .get-self-awareness-section-wrapper h5{
+    font-size: 15px;
+  }
+  .get-self-awareness-section-wrapper h5 p:last-child{
+    font-size: 26px;
+    font-weight: 400;
+  }
+  .get-self-awareness-section-wrapper h4{
+    margin-top: 20px;
+  }
+  .get-self-awareness-section-wrapper h4 p.titre{
+    font-size: 15px;
+    text-align: center;
+  }
   
 }

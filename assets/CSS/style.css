@@ -23,8 +23,11 @@
   --color-card-overlay: rgba(210, 145, 188, 0.4);
   --main-font-color: #24242e;
   --bg-color-hover-a: #f7ebf3;
-}
+  --bg-color-self-awareness-even:#ffc2d1;
+  --bg-color-self-awareness-odd:#fff0f3;
 
+}
+/*  */
 @font-face {
   font-family: Vazeir;
   src: url(../Fonts/Vazir-Medium.eot) format("eot"),
@@ -43,6 +46,7 @@ body {
   font-family: IRANSansXFaNum;
   /* font-family: Vazeir; */
   scroll-behavior:smooth;
+  /* color: var(--main-font-color); */
 }
 body {
   direction: rtl;
