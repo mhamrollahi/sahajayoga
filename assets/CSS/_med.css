@@ -1,13 +1,11 @@
 /* Style for Meditation section */
 .sahaj-course-section-wrapper .custom-card {
-  /* box-shadow: 1px 1px 1px #b4b4b4; */
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   font-size: 14px;
   margin: 20px;
-  /* padding: 5px; */
   color: #24242e;
   border-radius: 5px;
-  min-height: 150px;
+  min-height: 410px;
   cursor: pointer;
   transition: 0.3s ease-in;
   overflow: hidden;
@@ -29,8 +27,8 @@
 
 #important-med::before {
   content: url(/assets/Images/Thumbnail/Ashnai-32.jpg);
-  padding-left: 4px;
-  vertical-align: -9px;
+  padding-left: 5px;
+  vertical-align: -12px;
 }
 #important-med2::before {
   content: url(/assets/Images/Thumbnail/Tajrobeh.jpg);
