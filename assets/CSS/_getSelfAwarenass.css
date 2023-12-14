@@ -27,6 +27,10 @@
   vertical-align: -14px;
   padding-right: 10px;
 }
+.get-self-awareness-section-wrapper p.sm-text {
+  color: var(--main-color-pink);
+  font-size: 22px;
+}
 .get-self-awareness-section-wrapper p span q{
   font-style: italic;
   font-weight: 600;
