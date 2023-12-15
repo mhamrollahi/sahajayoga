@@ -36,7 +36,7 @@
   font-weight: 600;
 }
 
-.get-self-awareness-section-wrapper h5{
+.get-self-awareness-section-wrapper h5,.get-self-awareness-section-wrapper h6{
   line-height: 30px;
   font-size: 17px;
   margin-top: 40px;
@@ -56,7 +56,17 @@
   font-size: 18px;
   text-align: start;
 }
-
+.get-self-awareness-section-wrapper h2{
+  font-size: 28px;
+  padding-top: 40px;
+  line-height: 50px;
+}
+.get-self-awareness-section-wrapper .shmt-video{
+  border: 1px solid var(--bg-color-self-awareness-odd);
+  border-radius: 5px;
+  height: 350px;
+  cursor:pointer;
+}
 .get-self-awareness-section-wrapper .bg-self-awareness-even{
   background-color: var(--bg-color-self-awareness-even);
 }
@@ -95,6 +105,12 @@
   .get-self-awareness-section-wrapper h4 p.titre{
     font-size: 15px;
     text-align: center;
+  }
+
+  .get-self-awareness-section-wrapper h2{
+    padding-top: 14px;
+    font-size: 18px;
+    line-height: 25px;
   }
   
 }
