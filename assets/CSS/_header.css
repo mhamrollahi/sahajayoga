@@ -26,6 +26,7 @@
 .header-section-wrapper .more-info{
     display: inline-block;
     background-color:var(--main-color-pink);
+    /* background-color:#ddb9bb; */
     color: var(--main-font-color);
     border: 1px solid var(--main-border-color);
     font-size: 18px;

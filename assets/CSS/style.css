@@ -15,9 +15,10 @@
 
 :root {
   --main-color-orange: orange;
-  --main-color-pink: #d291bc;
+  /* --main-color-pink: #d291bc; */
+  --main-color-pink: #bc5c84;
   --main-hover-color: #f7ebf3;
-  --main-border-color: pink;
+  --main-border-color: #ddb9bb;
   --bg-color-contact: #232f3e; /* -- Old :#13212e */
   --bg-color-pink: #f7ebf3;
   --color-card-overlay: rgba(210, 145, 188, 0.4);
