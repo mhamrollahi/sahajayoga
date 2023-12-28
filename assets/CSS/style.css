@@ -12,11 +12,11 @@
 @import url(../CSS/_faq.css);
 @import url(../CSS/_getrealization.css);
 @import url(../CSS/_getSelfAwarenass.css);
+@import url(../CSS/_benefiMeditaion.css);
 
 :root {
   --main-color-orange: orange;
-  /* --main-color-pink: #d291bc; */
-  --main-color-pink: #bc5c84;
+                                                                                                                                            --main-color-pink: #bc5c84;
   --main-hover-color: #f7ebf3;
   --main-border-color: #ddb9bb;
   --bg-color-contact: #232f3e; /* -- Old :#13212e */
