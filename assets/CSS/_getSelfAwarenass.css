@@ -56,10 +56,26 @@
   font-size: 18px;
   text-align: start;
 }
+
 .get-self-awareness-section-wrapper h2{
-  font-size: 28px;
-  padding-top: 40px;
-  line-height: 50px;
+  font-size: 24px;
+  padding-top: 20px;
+  line-height: 34px;
+}
+.get-self-awareness-section-wrapper .bg-self-awareness-even p{
+  font-size: 20px;
+  padding: 15px;
+  line-height: 34px;
+  font-weight: 500;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 20px;  
+  background-color: var(--bg-color-self-awareness-odd);
+}
+.get-self-awareness-section-wrapper .bg-self-awareness-even p a{
+  font-weight: 600;
+}
+.get-self-awareness-section-wrapper .bg-self-awareness-even p a:hover{
+  font-style: italic;
 }
 .get-self-awareness-section-wrapper .shmt-video{
   border: 1px solid var(--bg-color-self-awareness-odd);
@@ -102,7 +118,8 @@
   .get-self-awareness-section-wrapper h4{
     margin-top: 20px;
   }
-  .get-self-awareness-section-wrapper h4 p.titre{
+  .get-self-a
+  wareness-section-wrapper h4 p.titre{
     font-size: 15px;
     text-align: center;
   }
