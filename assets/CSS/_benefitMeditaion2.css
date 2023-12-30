@@ -1,0 +1,71 @@
+.benefit-meditation2-section-wrapper{
+  min-height: 90vh;
+  text-align: justify;
+  color: var(--main-font-color);
+}
+
+.benefit-meditation2-section-wrapper h3{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 40px;
+  color: var(--main-color-pink );
+  font-size: 30px;
+  text-align: center;
+}
+
+.benefit-meditation2-section-wrapper .right-sec p{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: justify;
+}
+
+.benefit-meditation2-section-wrapper .right-sec p a{
+  font-weight: 600;
+}
+.benefit-meditation2-section-wrapper .right-sec p a:hover{
+  font-style: italic;
+}
+
+.benefit-meditation2-section-wrapper .right-sec ul li{
+  padding: 4px 15px;
+  font-size: 18px;
+}
+ .benefit-meditation2-section-wrapper ul li::before{
+   font-family: "Font Awesome 5 Free";
+   content: "\f058";
+   display: inline-block;
+   padding-left: 4px;
+   vertical-align: middle;
+   font-weight: 600;
+   color: var(--main-color-pink );
+}
+
+.benefit-meditation2-section-wrapper img{
+  margin-top: 50px;
+  border-radius: 28px;
+}
+
+
+@media screen and (max-width:670px) {
+  .benefit-meditation2-section-wrapper .right-sec h3{
+    font-size: 24px;
+  }
+  
+  .benefit-meditation2-section-wrapper .right-sec p{
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .benefit-meditation2-section-wrapper .right-sec ul li{
+    font-size: 16px;
+  }
+  .benefit-meditation2-section-wrapper ul li::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f058";
+    display: inline-block;
+    padding-left: 4px;
+    vertical-align: middle;
+    font-weight: 500;
+    color: var(--main-color-pink );
+ }
+}
