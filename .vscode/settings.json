@@ -3,5 +3,8 @@
   "editor.tabSize": 2,
   "editor.fontFamily": "JetBrains Mono",
   "editor.detectIndentation": true,
-  "editor.insertSpaces": true
+  "editor.insertSpaces": true,
+  "cSpell.words": [
+    "myexperince"
+  ]
 }
