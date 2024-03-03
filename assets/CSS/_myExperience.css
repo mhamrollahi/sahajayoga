@@ -27,11 +27,11 @@
 }
 
 .myexperince-section-wrapper .txt-experience{
-  height: 110px;
+  min-height: 110px;
 }
 
 .myexperince-section-wrapper .mandatory{
-  color: #db0303;
+  color: var(--bg-color-mandatory-fields);
 }
 
 .myexperince-section-wrapper .mandatory::before{
@@ -41,6 +41,12 @@
   padding-left: 4px;
   padding-right: 2px;
   top: 3px;
+}
+
+.myexperince-section-wrapper .errMessage{
+  font-size: 12px;
+  font-weight: 500;
+  color:var(--bg-color-mandatory-fields)
 }
 
 .myexperince-section-wrapper .custom-btn{

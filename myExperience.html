@@ -123,11 +123,13 @@
     <div class="row">
       <div class="col-12 col-sm-12 col-md-8">
         <div>
-          <form class="row g-3 needs-validation" novalidate>
+          <form method="" action="" class="row g-3 needs-validation" >
 
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="txtSubject" minlength="10" required placeholder="موضوع خود را بنویسید...">
-              <label for="txtSubject" class="mandatory">موضوع</label>
+              <label for="txtSubject" class="mandatory">عنوان خاطره / تجربه </label>
+              <small class="errMessage" hidden>فیلد عنوان باید بیش از ۱۰ کاراکتر باشد.</small>
+              <small class="errMessage" hidden> موضوع اجباری می باشد. </small>
             </div>
 
             <div class="form-floating mb-3">
@@ -138,11 +140,15 @@
             <div class="form-floating mb-3">
               <input type="email" class="form-control" id="txtEmail" required placeholder="name@example.com">
               <label for="txtEmail" class="mandatory">آدرس پست الکترونیکی</label>
+              <small class="errMessage" hidden>فیلد عنوان باید بیش از ۱۰ کاراکتر باشد.</small>
+              <small class="errMessage" hidden> پست الکترونیکی اجباری می باشد. </small>
             </div>
 
             <div class="form-floating mb-3">
               <textarea class="form-control txt-experience" required id="txtEexperience" rows="3" minlength="40" placeholder="متن خاطره یا تجربه خود را اینجا بنویسید ..."></textarea>
-              <label for="txtEexperience" class="mandatory">متن خاطره یا تجربه خود را اینجا بنویسید ...</label>
+              <label for="txtEexperience" class="mandatory">متن تجربه / خاطره  خود را اینجا بنویسید...</label>
+              <small class="errMessage" hidden>فیلد عنوان باید بیش از ۱۰ کاراکتر باشد.</small>
+              <small class="errMessage" hidden> متن تجربه/خاطره اجباری می باشد. </small>
             </div>
 
             <div class="col-12 my-2 text-center">
