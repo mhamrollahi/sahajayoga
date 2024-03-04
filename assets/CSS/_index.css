@@ -461,8 +461,8 @@ END -- Counter Section style */
   padding-left: 4px;
   vertical-align: 0px;
 }
-#important-med4::before {
-  content: url(/assets/Images/Thumbnail/Log1.png);
+#subtleSystemLog::before {
+  content: url(/assets/Images/Thumbnail/subtleSystem32.jpg);
   padding-left: 4px;
   vertical-align: -9px;
 }
