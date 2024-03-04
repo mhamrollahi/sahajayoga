@@ -446,17 +446,17 @@ END -- Counter Section style */
   color: var(--main-color-pink);
 }
 
-#important-med::before {
+#selfFreedomLog::before {
   content: url(/assets/Images/Thumbnail/Ashnai-32.jpg);
   padding-left: 5px;
   vertical-align: -12px;
 }
-#important-med2::before {
+#selfAwarenessLog::before {
   content: url(/assets/Images/Thumbnail/Tajrobeh.jpg);
   padding-left: 4px;
   vertical-align: -9px;
 }
-#important-med3::before {
+#sahajaMeditationLog::before {
   content: url(/assets/Images/Thumbnail/Important-med-25.jpg);
   padding-left: 4px;
   vertical-align: 0px;
