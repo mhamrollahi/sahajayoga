@@ -289,6 +289,8 @@
       target.setCustomValidity('')
       errMessageMandatory[1].hidden = true
       
+      console.log(target.validity)
+      
       if(!target.validity.typeMismatch){
         //txtEmail Error
         errMessageFormatted[1].hidden = false
