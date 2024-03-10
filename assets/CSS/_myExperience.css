@@ -48,6 +48,14 @@
   font-weight: 500;
   color:var(--bg-color-mandatory-fields)
 }
+.myexperince-section-wrapper .errMessage::before{
+  position: relative;
+  top: 2px;
+  padding-left: 3px;
+  font-family: 'Font Awesome\ 5 Free';
+  content: "\f00d"; /* FontAwesome Unicode */
+  font-weight: 300;
+}
 
 .myexperince-section-wrapper .custom-btn{
   font-size: 13px;
