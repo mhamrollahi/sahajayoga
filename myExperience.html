@@ -126,7 +126,7 @@
           <form method="" action="" class="row g-3 needs-validation" >
 
             <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="txtSubject" minlength="10" required placeholder="موضوع خود را بنویسید..." autocomplete="off" autofocus="true">
+              <input type="text" class="form-control" id="txtSubject" minlength="10" required placeholder="موضوع خود را بنویسید..." title="لظفا موضوع تجربه یا خاطره خود را اینجا بنویسید" autocomplete="off" autofocus="true">
               <label for="txtSubject" class="mandatory">عنوان خاطره / تجربه </label>
               <small class="errMessage" data-err = "formatted" hidden> عنوان باید بیش از ۱۰ کاراکتر باشد.</small>
               <small class="errMessage" data-err = "mandatory" hidden> عنوان اجباری می باشد. </small>
@@ -145,9 +145,9 @@
             </div>
 
             <div class="form-floating mb-3">
-              <textarea class="form-control txt-experience" required id="txtEexperience" rows="3" minlength="40" placeholder="متن خاطره یا تجربه خود را اینجا بنویسید ..."></textarea>
+              <textarea class="form-control txt-experience" required id="txtEexperience" rows="3" minlength="30" placeholder="متن خاطره یا تجربه خود را اینجا بنویسید ..."></textarea>
               <label for="txtEexperience" class="mandatory">متن تجربه / خاطره  خود را اینجا بنویسید...</label>
-              <small class="errMessage" data-err = "formatted"  hidden>متن تجربه / عنوان باید بیش از 40 کاراکتر باشد.</small>
+              <small class="errMessage" data-err = "formatted"  hidden>متن تجربه / عنوان باید بیش از 30 کاراکتر باشد.</small>
               <small class="errMessage" data-err = "mandatory"  hidden> متن تجربه/خاطره اجباری می باشد. </small>
             </div>
 
@@ -252,8 +252,12 @@
     const errMessageMandatory = document.querySelectorAll("[data-err='mandatory']")
     const errMessageFormatted = document.querySelectorAll("[data-err='formatted']")
     const btnCancel = document.querySelector('#btnCancel')
+    const btnSubmit = document.querySelector('#btnSubmit')
 
     errMessageMandatory.forEach((value,key)=>{
+      value.hidden = true
+    })
+    errMessageFormatted.forEach((value,key)=>{
       value.hidden = true
     })
 
@@ -263,7 +267,7 @@
 
     txtSubject.addEventListener('input',(e)=>{
       const {target} = e
-
+      
       target.setCustomValidity('')
       errMessageMandatory[0].hidden = true
       
@@ -276,13 +280,24 @@
         target.setCustomValidity('')
       }
     })
+
     txtSubject.addEventListener('invalid',(e)=>{
       const {target} = e
-      target.setCustomValidity('لطفا عنوان را وارد کنید')
-      errMessageMandatory[0].hidden = false
+      
+      if(target.validity.valueMissing){
+        target.setCustomValidity('لطفا عنوان را وارد کنید')
+        errMessageMandatory[0].hidden = false
+      }
     })
     
     
+    txtEmail.addEventListener('invalid',(e)=>{
+      const {target} = e
+      if(target.validity.valueMissing){
+        target.setCustomValidity('لطفا پست الکترونیکی را وارد کنید')
+        errMessageMandatory[1].hidden = false
+      }
+    })
     txtEmail.addEventListener('input',(e)=>{
       const {target} = e
 
@@ -291,19 +306,17 @@
       
       console.log(target.validity)
       
-      if(!target.validity.typeMismatch){
+      if(target.validity.typeMismatch){
         //txtEmail Error
         errMessageFormatted[1].hidden = false
+        errMessageMandatory[1].hidden = true
         target.setCustomValidity('فرمت پست الکترونیکی درست نمی باشد.')
+        return
       }else{
         errMessageFormatted[1].hidden = true
+        errMessageMandatory[1].hidden = true
         target.setCustomValidity('')
       }
-    })
-    txtEmail.addEventListener('invalid',(e)=>{
-      const {target} = e
-      target.setCustomValidity('لطفا پست الکترونیکی را وارد کنید')
-      errMessageMandatory[1].hidden = false
     })
     
 
@@ -324,11 +337,14 @@
     })
     txtEexperience.addEventListener('invalid',(e)=>{
       const {target} = e
-      target.setCustomValidity('لطفا عنوان را وارد کنید')
-      errMessageMandatory[2].hidden = false
+      
+      if(target.validity.valueMissing){
+        target.setCustomValidity('لطفا تجربه یا خاطره خود را وارد کنید')
+        errMessageMandatory[2].hidden = false
+      }
     })
     
-    
+
     btnCancel.addEventListener('click',(e)=>{
       errMessageMandatory.forEach((val,key)=>{
         val.hidden = true
