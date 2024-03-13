@@ -13,7 +13,7 @@ console.log('dirName = ',__dirname)
 console.log('fileName = ',__filename)
 
 router.get('/',(req,res)=>{
-  res.sendFile(path.join(__dirname + '/index.html'))
+  res.sendFile(path.join(__dirname + '/myExperience.html'))
 })
 
 app.use(router)
