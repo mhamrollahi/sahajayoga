@@ -14,6 +14,7 @@ console.log('fileName = ',__filename)
 
 router.get('/',(req,res)=>{
   res.sendFile(path.join(__dirname + '/myExperience.html'))
+  // res.sendFile('myExperience.html')
 })
 
 app.use(router)

@@ -13,10 +13,11 @@ console.log('dirName = ',__dirname)
 console.log('fileName = ',__filename)
 
 router.get('/',(req,res)=>{
-  res.sendFile('index.html',{root : __dirname})
+  res.sendFile(path.join(__dirname + '/myExperience.html'))
 })
 
-app.use('/',router)
+app.use(router)
+app.use(express.static(__dirname));
 
 app.listen(port,()=>{
   console.log(`Our app listening on port ${port}`)
