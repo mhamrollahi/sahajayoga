@@ -69,19 +69,59 @@
 .myexperince-section-wrapper .captcha input:focus{
   box-shadow: none;
 }
-.myexperince-section-wrapper #captchaValue{
-  background-color: rgb(240, 194, 194); 
-  width: 760px; 
+
+.myexperince-section-wrapper .captcha img{
+  margin: 0;
+  padding: 0 !important;
+  height: 100%;
+  width: 100%;
+  opacity: .8;
+  border-radius: 0 6px 6px 0 ;
+}
+.myexperince-section-wrapper .captcha .captcha-img{
+  width: 700px; 
   height: 36px;
   border-radius: 0 6px 6px 0 ;
   text-align: right;
-  line-height: 33px;
+  /* position: absolute; */
   padding-right: 10px;
+  /* padding-top: 4px; */
+  user-select: none;
+}
+.myexperince-section-wrapper #captchaTitle{
+  position: relative;
+  top: -38px;
+  right: 20px;
+  font-weight: 500;
+}
+.myexperince-section-wrapper #captchaValue{
+  position: relative;
+  top: -34px;
+  right: 100px;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 4px;
+}
 
+.myexperince-section-wrapper .btnReload {
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background: #4db2ec;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  height: 35px;
+  width: 70px;
+  user-select: none;
+}
+.myexperince-section-wrapper .btnReload:hover{
+  background: #2fa5e9;
 }
 .myexperince-section-wrapper #captchaInput{
   text-align: center;
-
+  font-size: 18px;
+  font-weight: 500;
 }
 @media screen and (max-width:880px) {
   .myexperince-section-wrapper h3{

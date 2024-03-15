@@ -156,10 +156,13 @@
             </div>
 
             <div class="col-12 my-2 text-center d-flex align-items-center captcha">
-              <div id="captchaValue">
-                لطفا کلمه امنیتی را کادر روبرو بنویسید:
+              <div class="captcha-img">
+                <img class="img-fluid" src="assets/Images/captcha-bg.png" alt="captcha background image"><span
+                  id="captchaTitle">کلمه روبرو را بنویسید:</span><span id="captchaValue"></span>
               </div>
-              <input type="text" class="form-control" id="captchaInput" width="70%">
+
+              <button class="btnReload"><i class="fas fa-redo-alt"></i></button>
+              <input type="text" class="form-control" id="captchaInput" maxlength="5">
             </div>
             <div class="col-12 my-2 text-center">
               <button class="btn btn-success  custom-btn" type="submit" id="btnSubmit">ثبت خاطره</button>
@@ -364,6 +367,72 @@
         val.hidden = true
       })
 
+    })
+
+
+    btnSubmit.addEventListener('click',(e)=>{
+      e.preventDefault()
+
+
+    })
+
+    //CAPTCHA VALIDATION :
+    const captchaValue = document.querySelector('#captchaValue')
+    const captchaInput = document.querySelector('#captchaInput')
+    const btnReload = document.querySelector('.btnReload')
+
+    let allChars = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
+      'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd',
+      'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+      't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+      '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '=', '<', '>', '|', '/', '~'];
+
+    function getCaptcha() {
+      for (let i = 0; i < 5; i++) { //getting 6 random characters from the array
+        let randomCharacter = allChars[Math.floor(Math.random() * allChars.length)];
+        captchaValue.innerText += `${randomCharacter}`; //passing 5 random characters inside captcha innerText
+      }
+    }
+
+    getCaptcha();
+    function checkCaptcha(){
+      let inputVal = captchaInput.value.split('').join(' ');
+      if (inputVal == captchaValue.innerText) { //if captcha matched
+        alert('Captcha Matched ! Damet Gharam')
+        return true
+      } else {
+        alert('Riddi dadashh !! ')
+        return false
+      }
+
+    }
+    checkBtn.addEventListener("click", e => {
+      e.preventDefault(); //preventing button from it's default behaviour
+      statusTxt.style.display = "block";
+      //adding space after each character of user entered values because I've added spaces while generating captcha
+      let inputVal = inputField.value.split('').join(' ');
+      if (inputVal == captcha.innerText) { //if captcha matched
+        statusTxt.style.color = "#4db2ec";
+        statusTxt.innerText = "Nice! You don't appear to be a robot.";
+        setTimeout(() => { //calling removeContent & getCaptcha after 2 seconds
+          removeContent();
+          getCaptcha();
+        }, 2000);
+      } else {
+        statusTxt.style.color = "#ff0000";
+        statusTxt.innerText = "Captcha not matched. Please try again!";
+      }
+    });
+
+
+    function removeContent() {
+      captchaInput.value = "";
+      captchaValue.innerText = "";
+    }
+
+    btnReload.addEventListener('click', (e) => {
+      removeContent()
+      getCaptcha()
     })
 
   </script>
