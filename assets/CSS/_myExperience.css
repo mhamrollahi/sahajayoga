@@ -61,7 +61,28 @@
   font-size: 13px;
   width:95px;
 }
+.myexperince-section-wrapper .captcha input{
+  border: none;
+  outline: 0 !important;
+}
 
+.myexperince-section-wrapper .captcha input:focus{
+  box-shadow: none;
+}
+.myexperince-section-wrapper #captchaValue{
+  background-color: rgb(240, 194, 194); 
+  width: 760px; 
+  height: 36px;
+  border-radius: 0 6px 6px 0 ;
+  text-align: right;
+  line-height: 33px;
+  padding-right: 10px;
+
+}
+.myexperince-section-wrapper #captchaInput{
+  text-align: center;
+
+}
 @media screen and (max-width:880px) {
   .myexperince-section-wrapper h3{
     font-size: 25px;
