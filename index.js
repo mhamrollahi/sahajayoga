@@ -1,12 +1,12 @@
 import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import fs from 'fs/promises'
+// import fs from 'fs/promises'
 
 const app = express()
 const port = 3000
 const router = express.Router()
-const EXPERIENCES_LIST_FILE_PATH = './data/experiences_list.json'
+// const EXPERIENCES_LIST_FILE_PATH = './data/experiences_list.json'
 const experiencesList = []
 
 
@@ -20,56 +20,57 @@ function loggerMiddleware(req,res,next){
   console.log('New Request = ',req.method,req.url)
 }
 
-async function addNewExperience(){
-  try{
-    const newExperience = {
-      id:experiencesList.length,
-      subject:' ',
-      Email: ' ',
-      FullName : ' ',
-      Description : ' ',
-      isActive : false,
-      creationDate: ' ',
-      updatedDate: ' '
-    }
-
-    experiencesList.push(newExperience)
-    saveExperience()
+// async function addNewExperience(){
+//   try{
+//     const newRecord = {
+//       id : experiencesList.length,
+//       subject : 'txtSubject.value',
+//       Email : 'txtEmail.value',
+//       fullName : 'txtFullname.value',
+//       Description : 'txtEexperience.value',
+//       isActive : false,
+//       creationDate : ' ',
+//       updatedDate : ' ',
+//     }
     
-  }catch(err){
-    throw err
-  }
-}
+//     experiencesList.push(newRecord)
+//     saveExperience()
 
-async function loadExperience(){
-  try{
-    const experiencesListJSON = await fs.readFile(EXPERIENCES_LIST_FILE_PATH,'utf-8')
-    experiencesList.push(JSON.parse(...experiencesListJSON))
-  }catch(err){
-     throw err
-  }
-}
+//   }catch(err){
+//     throw err
+//   }
+// }
 
-async function saveExperience(){
-  try{
-    const experienceJSON = JSON.stringify(experiencesList)
-    await fs.writeFile(EXPERIENCES_LIST_FILE_PATH,'utf-8')
+// async function loadExperience(){
+//   try{
+//     const experiencesListJSON = await fs.readFile(EXPERIENCES_LIST_FILE_PATH,'utf-8')
+//     experiencesList.push(JSON.parse(...experiencesListJSON))
+//   }catch(err){
+//      throw err
+//   }
+// }
 
-  }catch(err){
-    throw err
-  }
-}
+// async function saveExperience(){
+//   try{
+//     const experienceJSON = JSON.stringify(experiencesList)
+//     await fs.writeFile(EXPERIENCES_LIST_FILE_PATH,'utf-8')
 
-router.get('/test',(req,res)=>{
-  res.sendFile(path.join(__dirname + '/myExperience.html'))
-  // res.sendFile('myExperience.html')
-})
+//   }catch(err){
+//     throw err
+//   }
+// }
 
+// router.get('/test',(req,res)=>{
+//   res.sendFile(path.join(__dirname + '/myExperience.html'))
+// })
+
+app.use(express.static(path.join(__dirname,'public')));
 app.use(router)
 app.use(loggerMiddleware)
-
-app.use(express.static(__dirname));
 
 app.listen(port,()=>{
   console.log(`Our app listening on port ${port}`)
 })
+
+
+

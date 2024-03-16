@@ -117,7 +117,6 @@
 
   <!-- Start -- Main Content  -->
   <!-- ********************************************************************************************************* -->
-
   <main class="container myexperince-section-wrapper my-4">
     <h3>تجربیات من از مدیتیشن ساهاجا یوگا</h3>
     <div class="row">
@@ -176,7 +175,6 @@
       </div>
     </div>
   </main>
-
   <!-- ********************************************************************************************************* -->
   <!-- End  -- Main Content   -->
 
@@ -277,6 +275,7 @@
     const txtSubject = document.querySelector('#txtSubject')
     const txtEmail = document.querySelector('#txtEmail')
     const txtEexperience = document.querySelector('#txtEexperience')
+    const txtFullname = document.querySelector('#txtFullname')
 
     txtSubject.addEventListener('input', (e) => {
       const { target } = e
@@ -372,11 +371,18 @@
 
     btnSubmit.addEventListener('click',(e)=>{
       e.preventDefault()
-
+      try{
+        if(checkValidCaptcha){
+        addNewExperience()
+      }
+      }catch(err){
+        throw err
+      }
 
     })
 
     //CAPTCHA VALIDATION :
+    //Start *********************
     const captchaValue = document.querySelector('#captchaValue')
     const captchaInput = document.querySelector('#captchaInput')
     const btnReload = document.querySelector('.btnReload')
@@ -390,22 +396,12 @@
     function getCaptcha() {
       for (let i = 0; i < 5; i++) { //getting 6 random characters from the array
         let randomCharacter = allChars[Math.floor(Math.random() * allChars.length)];
+        console.log(randomCharacter)
         captchaValue.innerText += `${randomCharacter}`; //passing 5 random characters inside captcha innerText
       }
     }
 
     getCaptcha();
-    function checkCaptcha(){
-      let inputVal = captchaInput.value.split('').join(' ');
-      if (inputVal == captchaValue.innerText) { //if captcha matched
-        alert('Captcha Matched ! Damet Gharam')
-        return true
-      } else {
-        alert('Riddi dadashh !! ')
-        return false
-      }
-
-    }
 
     function checkValidCaptcha(){
       btnSubmit.preventDefault(); //preventing button from it's default behaviour
@@ -432,6 +428,53 @@
       removeContent()
       getCaptcha()
     })
+    //CAPTCHA VALIDATION :
+    //End *********************
+
+    //Save Record :
+    //Start *******************
+    import fs from 'fs/promises'
+
+    const app = express()
+    const router = express.router()
+    const EXPERIENCE_LIST_FILE_PATH = './data/experience_list.json'
+    const experienceList = []
+    
+    console.log('Save Record ...')
+    
+    async function addNewExperience(){
+      try{
+        const newRecord = {
+          id:experienceList.length,
+          subject : txtSubject.value,
+          Email : txtEmail.value,
+          fullName : txtFullname.value,
+          Description : txtEexperience.value,
+          isActive : false,
+          creationDate : ' ',
+          updatedDate : ' ',
+        }
+        
+        experienceList.push(newRecord)
+        saveExperience()
+
+      }catch(err){
+        throw err
+      }
+    }
+
+    async function saveExperience(){
+      try{
+        const experienceJSON = JSON.stringify(experiencesList)
+        await fs.writeFile(EXPERIENCES_LIST_FILE_PATH,experienceJSON)
+
+      }catch(err){
+        throw err
+      }
+    }
+
+    //Save Record :
+    //End *******************
 
   </script>
 </body>
