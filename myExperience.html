@@ -406,23 +406,21 @@
       }
 
     }
-    checkBtn.addEventListener("click", e => {
-      e.preventDefault(); //preventing button from it's default behaviour
-      statusTxt.style.display = "block";
+
+    function checkValidCaptcha(){
+      btnSubmit.preventDefault(); //preventing button from it's default behaviour
       //adding space after each character of user entered values because I've added spaces while generating captcha
-      let inputVal = inputField.value.split('').join(' ');
-      if (inputVal == captcha.innerText) { //if captcha matched
+      let inputVal = captchaInput.value.split('').join(' ');
+      if (inputVal == captchaValue.innerText) { //if captcha matched
+        alert('Captcha is Valid !')
+        return true
         statusTxt.style.color = "#4db2ec";
         statusTxt.innerText = "Nice! You don't appear to be a robot.";
-        setTimeout(() => { //calling removeContent & getCaptcha after 2 seconds
-          removeContent();
-          getCaptcha();
-        }, 2000);
       } else {
-        statusTxt.style.color = "#ff0000";
-        statusTxt.innerText = "Captcha not matched. Please try again!";
+        alert('Captcha isnot Valid !!!')
+        return false
       }
-    });
+    }
 
 
     function removeContent() {
