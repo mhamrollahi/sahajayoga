@@ -6,7 +6,6 @@ import { fileURLToPath } from 'url'
 const app = express()
 const port = 3000
 const router = express.Router()
-// const EXPERIENCES_LIST_FILE_PATH = './data/experiences_list.json'
 const experiencesList = []
 
 

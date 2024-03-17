@@ -1,15 +1,9 @@
-import fs from 'fs/promises'
-
-
 const errMessageMandatory = document.querySelectorAll("[data-err='mandatory']")
 const errMessageFormatted = document.querySelectorAll("[data-err='formatted']")
 const btnCancel = document.querySelector('#btnCancel')
 const btnSubmit = document.querySelector('#btnSubmit')
 
-console.log(errMessageMandatory)
-console.log(errMessageFormatted)
-
-
+console.log('myExperience test 3')
 
 errMessageMandatory.forEach((value, key) => {
   value.hidden = true
@@ -156,10 +150,8 @@ function checkValidCaptcha(){
   if (inputVal == captchaValue.innerText) { //if captcha matched
     alert('Captcha is Valid !')
     return true
-    statusTxt.style.color = "#4db2ec";
-    statusTxt.innerText = "Nice! You don't appear to be a robot.";
   } else {
-    alert('Captcha isnot Valid !!!')
+    alert("Captcha isn't Valid !!!")
     return false
   }
 }
@@ -177,15 +169,15 @@ btnReload.addEventListener('click', (e) => {
 //CAPTCHA VALIDATION :
 //End *********************
 
+// import fs from 'fs/promises'
 //Save Record :
 //Start *******************
 
-const app = express()
-const router = express.router()
-const EXPERIENCE_LIST_FILE_PATH = './data/experience_list.json'
 const experienceList = []
+const EXPERIENCES_LIST_FILE_PATH = './data/experiences_list.json'
 
 console.log('Save Record ...')
+console.log(`Subject = ${txtSubject.value}`)
 
 async function addNewExperience(){
   try{
@@ -210,8 +202,8 @@ async function addNewExperience(){
 
 async function saveExperience(){
   try{
-    const experienceJSON = JSON.stringify(experiencesList)
-    await fs.writeFile(EXPERIENCES_LIST_FILE_PATH,experienceJSON)
+    // const experienceJSON = JSON.stringify(experiencesList)
+    // await fs.writeFile(EXPERIENCES_LIST_FILE_PATH,experienceJSON)
 
   }catch(err){
     throw err
@@ -221,3 +213,7 @@ async function saveExperience(){
 //Save Record :
 //End *******************
 
+
+
+
+export default saveExperience
