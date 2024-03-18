@@ -14,7 +14,7 @@ errMessageFormatted.forEach((value, key) => {
 
 const txtSubject = document.querySelector('#txtSubject')
 const txtEmail = document.querySelector('#txtEmail')
-const txtEexperience = document.querySelector('#txtEexperience')
+const txtExperience = document.querySelector('#txtExperience')
 const txtFullname = document.querySelector('#txtFullname')
 
 txtSubject.addEventListener('input', (e) => {
@@ -72,14 +72,14 @@ txtEmail.addEventListener('input', (e) => {
 })
 
 
-txtEexperience.addEventListener('input', (e) => {
+txtExperience.addEventListener('input', (e) => {
   const { target } = e
 
   target.setCustomValidity('')
   errMessageMandatory[2].hidden = true
 
   if (target.validity.tooShort) {
-    //txtEexperience Error
+    //txtExperience Error
     errMessageFormatted[2].hidden = false
     target.setCustomValidity('متن خاطره / تجربه باید بیش از 40 کاراکتر باشد')
   } else {
@@ -87,7 +87,7 @@ txtEexperience.addEventListener('input', (e) => {
     target.setCustomValidity('')
   }
 })
-txtEexperience.addEventListener('invalid', (e) => {
+txtExperience.addEventListener('invalid', (e) => {
   const { target } = e
 
   if (target.validity.valueMissing) {
@@ -169,9 +169,16 @@ btnReload.addEventListener('click', (e) => {
 //CAPTCHA VALIDATION :
 //End *********************
 
-// import fs from 'fs/promises'
+
 //Save Record :
 //Start *******************
+
+
+// import fs from 'fs/promises'
+
+const fs = require('fs')
+
+// import {fs} from 'fs';
 
 const experienceList = []
 const EXPERIENCES_LIST_FILE_PATH = './data/experiences_list.json'
@@ -186,7 +193,7 @@ async function addNewExperience(){
       subject : txtSubject.value,
       Email : txtEmail.value,
       fullName : txtFullname.value,
-      Description : txtEexperience.value,
+      Description : txtExperience.value,
       isActive : false,
       creationDate : ' ',
       updatedDate : ' ',
@@ -202,8 +209,8 @@ async function addNewExperience(){
 
 async function saveExperience(){
   try{
-    // const experienceJSON = JSON.stringify(experiencesList)
-    // await fs.writeFile(EXPERIENCES_LIST_FILE_PATH,experienceJSON)
+    const experienceJSON = JSON.stringify(experiencesList)
+    await fs.writeFile(EXPERIENCES_LIST_FILE_PATH,experienceJSON)
 
   }catch(err){
     throw err
@@ -211,9 +218,4 @@ async function saveExperience(){
 }
 
 //Save Record :
-//End *******************
-
-
-
-
-export default saveExperience
+//End ******************
