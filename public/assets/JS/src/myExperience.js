@@ -172,13 +172,13 @@ btnReload.addEventListener('click', (e) => {
 
 //Save Record :
 //Start *******************
-
+import path from 'path'
 import fs from 'fs/promises'
 //const fs = require('fs')
 //import {fs} from 'fs';
 
 const experienceList = []
-const EXPERIENCES_LIST_FILE_PATH = './data/experiences_list.json'
+const EXPERIENCES_LIST_FILE_PATH = './public/data/experiences_list.json'
 
 console.log('Save Record ...')
 console.log(`Subject = ${txtSubject.value}`)
