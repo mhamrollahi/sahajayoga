@@ -3,7 +3,9 @@ const errMessageFormatted = document.querySelectorAll("[data-err='formatted']")
 const btnCancel = document.querySelector('#btnCancel')
 const btnSubmit = document.querySelector('#btnSubmit')
 
-console.log('myExperience test 3')
+const captchaValue = document.querySelector('#captchaValue')
+const captchaInput = document.querySelector('#captchaInput')
+
 
 errMessageMandatory.forEach((value, key) => {
   value.hidden = true
@@ -14,7 +16,7 @@ errMessageFormatted.forEach((value, key) => {
 
 const txtSubject = document.querySelector('#txtSubject')
 const txtEmail = document.querySelector('#txtEmail')
-const txtExperience = document.querySelector('#txtExperience')
+// const txtExperience = document.querySelector('#txtExperience')
 const txtFullname = document.querySelector('#txtFullname')
 
 txtSubject.addEventListener('input', (e) => {
@@ -97,6 +99,17 @@ txtExperience.addEventListener('invalid', (e) => {
 })
 
 
+captchaInput.addEventListener('invalid', (e)=>{
+  const { target } = e
+
+  if (target.validity.valueMissing) {
+    target.setCustomValidity('لطفا عبارت کپچا را وارد کنید.')
+  }else{
+    target.setCustomValidity('')
+  }
+
+})
+
 btnCancel.addEventListener('click', (e) => {
   errMessageMandatory.forEach((val, key) => {
     val.hidden = true
@@ -110,10 +123,12 @@ btnCancel.addEventListener('click', (e) => {
 
 //Save New Record ....
 btnSubmit.addEventListener('click',(e)=>{
-  e.preventDefault()
+  // e.preventDefault()
   try{
-    if(checkValidCaptcha){
-    addNewExperience()
+    if(checkValidCaptcha()){
+      console.log('inside a function submit ...')
+      addNewExperience()
+      return
   }
   }catch(err){
     throw err
@@ -123,20 +138,16 @@ btnSubmit.addEventListener('click',(e)=>{
 
 //CAPTCHA VALIDATION :
 //Start *********************
-const captchaValue = document.querySelector('#captchaValue')
-const captchaInput = document.querySelector('#captchaInput')
 const btnReload = document.querySelector('.btnReload')
 
-let allChars = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
+let allChars = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','J', 'K', 'M', 'N', 'O',
   'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd',
-  'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-  't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
-  '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '=', '<', '>', '|', '/', '~'];
+  'e', 'f', 'g', 'h', 'i', 'j', 'k', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+  't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 function getCaptcha() {
-  for (let i = 0; i < 5; i++) { //getting 6 random characters from the array
+  for (let i = 0; i < 3; i++) { //getting 6 random characters from the array
     let randomCharacter = allChars[Math.floor(Math.random() * allChars.length)];
-    console.log(randomCharacter)
     captchaValue.innerText += `${randomCharacter}`; //passing 5 random characters inside captcha innerText
   }
 }
@@ -144,14 +155,19 @@ function getCaptcha() {
 getCaptcha();
 
 function checkValidCaptcha(){
-  btnSubmit.preventDefault(); //preventing button from it's default behaviour
   //adding space after each character of user entered values because I've added spaces while generating captcha
-  let inputVal = captchaInput.value.split('').join(' ');
-  if (inputVal == captchaValue.innerText) { //if captcha matched
+
+  console.log('Captcha Input = ',captchaInput.value)
+  console.log('Captcha Value = ',captchaValue.innerText)
+
+  console.log(captchaInput.value.localeCompare(captchaValue.innerText))
+
+  // if (inputVal == captchaValue.innerText) { //if captcha matched
+  if (captchaInput.value.localeCompare(captchaValue.innerText)==0) { //if captcha matched
     alert('Captcha is Valid !')
     return true
   } else {
-    alert("Captcha isn't Valid !!!")
+    // alert("Captcha isn't Valid !!!")
     return false
   }
 }
@@ -172,47 +188,49 @@ btnReload.addEventListener('click', (e) => {
 
 //Save Record :
 //Start *******************
-import path from 'path'
-import fs from 'fs/promises'
+// import path from 'path'
+// import fs from 'fs/promises'
 //const fs = require('fs')
 //import {fs} from 'fs';
 
-const experienceList = []
-const EXPERIENCES_LIST_FILE_PATH = './public/data/experiences_list.json'
+// const experienceList = []
+// const EXPERIENCES_LIST_FILE_PATH = './public/data/experiences_list.json'
 
-console.log('Save Record ...')
-console.log(`Subject = ${txtSubject.value}`)
+// console.log('Save Record ...')
+// console.log(`Subject = ${txtSubject.value}`)
 
-async function addNewExperience(){
-  try{
-    const newRecord = {
-      id:experienceList.length,
-      subject : txtSubject.value,
-      Email : txtEmail.value,
-      fullName : txtFullname.value,
-      Description : txtExperience.value,
-      isActive : false,
-      creationDate : ' ',
-      updatedDate : ' ',
-    }
+// async function addNewExperience(){
+//   try{
+//     const newRecord = {
+//       id:experienceList.length,
+//       subject : txtSubject.value,
+//       Email : txtEmail.value,
+//       fullName : txtFullname.value,
+//       Description : txtExperience.value,
+//       isActive : false,
+//       creationDate : ' ',
+//       updatedDate : ' ',
+//     }
     
-    experienceList.push(newRecord)
-    saveExperience()
+//     console.log(newRecord)
 
-  }catch(err){
-    throw err
-  }
-}
+//     experienceList.push(newRecord)
+//     saveExperience()
 
-async function saveExperience(){
-  try{
-    const experienceJSON = JSON.stringify(experiencesList)
-    await fs.writeFile(EXPERIENCES_LIST_FILE_PATH,experienceJSON)
+//   }catch(err){
+//     throw err
+//   }
+// }
 
-  }catch(err){
-    throw err
-  }
-}
+// async function saveExperience(){
+//   try{
+//     const experienceJSON = JSON.stringify(experiencesList)
+//     await fs.writeFile(EXPERIENCES_LIST_FILE_PATH,experienceJSON)
+
+//   }catch(err){
+//     throw err
+//   }
+// }
 
 //Save Record :
 //End ******************

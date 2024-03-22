@@ -19,16 +19,23 @@ const __dirname = path.dirname(__filename);
 console.log("dirName = ", __dirname);
 console.log("fileName = ", __filename);
 
+app.use(express.static(path.join(__dirname, "public")));
+
+app.use(express.urlencoded({extended:false}));
+app.use(router);
+app.use(loggerMiddleware);
+
+
 function loggerMiddleware(req, res, next) {
   console.log("New Request = ", req.method, req.url);
 }
 
-const _loadExperience = await loadExperience()
-experiencesList.push(..._loadExperience)
+const _loadExperience = await loadExperience();
+experiencesList.push(..._loadExperience);
 
+export function addNewExperience() {
+  console.log("inside of index.js !! ABALFAZELLLLL ..... ");
 
-function addNewExperience() {
-  console.log("in addNewExprience function ...");
   const id = generateNewExperienceID(experiencesList);
 
   try {
@@ -43,24 +50,25 @@ function addNewExperience() {
       updatedDate: " ",
     };
 
-    console.log('new rocord :',newRecord)
+    console.log("new rocord :", newRecord);
 
     experiencesList.push(newRecord);
     saveExperience(experiencesList);
-
   } catch (err) {
     throw err;
   }
 }
 
+// router.get("/", (req, res) => {
+//   res.send("Baba to digeh ki hasti ....");
+//   console.log("damet garmmm....");
+// });
 
 router.post("/new", (req, res) => {
   try {
-
     console.log("Add new Exprience ...");
     addNewExperience();
-    res.send('New rocord added ...')
-
+    res.send("New rocord added ...");
   } catch (err) {
     throw err;
   }
@@ -75,13 +83,55 @@ router.post("/new", (req, res) => {
 //   }
 // }
 
-// router.get('/test',(req,res)=>{
-//   res.sendFile(path.join(__dirname + '/myExperience.html'))
-// })
+//Test for Save
 
-// app.use(express.static(path.join(__dirname, "public")));
-app.use(router);
-app.use(loggerMiddleware);
+router.get("/myExperience", (req, res) => {
+  // res.send(`
+  // <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  // <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  // <div class="container">
+  //   <h1 class="text-center mt-3 mb-3">خودم دارم تست می کنم .گاییده شدم تا الان که یه چیزی فهمیدممم..</h1>
+  //   <div class="card">
+  //     <div class="card-header">Sample Form</div>
+  //     <div class="card-body">
+  //       <form method="POST" action="/test">
+  //         <div class="mb-3">
+  //           <label>First Name</label>
+  //           <input type="text" name="first_name" id="first_name" class="form-control" />
+  //         </div>
+  //         <div class="mb-3">
+  //           <label>Last Name</label>
+  //           <input type="text" name="last_name" id="last_name" class="form-control" />
+  //         </div>
+  //         <div class="mb-3">
+  //                   <label>Email Address</label>
+  //                   <input type="text" name="email_address" id="email_address" class="form-control" />
+  //                 </div>
+  //                 <div class="mb-3">
+  //                   <input type="submit" name="submit_button" class="btn btn-primary" value="Add" />
+  //                 </div>
+  //       </form>
+  //     </div>
+  //   </div>
+  // </div>
+  // `);
+
+  res.sendFile(path.join(__dirname , "/public/myExperience.html"));
+
+
+});
+
+router.post("/myExperience", (req, res, next) => {
+  console.log('inside of index.js file and post router ...!!!')
+  res.send(req.body);
+  console.log(req.body);
+
+  // const { first_name, last_name, email_address } = req.body;
+
+  // console.log(first_name, last_name, email_address);
+});
+
+//Test for Save
 
 app.listen(port, () => {
   console.log(`Our app listening on port ${port}`);

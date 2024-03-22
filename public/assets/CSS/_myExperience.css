@@ -93,6 +93,7 @@
   top: -38px;
   right: 20px;
   font-weight: 500;
+
 }
 .myexperince-section-wrapper #captchaValue{
   position: relative;
@@ -100,7 +101,8 @@
   right: 100px;
   font-weight: 700;
   font-size: 24px;
-  letter-spacing: 4px;
+  direction: ltr;
+  letter-spacing: 3px;
 }
 
 .myexperince-section-wrapper .btnReload {
@@ -114,14 +116,16 @@
   height: 35px;
   width: 70px;
   user-select: none;
+  border-radius: 5px 0 0 5px;
 }
 .myexperince-section-wrapper .btnReload:hover{
-  background: #2fa5e9;
+  background: #2090d1;
 }
 .myexperince-section-wrapper #captchaInput{
   text-align: center;
   font-size: 18px;
   font-weight: 500;
+  direction: ltr;
 }
 @media screen and (max-width:880px) {
   .myexperince-section-wrapper h3{
