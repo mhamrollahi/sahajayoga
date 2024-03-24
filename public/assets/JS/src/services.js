@@ -1,7 +1,7 @@
-import path from "path";
 import fs from "fs/promises";
 
 const EXPERIENCES_LIST_FILE_PATH = './public/data/experiences_list.json'
+
 
 export function generateNewExperienceID(experiencesList) {
   const lastExperience = experiencesList[experiencesList.length - 1];
@@ -13,10 +13,34 @@ export function generateNewExperienceID(experiencesList) {
   return id;
 }
 
+export function addNewExperience(_experienceRec,experiencesList) {
+  const id = generateNewExperienceID(experiencesList);
+
+  try { 
+    const newRecord = {
+      id: id,
+      subject: _experienceRec.txtSubject,
+      Email: _experienceRec.txtEmail,
+      fullName: _experienceRec.txtFullname,
+      Description: _experienceRec.txtExperience,
+      isActive: false,
+      creationDate: " ",
+      updatedDate: " ",
+    };
+
+    // console.log("new rocord :", newRecord);
+
+    experiencesList.push(newRecord);
+    saveExperience(experiencesList);
+  } catch (err) {
+    throw err;
+  }
+}
+
 export async function saveExperience(experiencesList){
   try {
     const experienceJSON = JSON.stringify(experiencesList);
-    console.log('save Experience ...',experienceJSON)
+    console.log('save Experience ... experienceJSON =',experienceJSON)
 
     await fs.writeFile(EXPERIENCES_LIST_FILE_PATH, experienceJSON);
 
