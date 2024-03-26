@@ -2,8 +2,8 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import loggerMiddleware from "./middleware.js";
-import bodyParser from 'body-parser'
-import authRouter from "./server/routes/authRouters.js"
+import bodyParser from "body-parser";
+import authRouter from "./server/routes/authRouters.js";
 
 import {
   addNewExperience,
@@ -23,27 +23,29 @@ console.log("fileName = ", __filename);
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use(bodyParser.urlencoded({urlencoded:false}))
-app.use(bodyParser.json( ))
+app.use(bodyParser.urlencoded({ urlencoded: false }));
+app.use(bodyParser.json());
 app.use(loggerMiddleware);
 
 app.use(router);
-app.use('/auth',authRouter)
-
+app.use("/auth", authRouter);
 
 const _loadExperience = await loadExperience();
 experiencesList.push(..._loadExperience);
 
-
 router.get("/myExperience", (req, res) => {
-  res.sendFile(path.join(__dirname, "/public/myExperience.html"));
+  try {
+    throw new error('error in application')
+    res.sendFile(path.join(__dirname, "/public/myExperience.html"));
+  } catch (err) {
+    console.log(err.message)
+  }
 });
 
 router.post("/myExperience", (req, res, next) => {
   res.send(req.body);
-  addNewExperience(req.body,experiencesList)
+  addNewExperience(req.body, experiencesList);
 });
-
 
 const startApp = () => {
   app.listen(port, () => {
