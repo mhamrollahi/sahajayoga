@@ -3,10 +3,10 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 const authRouter = express.Router();
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('in auth Routes file ... ',__dirname)
 
 authRouter.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname,'..','..','/public/auth/login.html'))

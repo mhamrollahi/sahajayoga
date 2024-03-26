@@ -18,9 +18,6 @@ const experiencesList = [];
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log("dirName = ", __dirname);
-console.log("fileName = ", __filename);
-
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(bodyParser.urlencoded({ urlencoded: false }));
@@ -33,14 +30,27 @@ app.use("/auth", authRouter);
 const _loadExperience = await loadExperience();
 experiencesList.push(..._loadExperience);
 
-router.get("/myExperience", (req, res) => {
+router.get("/myExperience", (req, res,next) => {
   try {
-    throw new error('error in application')
+    throw new Error('error in application')
     res.sendFile(path.join(__dirname, "/public/myExperience.html"));
   } catch (err) {
     console.log(err.message)
   }
 });
+
+router.get('/test',(req,res,next)=>{
+  try{
+    throw new Error('خطا می دهد.....')
+      res.send({
+        message:'تست می شود. ....',
+        success:true
+    })
+  }catch(err){
+
+  }
+
+})
 
 router.post("/myExperience", (req, res, next) => {
   res.send(req.body);
