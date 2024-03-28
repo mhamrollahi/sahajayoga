@@ -39,15 +39,28 @@ router.get("/myExperience", (req, res,next) => {
   }
 });
 
+app.get('/test2',(req,res,next)=>{
+  try{
+    throw new Error('Erroorrr ....')
+    res.send({
+      message:'salam khobi ...',
+      success: true
+    })
+  }catch(err){
+    console.log(err)
+  }
+})
+
 router.get('/test',(req,res,next)=>{
   try{
-    throw new Error('خطا می دهد.....')
+    throw new Error('Error Midahad .....')
       res.send({
         message:'تست می شود. ....',
         success:true
     })
   }catch(err){
-
+    console.log(err.message)
+    res.end()
   }
 
 })
