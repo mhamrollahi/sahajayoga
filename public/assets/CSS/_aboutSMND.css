@@ -14,24 +14,49 @@
 }
 
 .about-mataji-section-wrapper .right-sec p {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 46px;
+  line-height: 50px;
   text-align: justify;
   padding: 10px 30px;
   margin-top: 20px;
 }
+.about-mataji-section-wrapper .right-sec-detail p {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: center;
+  padding: 10px 30px;
+  margin-top: 80px;
+}
 
-.about-mataji-section-wrapper .shrimtji-sec2 p{
-  font-size: 19px;
+.about-mataji-section-wrapper img.img-mataji-tavalod2{
+  margin-top: 20px;
+}
+.about-mataji-section-wrapper .mataji-sec2 p{
+  font-size: 18px;
   font-weight: 500;
   line-height: 45px;
   text-align: justify;
 }
-.about-mataji-section-wrapper .shrimtji-sec2 a{
+.about-mataji-section-wrapper .mt-x{
+  margin-top: 100px!important;
+}
+
+.img-babamama{
+  position: relative;
+  top: 80px;
+  right: 100px;
+  border-radius: 10px;
+}
+.about-mataji-section-wrapper .mataji-sec-nojavani p{
+  margin-top: 50px;
+}
+
+.about-mataji-section-wrapper .mataji-sec2 a{
   font-weight: 600;
 }
-.about-mataji-section-wrapper .shrimtji-sec2 q{
+.about-mataji-section-wrapper .mataji-sec2 q{
   font-weight: 600;
   font-style: italic;
 }
@@ -49,8 +74,8 @@
   .about-mataji-section-wrapper h3{
     font-size: 22px;
   }
-  .about-mataji-section-wrapper .right-sec p {
-    font-size: 18px;
+  .about-mataji-section-wrapper .right-sec p,.about-mataji-section-wrapper .right-sec-detail p  {
+    font-size: 16px;
     margin-top: 0px;
     padding: 5px 3px;
     line-height: 30px;
@@ -58,87 +83,9 @@
   .about-mataji-section-wrapper .right-sec h3 {
     font-size: 20px;
   }
-  .about-mataji-section-wrapper .chakra-sec h3 {
-    font-size: 22px;
-  }
-  .about-mataji-section-wrapper .chakra-sec{
-    margin-top: 5px!important;
-  }
-  .about-mataji-section-wrapper .chakra-sec p {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 32px;
-  }
-
-  .about-mataji-section-wrapper .img-chakras {
-    margin-top: 10px;
-  }
-  .shape,
-  .shape-octagon,
-  .shape-nonagon,
-  .shape-heptagon,
-  .shape-decagon {
-    display: none;
-  }
-  .about-mataji-section-wrapper .chakra-shape {
-    height: 1000px;
-  }
-  .about-mataji-section-wrapper .chakra-shape p {
-    font-size: 14px;
-    line-height: 30px;
-    padding: 1px;
-  }
-  .about-mataji-section-wrapper .chakra-shape h3 {
-    font-size: 20px;
-  }
-  .about-mataji-section-wrapper .chakra-sec p a {
+  .about-mataji-section-wrapper .mataji-sec2 p{
     font-size: 15px;
-    font-weight: 500;
-  }
-}
-@media screen and (max-width: 900px) and (min-width: 678px) {
-  .about-mataji-section-wrapper .right-sec p {
-    font-size: 18px;
-    margin-top: 0px;
-    padding: 5px 3px;
     line-height: 30px;
-  }
-  .about-mataji-section-wrapper .right-sec h3 {
-    font-size: 20px;
-  }
-  .about-mataji-section-wrapper .chakra-sec h3 {
-    font-size: 22px;
-  }
-
-  .about-mataji-section-wrapper .chakra-sec p {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 32px;
-  }
-
-  .about-mataji-section-wrapper .img-chakras {
     margin-top: 10px;
-  }
-  .shape,
-  .shape-octagon,
-  .shape-nonagon,
-  .shape-heptagon,
-  .shape-decagon {
-    display: none;
-  }
-  .about-mataji-section-wrapper .chakra-shape {
-    height: 1000px;
-  }
-  .about-mataji-section-wrapper .chakra-shape p {
-    font-size: 14px;
-    line-height: 30px;
-    padding: 1px;
-  }
-  .about-mataji-section-wrapper .chakra-shape h3 {
-    font-size: 20px;
-  }
-  .about-mataji-section-wrapper .chakra-sec p a {
-    font-size: 15px;
-    font-weight: 500;
   }
 }
