@@ -30,37 +30,37 @@
   margin-top: 80px;
 }
 
-.about-mataji-section-wrapper img.img-mataji-tavalod2{
+.about-mataji-section-wrapper img.img-mataji-tavalod2 {
   margin-top: 20px;
 }
-.about-mataji-section-wrapper .mataji-sec2 p{
+.about-mataji-section-wrapper .mataji-sec2 p {
   font-size: 18px;
   font-weight: 500;
   line-height: 45px;
   text-align: justify;
 }
-.about-mataji-section-wrapper .mt-x{
-  margin-top: 100px!important;
+.about-mataji-section-wrapper .mt-x {
+  margin-top: 100px !important;
 }
 
-.img-babamama{
+.img-babamama {
   position: relative;
   top: 80px;
   right: 100px;
   border-radius: 10px;
 }
-.about-mataji-section-wrapper .mataji-sec-nojavani p{
+.about-mataji-section-wrapper .mataji-sec-nojavani p {
   margin-top: 50px;
 }
 
-.about-mataji-section-wrapper .mataji-sec2 a{
+.about-mataji-section-wrapper .mataji-sec2 a {
   font-weight: 600;
 }
-.about-mataji-section-wrapper .mataji-sec2 q{
+.about-mataji-section-wrapper .mataji-sec2 q {
   font-weight: 600;
   font-style: italic;
 }
-.about-mataji-section-wrapper .mataji-detail{
+.about-mataji-section-wrapper .mataji-detail {
   font-size: 20px;
   margin-top: 50px;
   background-color: #ebe7e7;
@@ -69,12 +69,38 @@
   min-width: 600px;
   text-align: center;
 }
+/* #fbf7f4 */
+
+.shape-shrimataji {
+  overflow: hidden;
+  position: absolute;
+  /* min-width: 100%; */
+  /* min-height: 220vh; */
+  z-index: -1;
+}
+.shape-tavalod {
+  top: 180px;
+  left: 0px;
+
+  min-width: 100%;
+  min-height: 370px;
+  /* border: 1px solid red; */
+  /* clip-path: polygon(
+    30% 0%,70% 0%,100% 30%,100% 70%,70% 100%,30% 100%,0% 70%,0% 30%
+  ); */
+  background-image: linear-gradient(
+    90deg,
+    rgba(246, 243, 241, 1) 0%,
+    rgba(243, 224, 210, 1) 100%
+  );
+}
 
 @media screen and (max-width: 678px) {
-  .about-mataji-section-wrapper h3{
+  .about-mataji-section-wrapper h3 {
     font-size: 22px;
   }
-  .about-mataji-section-wrapper .right-sec p,.about-mataji-section-wrapper .right-sec-detail p  {
+  .about-mataji-section-wrapper .right-sec p,
+  .about-mataji-section-wrapper .right-sec-detail p {
     font-size: 16px;
     margin-top: 0px;
     padding: 5px 3px;
@@ -83,7 +109,7 @@
   .about-mataji-section-wrapper .right-sec h3 {
     font-size: 20px;
   }
-  .about-mataji-section-wrapper .mataji-sec2 p{
+  .about-mataji-section-wrapper .mataji-sec2 p {
     font-size: 15px;
     line-height: 30px;
     margin-top: 10px;
