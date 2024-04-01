@@ -69,32 +69,29 @@
   min-width: 600px;
   text-align: center;
 }
-/* #fbf7f4 */
 
 .shape-shrimataji {
   overflow: hidden;
   position: absolute;
-  /* min-width: 100%; */
-  /* min-height: 220vh; */
   z-index: -1;
 }
 .shape-tavalod {
   top: 180px;
   left: 0px;
-
   min-width: 100%;
   min-height: 370px;
-  /* border: 1px solid red; */
-  /* clip-path: polygon(
-    30% 0%,70% 0%,100% 30%,100% 70%,70% 100%,30% 100%,0% 70%,0% 30%
-  ); */
-  background-image: linear-gradient(
-    90deg,
-    rgba(246, 243, 241, 1) 0%,
-    rgba(243, 224, 210, 1) 100%
-  );
+  background-image: linear-gradient(-90deg, rgba(255,255,255,1) 0%, rgba(250,246,243,1) 100%)
 }
 
+.shape-father-bidari{
+  /* border:1px solid red; */
+  top:1100px;
+  left:0px;
+  /* min-width: 10%; */
+  min-height: 270vh;
+  transform: rotate(3deg);
+  background-image: linear-gradient(-90deg, rgba(255,255,255,1) 0%, rgba(214,239,244,1) 100%);
+}
 @media screen and (max-width: 678px) {
   .about-mataji-section-wrapper h3 {
     font-size: 22px;
