@@ -8,6 +8,7 @@
 @import url(../css/_subtleSystem.css);
 @import url(../css/_aboutSMND.css);
 @import url(../CSS/_myExperience.css);
+@import url(../CSS/_aboutKundalini.css);
 
 :root {
   --main-color-orange: orange;
@@ -22,6 +23,7 @@
   --bg-color-self-awareness-even: #ffc2d1;
   --bg-color-self-awareness-odd: #fff0f3;
   --bg-color-mandatory-fields : #db0303;
+  --bg-color-title:#f2b4ce;
 }
 /*  */
 @font-face {
