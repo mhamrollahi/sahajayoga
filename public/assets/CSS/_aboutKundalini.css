@@ -1,54 +1,81 @@
-.about-kundalini-section-wrapper{
+.about-kundalini-section-wrapper {
   text-align: justify;
   color: var(--main-font-color);
 }
-.about-kundalini-section-wrapper h3{
+.about-kundalini-section-wrapper h3 {
   padding: 10px 50px;
   color: var(--main-color-pink);
   font-size: 30px;
   text-align: center;
-  background-image: linear-gradient(90deg, rgba(255,255,255,1) 0%, var(--bg-color-title) 100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    var(--bg-color-title) 100%
+  );
   width: 55%;
-  margin:20px auto;
+  margin: 20px auto;
 }
 
-.about-kundalini-section-wrapper .right-sec-kundalini p{
+.about-kundalini-section-wrapper .right-sec-kundalini p {
   font-size: 20px;
   line-height: 40px;
 }
 
-.about-kundalini-section-wrapper .img-title-kundalini{
+.about-kundalini-section-wrapper .img-title-kundalini {
   border-radius: 10px;
 }
 
-.about-kundalini-section-wrapper .img-kundalini-thumbnail{
-  top:290px;
+.about-kundalini-section-wrapper .img-kundalini-thumbnail {
+  top: 290px;
   right: 650px;
 }
-.about-kundalini-section-wrapper .sec-kundalini{
+.about-kundalini-section-wrapper .sec-kundalini {
   font-size: 18px;
   line-height: 35px;
-  text-align: justify!important;
+  text-align: justify !important;
 }
-.about-kundalini-section-wrapper .sec-kundalini a{
+.about-kundalini-section-wrapper .sec-kundalini a {
   font-weight: 600;
 }
 
-.about-kundalini-section-wrapper .sec-kundalini a:hover{
+.about-kundalini-section-wrapper .sec-kundalini a:hover {
   font-style: italic;
   font-weight: 700;
 }
 
-.about-kundalini-section-wrapper .img-quran{
-  margin-top: 140px!important;
+.about-kundalini-section-wrapper .img-quran {
+  margin-top: 140px !important;
   margin-right: 20px;
 }
 
-.about-kundalini-section-wrapper .img-bidari-kundalini{
-  margin-top: 120px!important;
+.about-kundalini-section-wrapper .img-bidari-kundalini {
+  margin-top: 120px !important;
 }
 
-.about-kundalini-section-wrapper .img-kundalini-footer{
+.about-kundalini-section-wrapper .img-kundalini-footer {
   right: 530px;
   top: 260px;
+}
+
+@media screen and (max-width: 678px) {
+  .about-kundalini-section-wrapper h3 {
+    font-size: 22px;
+    width: 90%;
+    line-height: 33px;
+  }
+  .about-kundalini-section-wrapper .right-sec-kundalini p,
+  .about-kundalini-section-wrapper .sec-kundalini {
+    font-size: 16px;
+    margin-top: 0px;
+    padding: 5px 3px;
+    line-height: 30px;
+  }
+  .about-kundalini-section-wrapper .img-kundalini-footer {
+    right: 410px;
+    top: 250px;
+  }
+  .about-kundalini-section-wrapper .img-kundalini-thumbnail {
+    top: 380px;
+    right: 410px;
+  }
 }
