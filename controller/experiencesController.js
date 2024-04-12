@@ -7,6 +7,7 @@ class experienceController {
   }
 
   test(req, res) {
+    console.log('in experience Controller ...')
     res.send({
       success: true,
       message: "from experience Controller test Route .... Damam",

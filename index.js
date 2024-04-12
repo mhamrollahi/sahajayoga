@@ -5,9 +5,6 @@ import loggerMiddleware from "./middleware.js";
 import bodyParser from "body-parser";
 import mainRouter  from "./routes/index.js";
 
-import authRouter from "./routes/authRouters.js";
-
-
 
 import {
   addNewExperience,
