@@ -4,16 +4,17 @@ import { fileURLToPath } from "url";
 import loggerMiddleware from "./middleware.js";
 import bodyParser from "body-parser";
 import mainRouter  from "./routes/index.js";
-
+import dotenv from "dotenv";
 
 import {
   addNewExperience,
   loadExperience,
 } from "./public/assets/JS/src/services.js";
 
+dotenv.config()
 
 const app = express();
-const port = 3000;
+const port = process.env.APP_PORT;
 const router = express.Router();
 const experiencesList = [];
 
