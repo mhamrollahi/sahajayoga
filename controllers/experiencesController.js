@@ -1,4 +1,4 @@
-import experienceModel from "../model/experienceModel.js";
+import experienceModel from "../models/experienceModel.js";
 
 class experienceController {
   index(req, res) {
