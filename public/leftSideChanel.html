@@ -11,8 +11,29 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="assets/CSS/bootstrap.rtl.min.css">
   <link rel="stylesheet" href="assets/CSS/aos.css">
+  <link rel="stylesheet" href="assets/CSS/mdb.rtl.min.css">
 
   <link rel="stylesheet" href="assets/CSS/style.css">
+  <style>
+    .dropdown-menu li {
+position: relative;
+}
+.dropdown-menu .dropdown-submenu {
+display: none;
+position: absolute;
+left: 100%;
+top: -7px;
+}
+.dropdown-menu .dropdown-submenu-left {
+right: 100%;
+left: auto;
+}
+.dropdown-menu > li:hover > .dropdown-submenu {
+display: block;
+}
+  </style>
+
+
   <link rel="shortcut icon" href="assets/Images/Thumbnail/Log.ico" />
 </head>
 
@@ -86,7 +107,17 @@
                     <a class="dropdown-item" href="aboutSubtleSystem.html">آشنایی با سیستم ظریف انرژیتیک</a>
                     <a class="dropdown-item" href="aboutKundalini.html">درباره کندالینی</a>
                     <a class="dropdown-item" href="#">معرفی چاکراها</a>
-                    <a class="dropdown-item" href="#">نادی‌های انرژی</a>
+                    <a class="dropdown-item dropdown-toggle" href="#"  data-bs-toggle="dropdown">11نادی‌های انرژی</a>
+                    <div class="dropdown-menu  dropdown-menu-custom">
+                      <ul class="dropdown-menu dropdown-submenu">
+                        <li>
+                          <a class="dropdown-item" href="#">Submenu item 1</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Submenu item 2</a>
+                        </li>
+                      </ul>
+                    </div>
                     <a class="dropdown-item" href="#">تکنیک‌های پاکسازی</a>
                   </div>
                 </li>
@@ -115,6 +146,61 @@
   </div>
   <!-- ********************************************************************************************************* -->
   <!-- End -- Menu Section  -->
+
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a data-mdb-dropdown-init class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+            data-mdb-toggle="dropdown" aria-expanded="false">
+            Dropdown link
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">
+                Submenu &raquo;
+              </a>
+              <ul class="dropdown-menu dropdown-submenu">
+                <li>
+                  <a class="dropdown-item" href="#">Submenu item 1</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Submenu item 2</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                  <ul class="dropdown-menu dropdown-submenu">
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 1</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Multi level 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Submenu item 4</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Submenu item 5</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    </nav>
+</div>
+
 
   <!-- Start -- Main Section  -->
   <!-- ********************************************************************************************************* -->
@@ -477,6 +563,7 @@
   <script src="assets/JS/bootstrap.bundle.min.js"></script>
   <script src="assets/JS/jquery-3.2.1.min.js"></script>
   <script src="assets/JS/aos.js"></script>
+  <script src="assets/JS/mdb.umd.min.js"></script>
   <script src="assets/JS/main.js"></script>
 </body>
 
