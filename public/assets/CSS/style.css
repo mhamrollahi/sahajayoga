@@ -110,6 +110,10 @@ a.more-info {
 #scroll-top:hover {
   background-color: #a87497;
 }
+.submenu-left-custom{
+  color: #9c9fa3;
+  vertical-align: -3px;
+}
 
     /* ============ desktop view ============ */
     @media all and (min-width: 992px) {
