@@ -1,0 +1,81 @@
+.leftside-chanel-section-wrapper {
+  text-align: justify;
+  color: var(--main-font-color);
+}
+.leftside-chanel-section-wrapper h3 {
+  padding: 10px 50px;
+  color: var(--main-color-pink);
+  font-size: 30px;
+  text-align: center;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    var(--bg-color-title) 100%
+  );
+  width: 65%;
+  margin: 20px auto;
+}
+
+.leftside-chanel-section-wrapper .right-sec-kundalini p {
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.leftside-chanel-section-wrapper .img-title-kundalini {
+  border-radius: 10px;
+}
+
+.leftside-chanel-section-wrapper .img-kundalini-thumbnail {
+  top: 290px;
+  right: 650px;
+}
+.leftside-chanel-section-wrapper .sec-kundalini {
+  font-size: 18px;
+  line-height: 35px;
+  text-align: justify !important;
+}
+.leftside-chanel-section-wrapper .sec-kundalini a {
+  font-weight: 600;
+}
+
+.leftside-chanel-section-wrapper .sec-kundalini a:hover {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.leftside-chanel-section-wrapper .img-quran {
+  margin-top: 140px !important;
+  margin-right: 20px;
+}
+
+.leftside-chanel-section-wrapper .img-bidari-kundalini {
+  margin-top: 120px !important;
+}
+
+.leftside-chanel-section-wrapper .img-kundalini-footer {
+  right: 530px;
+  top: 260px;
+}
+
+@media screen and (max-width: 678px) {
+  .leftside-chanel-section-wrapper h3 {
+    font-size: 22px;
+    width: 90%;
+    line-height: 33px;
+  }
+  .leftside-chanel-section-wrapper .right-sec-kundalini p,
+  .leftside-chanel-section-wrapper .sec-kundalini {
+    font-size: 16px;
+    margin-top: 0px;
+    padding: 5px 3px;
+    line-height: 30px;
+  }
+  .leftside-chanel-section-wrapper .img-kundalini-footer {
+    right: 410px;
+    top: 250px;
+  }
+  .leftside-chanel-section-wrapper .img-kundalini-thumbnail {
+    top: 380px;
+    right: 410px;
+  }
+}
