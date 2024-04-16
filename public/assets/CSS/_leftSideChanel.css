@@ -57,6 +57,14 @@
   top: 260px;
 }
 
+.submenu-left-custom{
+  /* font-family: "Font Awesome 5 Free";
+  content: "\f100"; 
+  display: inline-block; */
+  color: #9c9fa3;
+  vertical-align: -3px;
+}
+
 @media screen and (max-width: 678px) {
   .leftside-chanel-section-wrapper h3 {
     font-size: 22px;
