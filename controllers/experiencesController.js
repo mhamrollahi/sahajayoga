@@ -2,8 +2,10 @@ import experienceModel from "../models/experienceModel.js";
 
 class experienceController {
   index(req, res) {
-    const allExperiences = experienceModel.all();
-    res.render("experience/index", { experiences: allExperiences });
+    // res.send({message:'list function from experience controllers ....'})
+    const allExperiences = experienceModel.list();
+    res.send(allExperiences)
+    // res.render("experience/index", { experiences: allExperiences });
   }
 
   test(req, res) {

@@ -5,6 +5,7 @@ import loggerMiddleware from "./middleware.js";
 import bodyParser from "body-parser";
 import mainRouter  from "./routes/index.js";
 import dotenv from "dotenv";
+import experiencesController from "./controllers/experiencesController.js";
 
 import {
   addNewExperience,
@@ -44,7 +45,7 @@ router.get("/myExperience", (req, res,next) => {
   }
 });
 
-
+mainRouter.get('/index',experiencesController.index)
 
 
 // app.get('/test2',(req,res,next)=>{
