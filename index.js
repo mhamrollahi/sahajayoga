@@ -37,13 +37,13 @@ app.use(mainRouter)
 const _loadExperience = await loadExperience();
 experiencesList.push(..._loadExperience);
 
-router.get("/myExperience", (req, res,next) => {
-  try {
-    res.sendFile(path.join(__dirname, "/public/myExperience.html"));
-  } catch (err) {
-    console.log(err.message)
-  }
-});
+// router.get("/myExperience", (req, res,next) => {
+//   try {
+//     res.sendFile(path.join(__dirname, "/public/myExperience.html"));
+//   } catch (err) {
+//     console.log(err.message)
+//   }
+// });
 
 mainRouter.get('/index',experiencesController.index)
 

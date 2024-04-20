@@ -1,5 +1,5 @@
 // import {testData,index} from "../models/experienceModel.js";
-import {index,testData} from "../models/experienceModel.js";
+import {index,insertExperience,testData} from "../models/experienceModel.js";
 
 console.log('in experience Controllers file ...');
 class experienceController {
@@ -18,13 +18,33 @@ class experienceController {
 
   test(req, res) {
     console.log('in experience Controller ...')
-    index()
-
     res.send({
       success: true,
       message: "from experience Controller test Route .... Damam",
-      Damet: testData,
+      data_from_model: testData,
     });
+  }
+
+
+ async insertExperience(req,res){
+    try {
+      const newRecord ={
+        fullName: 'New rec from code',
+        Email: 'New rec from code',
+        Title: 'New rec from code',
+        Description: 'New rec from code'
+      }
+
+      const message =await insertExperience(newRecord)
+
+      res.send({
+        success: true,
+        message: `the new record:${message[0].insertId} saved! ...`
+      })
+      res.end()
+    } catch (error) {
+      
+    }
   }
 }
 
