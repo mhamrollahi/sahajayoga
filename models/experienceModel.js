@@ -13,6 +13,7 @@ export async function index(){
 
 export async function insertExperience(newRecord){
   try {
+    
     const sql = `INSERT INTO EXPERIENCES(fullName,Email,Title,Description) 
     VALUES(
         '${newRecord.fullName}', 
@@ -21,7 +22,7 @@ export async function insertExperience(newRecord){
         '${newRecord.Description}'
       )`
 
-    // console.log('sql string = ',sql)
+    console.log('sql string in Model = ',sql)
 
     const message = await myDatabase.query(sql)
     // console.log(message[0].insertId);

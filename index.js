@@ -45,7 +45,7 @@ experiencesList.push(..._loadExperience);
 //   }
 // });
 
-mainRouter.get('/index',experiencesController.index)
+// mainRouter.get('/index',experiencesController.index)
 
 
 // app.get('/test2',(req,res,next)=>{
@@ -74,10 +74,10 @@ mainRouter.get('/index',experiencesController.index)
 
 // })
 
-router.post("/myExperience", (req, res, next) => {
-  res.send(req.body);
-  addNewExperience(req.body, experiencesList);
-});
+// router.post("/myExperience", (req, res, next) => {
+//   res.send(req.body);
+//   addNewExperience(req.body, experiencesList);
+// });
 
 const startApp = () => {
   app.listen(port, () => {

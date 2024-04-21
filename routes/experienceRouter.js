@@ -14,7 +14,7 @@ router.get("/index", experiencesController.index);
 
 router.get("/test", experiencesController.test);
 
-router.get("/insert", experiencesController.insertExperience);
+router.post("/insert", experiencesController.insertExperience);
 
 router.get("/myExperiencetest", (req, res,next) => {
   try {
@@ -23,6 +23,11 @@ router.get("/myExperiencetest", (req, res,next) => {
     console.log(err.message)
   }
 });
+
+// router.post("/myExperience", (req, res, next) => {
+//   res.send(req.body);
+//   addNewExperience(req.body, experiencesList);
+// });
 
 
 export default router

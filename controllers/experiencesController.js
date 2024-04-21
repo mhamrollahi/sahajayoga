@@ -27,12 +27,13 @@ class experienceController {
 
 
  async insertExperience(req,res){
+    console.log('in experience Controllers and insert method ...!',req.body);
     try {
       const newRecord ={
-        fullName: 'New rec from code',
-        Email: 'New rec from code',
-        Title: 'New rec from code',
-        Description: 'New rec from code'
+        fullName: req.body.txtFullname,
+        Email: req.body.txtEmail,
+        Title: req.body.txtSubject,
+        Description: req.body.txtExperience
       }
 
       const message =await insertExperience(newRecord)
@@ -43,7 +44,7 @@ class experienceController {
       })
       res.end()
     } catch (error) {
-      
+      console.log(error.message);
     }
   }
 }
