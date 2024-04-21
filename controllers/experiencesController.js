@@ -1,9 +1,17 @@
 // import {testData,index} from "../models/experienceModel.js";
 import {index,insertExperience,testData} from "../models/experienceModel.js";
+import swal from 'sweetalert'
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 
 console.log('in experience Controllers file ...');
 class experienceController {
- async index(req, res) {
+
+  async index(req, res) {
     
      // res.send({message:'list function from experience controllers ....'})
     const allExperiences = await index()
@@ -27,7 +35,8 @@ class experienceController {
 
 
  async insertExperience(req,res){
-    console.log('in experience Controllers and insert method ...!',req.body);
+    // console.log('in experience Controllers and insert method ...!',req.body);
+    
     try {
       const newRecord ={
         fullName: req.body.txtFullname,
@@ -36,13 +45,25 @@ class experienceController {
         Description: req.body.txtExperience
       }
 
-      const message =await insertExperience(newRecord)
+      const message = await insertExperience(newRecord)
 
-      res.send({
-        success: true,
-        message: `the new record:${message[0].insertId} saved! ...`
-      })
+      // res.status(200).send('OK')
+
+      // swal({
+      //   title: "تجربه / خاطره شما با موفقیت ثبت شد.",
+      //   text: "دکمه بستن را کلیک کنید.",
+      //   icon: "success",
+      //   button: "بستن",
+      // });
+
+      // res.sendFile(path.join(__dirname, "../public/myExperience.html"));
+      // res.json('{ success: true }')
+      
+      // res.sendfile()
+      console.log('tamammmmmmmmmm shod babab .....')
+      res.sendFile(path.join(__dirname, "../public/myExperience.html"));
       res.end()
+
     } catch (error) {
       console.log(error.message);
     }
