@@ -48,25 +48,25 @@ class experienceController {
       
       res.json({ 
         success: true,
-        message: 'تجربه شما با موفقیت ذخیره شد.'
+        message: `تجربه جدید با کد ${result[0].insertId}  موفقیت آمیز ذخیره شد.`
        })
 
-       fetch('http://localhost:3000/experience/create',{
-        method: 'POST',
-        body: FormData
-       })
-       .then(res=>res.json())
-       .then(data => {
-        if(data.success){
-          swal({
-            title: data.message,
-            text: "دکمه بستن را کلیک کنید.",
-            icon: "success",
-            button: "بستن",
-          });
-        }
-       })
-       .catch(error=>console.log('Error : ',error))
+      //  fetch('/experience/create',{
+      //   method: 'POST',
+      //   body: FormData
+      //  })
+      //  .then(res=>res.json())
+      //  .then(data => {
+      //   if(data.success){
+      //     swal({
+      //       title: data.message,
+      //       text: "دکمه بستن را کلیک کنید.",
+      //       icon: "success",
+      //       button: "بستن",
+      //     });
+      //   }
+      //  })
+      //  .catch(error=>console.log('Error : ',error))
       // res.status(200).send('OK')
 
 

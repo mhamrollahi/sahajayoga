@@ -1,11 +1,6 @@
-import express from "express";
-import path from "path";
-import { fileURLToPath } from "url";
-import loggerMiddleware from "./middleware.js";
-import bodyParser from "body-parser";
-import mainRouter  from "./routes/index.js";
 import dotenv from "dotenv";
-import experiencesController from "./controllers/experiencesController.js";
+import app from './bootstrap/index.js'
+
 
 import {
   addNewExperience,
@@ -14,22 +9,25 @@ import {
 
 dotenv.config()
 
-const app = express();
+// const app = express();
+
 const port = process.env.APP_PORT;
-const router = express.Router();
+// const router = express.Router();
 const experiencesList = [];
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
-app.use(express.static(path.join(__dirname, "public")));
+// app.use(express.static(path.join(__dirname, "public")));
 
-app.use(bodyParser.urlencoded({ urlencoded: false }));
-app.use(bodyParser.json());
-app.use(loggerMiddleware);
+// app.use(bodyParser.urlencoded({ urlencoded: false }));
+// app.use(bodyParser.json());
+// app.use(loggerMiddleware);
 
-app.use(router);
-app.use(mainRouter)
+// app.use(router);
+// app.use(mainRouter)
+
+// boot(app)
 
 // app.use("/auth", authRouter);
 
@@ -78,6 +76,24 @@ experiencesList.push(..._loadExperience);
 //   res.send(req.body);
 //   addNewExperience(req.body, experiencesList);
 // });
+
+// app.use(router)
+
+
+app.get('/test1',(req,res)=>{
+  res.send({
+    success:true,
+    message: 'damam garam'
+  })
+})
+
+app.get('/test2',(req,res)=>{
+  try {
+    res.render('test2',{layout:false,userId:333})
+  } catch (error) {
+    console.log(err.message)    
+  }
+})
 
 const startApp = () => {
   app.listen(port, () => {
