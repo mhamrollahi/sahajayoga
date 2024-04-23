@@ -7,10 +7,11 @@ import loggerMiddleware from "../middleware.js";
 import router  from "../routes/index.js";
 
 const app = express()
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('dirName: ',path.join(__dirname,'../views'))
+// console.log('dirName: ',path.join(__dirname,'../views'))
 
 app.use(express.static(path.join(__dirname, "../public")));
 
