@@ -11,22 +11,22 @@ export async function index(){
   return _list
 }
 
-export async function insertExperience(newRecord){
+export async function createExperience(experienceData){
   try {
-    
-    const sql = `INSERT INTO EXPERIENCES(fullName,Email,Title,Description) 
-    VALUES(
-        '${newRecord.fullName}', 
-        '${newRecord.Email}',
-        '${newRecord.Title}', 
-        '${newRecord.Description}'
-      )`
+    // console.log('experienceData = ',experienceData)
 
-    console.log('sql string in Model = ',sql)
+    // const sql = `INSERT INTO EXPERIENCES SET ?(fullName,Email,Title,Description) 
+    // VALUES(
+    //     '${newRecord.fullName}', 
+    //     '${newRecord.Email}',
+    //     '${newRecord.Title}', 
+    //     '${newRecord.Description}'
+    //   )`
 
-    const message = await myDatabase.query(sql)
-    // console.log(message[0].insertId);
-    return message
+    // console.log('sql string in Model = ',sql)
+
+    const result = await myDatabase.query('INSERT INTO EXPERIENCES SET ?',[experienceData])
+    return result
   } catch (error) {
     console.log(error.message)
   }

@@ -14,21 +14,20 @@ router.get("/index", experiencesController.index);
 
 router.get("/test", experiencesController.test);
 
-router.post("/myExperience", experiencesController.insertExperience);
-
 router.get("/myExperience", (req,res,next) => {
   try {
     console.log('in myyyyyyyyyyyy ....')
-
+    
     res.sendFile(path.join(__dirname, "/public/myExperience.html"));
     if(res.success){
       alert('okay ....')
     }
-
+    
   } catch (err) {
     console.log(err.message)
   }
 });
 
+router.post("/create", experiencesController.createExperience);
 
 export default router

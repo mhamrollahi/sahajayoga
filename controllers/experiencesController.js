@@ -1,5 +1,5 @@
 // import {testData,index} from "../models/experienceModel.js";
-import {index,insertExperience,testData} from "../models/experienceModel.js";
+import {index,createExperience,testData} from "../models/experienceModel.js";
 import swal from 'sweetalert'
 import path from "path";
 import { fileURLToPath } from "url";
@@ -34,34 +34,50 @@ class experienceController {
   }
 
 
- async insertExperience(req,res){
-    // console.log('in experience Controllers and insert method ...!',req.body);
-    
-    try {
-      const newRecord ={
+ async createExperience(req,res){
+
+  try {
+      const experienceData ={
         fullName: req.body.txtFullname,
         Email: req.body.txtEmail,
         Title: req.body.txtSubject,
         Description: req.body.txtExperience
       }
+      
+      const result = await createExperience(experienceData)
+      
+      res.json({ 
+        success: true,
+        message: 'تجربه شما با موفقیت ذخیره شد.'
+       })
 
-      const message = await insertExperience(newRecord)
-
+       fetch('http://localhost:3000/experience/create',{
+        method: 'POST',
+        body: FormData
+       })
+       .then(res=>res.json())
+       .then(data => {
+        if(data.success){
+          swal({
+            title: data.message,
+            text: "دکمه بستن را کلیک کنید.",
+            icon: "success",
+            button: "بستن",
+          });
+        }
+       })
+       .catch(error=>console.log('Error : ',error))
       // res.status(200).send('OK')
 
-      // swal({
-      //   title: "تجربه / خاطره شما با موفقیت ثبت شد.",
-      //   text: "دکمه بستن را کلیک کنید.",
-      //   icon: "success",
-      //   button: "بستن",
-      // });
 
       // res.sendFile(path.join(__dirname, "../public/myExperience.html"));
-      // res.json('{ success: true }')
       
       // res.sendfile()
-      console.log('tamammmmmmmmmm shod babab .....')
-      res.sendFile(path.join(__dirname, "../public/myExperience.html"));
+      // console.log({result})
+      res.send({
+        success:'true',
+        message:`The new Experience saved by Id ${result[0].insertId}`
+      })
       res.end()
 
     } catch (error) {
