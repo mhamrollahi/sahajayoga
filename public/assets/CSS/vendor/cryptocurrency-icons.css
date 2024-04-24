@@ -8,13 +8,13 @@
 
 @font-face {
   font-family: "cryptocurrency-icons";
-  src: url('../../fonts/cryptocurrency-icons.eot');
+  src: url('../../Fonts/adomax/fonts/cryptocurrency-icons.eot');
   src: 
-    url('../../fonts/cryptocurrency-iconsd41d.eot?#iefix') format('embedded-opentype'),
-    url('../../fonts/cryptocurrency-icons.woff2') format('woff2'),
-    url('../../fonts/cryptocurrency-icons.woff') format('woff'),
-    url('../../fonts/cryptocurrency-icons.ttf') format('truetype'),
-    url('../../fonts/cryptocurrency-icons.svg#cryptocurrency-icons') format('svg');
+    url('../../Fonts/adomax/fonts/cryptocurrency-iconsd41d.eot?#iefix') format('embedded-opentype'),
+    url('../../Fonts/adomax/fonts/cryptocurrency-icons.woff2') format('woff2'),
+    url('../../Fonts/adomax/fonts/cryptocurrency-icons.woff') format('woff'),
+    url('../../Fonts/adomax/fonts/cryptocurrency-icons.ttf') format('truetype'),
+    url('../../Fonts/adomax/fonts/cryptocurrency-icons.svg#cryptocurrency-icons') format('svg');
 }
 
 .crypto {

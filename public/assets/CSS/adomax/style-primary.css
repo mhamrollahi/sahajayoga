@@ -73,11 +73,11 @@
 	font-family: IRANSans;
 	font-style: normal;
 	font-weight: bold;
-	src:url('../font/IRANSansWeb_Light.eot');
-	src: url('../font/IRANSansWeb_Lightd41d.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-		 url('../font/IRANSansWeb_Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-		 url('../font/IRANSansWeb_Light.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-		 url('../font/IRANSansWeb_Light.ttf') format('truetype');
+	src:url('../../Fonts/adomax/font/IRANSansWeb_Light.eot');
+	src: url('../../Fonts/adomax/font/IRANSansWeb_Lightd41d.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../../Fonts/adomax/font/IRANSansWeb_Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../../Fonts/adomax/font/IRANSansWeb_Light.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../../Fonts/adomax/font/IRANSansWeb_Light.ttf') format('truetype');
 }
 
 body {
@@ -14518,7 +14518,8 @@ body.skin-dark .cus-radio.light .icon::before {
     padding-right: 0 !important;
   }
   [dir="rtl"] .header-notification-area > li:last-child {
-    padding-left: 0 !important;
+    padding-left: 0
+ !important;
     padding-right: 10px !important;
   }
 }
