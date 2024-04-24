@@ -23,7 +23,7 @@ app.get('/test1',(req,res)=>{
 
 app.get('/test2',(req,res)=>{
   try {
-    res.render('admin/dashboard',{layout:'admin'})
+    res.render('admin/dashboard',{layout:'admin',userName:'محمد حسن امراللهی'})
   } catch (error) {
     console.log(err.message)    
   }
