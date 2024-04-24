@@ -73,6 +73,7 @@
 	font-family: IRANSans;
 	font-style: normal;
 	font-weight: bold;
+  src:url(../../CSS/fo)
 	src:url('../font/IRANSansWeb_Light.eot');
 	src: url('../font/IRANSansWeb_Lightd41d.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
 		 url('../font/IRANSansWeb_Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
@@ -14519,7 +14520,8 @@ body.skin-dark .cus-radio.light .icon::before {
     padding-right: 0 !important;
   }
   [dir="rtl"] .header-notification-area > li:last-child {
-    padding-left: 0 !important;
+    padding-left: 0
+ !important;
     padding-right: 10px !important;
   }
 }
