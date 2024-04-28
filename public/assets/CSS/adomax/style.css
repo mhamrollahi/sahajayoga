@@ -483,6 +483,13 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+.td-table
+{
+word-wrap: break-word;
+word-break: break-all;  
+white-space: normal !important;
+text-align: right;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .content-body {
