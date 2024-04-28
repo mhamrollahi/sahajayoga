@@ -1,5 +1,5 @@
 // import {testData,index} from "../models/experienceModel.js";
-import {index,createExperience,testData} from "../models/experienceModel.js";
+import {list,createExperience,testData} from "../models/experienceModel.js";
 import swal from 'sweetalert'
 import path from "path";
 import { fileURLToPath } from "url";
@@ -11,17 +11,17 @@ const __dirname = path.dirname(__filename);
 console.log('in experience Controllers file ...');
 class experienceController {
 
-  async index(req, res) {
+  async list(req, res) {
     
      // res.send({message:'list function from experience controllers ....'})
-    const allExperiences = await index()
-    console.log('in controller = one recorde =>>',allExperiences[0][3])
+    const allExperiences = await list()
+    // console.log('in controller = one recorde =>>',allExperiences)
     
-    const {fullName,email,isActive,Title,Description} = allExperiences[0][0]
-    console.log('in controller = ',fullName,email,Title,Description)
-    res.send({fullName,email,isActive,Title,Description})
-    res.end()
-    // res.render("experience/index", { experiences: allExperiences });
+    // const {fullName,email,isActive,Title,Description} = allExperiences[0][0]
+    // console.log('in controller = ',fullName,email,Title,Description)
+    // res.send({fullName,email,isActive,Title,Description})
+    // res.end()
+    res.render('admin/experienceList',{layout:'admin',allExperiences})
   }
 
   test(req, res) {
