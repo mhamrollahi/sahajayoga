@@ -21,7 +21,7 @@ class experienceController {
     // console.log('in controller = ',fullName,email,Title,Description)
     // res.send({fullName,email,isActive,Title,Description})
     // res.end()
-    res.render('admin/experienceList',{layout:'admin',allExperiences})
+    res.render('admin/experiencelist',{layout:'admin',allExperiences})
   }
 
   test(req, res) {
