@@ -58,7 +58,7 @@
                   <td class="td-table col-md-2"><a href="###">{{this.Title}}</a></td>
                   <td class="td-table col-md-4">{{this.Description}}</td>
                   <td class="col-md-1 td-table">{{this.Email}}</td>
-                  <td class="col-md-1">{{this.isActive}}</td>
+                  <td class="col-md-1">{{this.isActive}} </td>
                   <td class="text-center col-md-1">
                     <div class="table-action-buttons">
                       <a
@@ -81,14 +81,13 @@
     </div>
     <!-- Revenue Statistics Chart End -->
   </div>
+
 </div>
 <!-- Content Body End -->
 
 <script type="text/x-handlebars">
-  Handlebars.registerHelper('isActive', function (value, options) {
-    if (value == "0") {
-        return 'غیر‌فعال';
-    }
-    return 'فعال';
-});
+  Handlebars.registerHelper('loud', function (aString) {
+    return aString.toUpperCase()
+})
+
 </script>
