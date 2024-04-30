@@ -58,7 +58,9 @@
                   <td class="td-table col-md-2"><a href="###">{{this.Title}}</a></td>
                   <td class="td-table col-md-4">{{this.Description}}</td>
                   <td class="col-md-1 td-table">{{this.Email}}</td>
-                  <td class="col-md-1">{{this.isActive}} </td>
+                  <td class="col-md-1 text-center">{{#if this.isActive}} 
+                    <button type="button" class="btn btn-success btn-sm">فعال</button> 
+                    {{else}} <button type="button" class="btn btn-danger btn-sm">غیرفعال</button>{{/if}} </td>
                   <td class="text-center col-md-1">
                     <div class="table-action-buttons">
                       <a
