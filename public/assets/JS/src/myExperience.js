@@ -116,19 +116,19 @@ btnCancel.addEventListener("click", (e) => {
 });
 
 //Save New Record ....
-btnSubmit.addEventListener("click", (e) => {
+// btnSubmit.addEventListener("click", (e) => {
  
-  try {
-    if (checkValidCaptcha()) {
-      console.log("inside a function submit ...");
-      return;
-    }
-    e.preventDefault()
+//   try {
+//     if (checkValidCaptcha()) {
+//       console.log("inside a function submit ...");
+//       return;
+//     }
+//     e.preventDefault()
 
-  } catch (err) {
-    throw err;
-  }
-});
+//   } catch (err) {
+//     throw err;
+//   }
+// });
 
 //CAPTCHA VALIDATION :
 //Start *********************
@@ -200,7 +200,7 @@ function getCaptcha() {
   for (let i = 0; i < 3; i++) {
     //getting 6 random characters from the array
     let randomCharacter = allChars[Math.floor(Math.random() * allChars.length)];
-    captchaValue.innerText += `${randomCharacter}`; //passing 5 random characters inside captcha innerText
+    captchaValue.innerText += `${randomCharacter}`; //passing 3 random characters inside captcha innerText
   }
 }
 

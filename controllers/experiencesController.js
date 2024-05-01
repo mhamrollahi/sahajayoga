@@ -1,8 +1,10 @@
 // import {testData,index} from "../models/experienceModel.js";
+import { error } from "console";
 import {list,createExperience,testData} from "../models/experienceModel.js";
-import swal from 'sweetalert'
 import path from "path";
 import { fileURLToPath } from "url";
+import { experienceCreateValidators } from "../validators/experiences.js";
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -13,14 +15,7 @@ class experienceController {
 
   async list(req, res) {
     
-     // res.send({message:'list function from experience controllers ....'})
     const allExperiences = await list()
-    // console.log('in controller = one recorde =>>',allExperiences)
-    
-    // const {fullName,email,isActive,Title,Description} = allExperiences[0][0]
-    // console.log('in controller = ',fullName,email,Title,Description)
-    // res.send({fullName,email,isActive,Title,Description})
-    // res.end()
     res.render('admin/experiencelist',{layout:'admin',allExperiences})
   }
 
@@ -36,6 +31,9 @@ class experienceController {
 
  async createExperience(req,res){
 
+  const errors = []
+  let hasError = false
+
   try {
       const experienceData ={
         fullName: req.body.txtFullname,
@@ -44,46 +42,33 @@ class experienceController {
         Description: req.body.txtExperience
       }
       
-      const result = await createExperience(experienceData)
-      
-      res.json({ 
-        success: true,
-        message: `تجربه جدید با کد ${result[0].insertId}  موفقیت آمیز ذخیره شد.`
-       })
-
-      //  fetch('/experience/create',{
-      //   method: 'POST',
-      //   body: FormData
-      //  })
-      //  .then(res=>res.json())
-      //  .then(data => {
-      //   if(data.success){
-      //     swal({
-      //       title: data.message,
-      //       text: "دکمه بستن را کلیک کنید.",
-      //       icon: "success",
-      //       button: "بستن",
-      //     });
-      //   }
-      //  })
-      //  .catch(error=>console.log('Error : ',error))
-      // res.status(200).send('OK')
-
-
-      // res.sendFile(path.join(__dirname, "../public/myExperience.html"));
-      
-      // res.sendfile()
-      // console.log({result})
-      res.send({
-        success:'true',
-        message:`The new Experience saved by Id ${result[0].insertId}`
-      })
-      res.end()
+      const errors = experienceCreateValidators(experienceData)
+      if(errors.length >0 ){
+        res.render('experiences/showExperience',{layout:false,errors,hasError:errors.length>0})
+      }else{
+        const result = await createExperience(experienceData)
+        res.redirect('../../myExperience.html')
+        // res.send({
+        //   success:'true',
+        //   message:`The new Experience saved by Id ${result[0].insertId}`
+        // })
+        // res.end()
+      }
 
     } catch (error) {
       console.log(error.message);
     }
   }
+
+  showExperience(req,res){
+    try {
+      res.render('experiences/showExperience',{layout:false,errors,hasError})
+    } catch (error) {
+      console.log(error)      
+    }
+  }
 }
+
+
 
 export default new experienceController();
