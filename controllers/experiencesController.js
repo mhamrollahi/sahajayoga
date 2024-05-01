@@ -31,10 +31,7 @@ class experienceController {
 
  async createExperience(req,res){
 
-  const errors = []
-  let hasError = false
-
-  try {
+   try {
       const experienceData ={
         fullName: req.body.txtFullname,
         Email: req.body.txtEmail,
@@ -43,11 +40,20 @@ class experienceController {
       }
       
       const errors = experienceCreateValidators(experienceData)
-      if(errors.length >0 ){
-        res.render('experiences/showExperience',{layout:false,errors,hasError:errors.length>0})
+      console.log(errors);
+
+      if(errors.length > 0 ){
+        // req.flash('errors',errors)
+        res.redirect('experiences/showExperience',{layout:false,errors,hasError:errors.length>0})
       }else{
         const result = await createExperience(experienceData)
-        res.redirect('../../myExperience.html')
+        if(result[0].insertId){
+          const success = 'خاطره شما با موفقیت ثبت شد.بعد از تایید در صفحه اصلی قایل مشاهده است.'
+          // req.flash('success',success)
+          // res.redirect('../../myExperience.html')
+          res.redirect('experiences/showExperience' , {layout:false,success,hasError:errors.length>0})
+        }
+       
         // res.send({
         //   success:'true',
         //   message:`The new Experience saved by Id ${result[0].insertId}`

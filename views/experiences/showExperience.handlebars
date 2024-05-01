@@ -151,6 +151,7 @@
       <div class="col-12 col-sm-12 col-md-8">
         <div>
           <form method="POST" action="../../experience/create" class="row g-3 needs-validation">
+            
             <div class="alert alert-danger">
               {{#if hasError}}
                 {{#each errors}}
@@ -158,7 +159,7 @@
                 {{/each}}
               {{/if}}
             </div>
-
+            {{success}}
 
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="txtSubject" name="txtSubject" minlength="10" 

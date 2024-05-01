@@ -5,6 +5,9 @@ import path from "path";
 import { fileURLToPath } from "url";
 import loggerMiddleware from "../middleware.js";
 import router  from "../routes/index.js";
+import cookieParser from 'cookie-parser';
+import session from 'express-session';
+import flash from 'connect-flash'
 
 const app = express()
 
@@ -17,6 +20,15 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 app.use(bodyParser.urlencoded({ urlencoded: false }));
 app.use(bodyParser.json());
+// app.use(cookieParser())
+// app.use(session({
+//   secret: 'sfsfst43423423900fdf',
+//   resave:true,
+//   saveUninitialized:true,
+//   cookie:{maxAge:60000}}))
+
+// app.use(flash())
+
 app.use(loggerMiddleware)
 
 app.engine('handlebars',engine())
