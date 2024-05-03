@@ -116,19 +116,19 @@ btnCancel.addEventListener("click", (e) => {
 });
 
 //Save New Record ....
-// btnSubmit.addEventListener("click", (e) => {
+btnSubmit.addEventListener("click", (e) => {
  
-//   try {
-//     if (checkValidCaptcha()) {
-//       console.log("inside a function submit ...");
-//       return;
-//     }
-//     e.preventDefault()
+  try {
+    if (checkValidCaptcha()) {
+      console.log("inside a function submit ...");
+      return;
+    }
+    e.preventDefault()
 
-//   } catch (err) {
-//     throw err;
-//   }
-// });
+  } catch (err) {
+    throw err;
+  }
+});
 
 //CAPTCHA VALIDATION :
 //Start *********************

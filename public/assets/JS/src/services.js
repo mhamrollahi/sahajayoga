@@ -1,4 +1,3 @@
-import { log } from "console";
 import fs from "fs/promises";
 
 const EXPERIENCES_LIST_FILE_PATH = "./public/data/experiences_list.json";

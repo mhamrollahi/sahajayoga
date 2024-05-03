@@ -154,7 +154,7 @@
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="txtSubject" name="txtSubject" minlength="10" 
                 placeholder="موضوع خود را بنویسید..." title="لظفا موضوع تجربه یا خاطره خود را اینجا بنویسید"
-                autocomplete="off" autofocus="true">
+                autocomplete="off" autofocus="true" required>
               <label for="txtSubject" class="mandatory">عنوان خاطره / تجربه </label>
               <small class="errMessage" data-err="formatted" hidden> عنوان باید بیش از ۱۰ کاراکتر باشد.</small>
               <small class="errMessage" data-err="mandatory" hidden> عنوان اجباری می باشد. </small>
@@ -166,14 +166,14 @@
             </div>
 
             <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="txtEmail" name="txtEmail"  placeholder="name@example.com">
+              <input type="email" class="form-control" id="txtEmail" name="txtEmail"  placeholder="name@example.com" required>
               <label for="txtEmail" class="mandatory">آدرس پست الکترونیکی</label>
               <small class="errMessage" data-err="formatted" hidden>فرمت پست الکترونیکی صحیح نمی‌باشد.</small>
               <small class="errMessage" data-err="mandatory" hidden> پست الکترونیکی اجباری می باشد. </small>
             </div>
 
             <div class="form-floating mb-3">
-              <textarea class="form-control txt-experience"  id="txtExperience" name="txtExperience" rows="3" minlength="30"
+              <textarea class="form-control txt-experience"  id="txtExperience" name="txtExperience" rows="3" minlength="30" required
                 placeholder="متن خاطره یا تجربه خود را اینجا بنویسید ..."></textarea>
               <label for="txtExperience" class="mandatory">متن تجربه / خاطره خود را اینجا بنویسید...</label>
               <small class="errMessage" data-err="formatted" hidden>متن تجربه / عنوان باید بیش از 30 کاراکتر

@@ -152,15 +152,21 @@
         <div>
           <form method="POST" action="../../experience/create" class="row g-3 needs-validation">
             
-            <div class="alert alert-danger">
-              {{#if hasError}}
+            
+            {{#if hasError}}
+              <div class="alert alert-danger">
                 {{#each errors}}
                   <small class="errMessage">{{this}}</small><br>
                 {{/each}}
-              {{/if}}
-            </div>
-            {{success}}
+              </div>
+            {{else}}
+              <div class="alert alert-success text-center">
+                <small class="successMessage">{{success}}</small>
+              </div>
+            {{/if}}
+          
 
+            
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="txtSubject" name="txtSubject" minlength="10" 
                 placeholder="موضوع خود را بنویسید..." title="لظفا موضوع تجربه یا خاطره خود را اینجا بنویسید"

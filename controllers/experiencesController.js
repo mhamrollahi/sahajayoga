@@ -1,5 +1,4 @@
 // import {testData,index} from "../models/experienceModel.js";
-import { error } from "console";
 import {list,createExperience,testData} from "../models/experienceModel.js";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -10,7 +9,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 
-console.log('in experience Controllers file ...');
 class experienceController {
 
   async list(req, res) {
@@ -40,25 +38,21 @@ class experienceController {
       }
       
       const errors = experienceCreateValidators(experienceData)
-      console.log(errors);
+      // console.log(errors);
 
       if(errors.length > 0 ){
         // req.flash('errors',errors)
-        res.redirect('experiences/showExperience',{layout:false,errors,hasError:errors.length>0})
-      }else{
+       return res.render('experiences/showExperience',{layout:false,errors,hasError:errors.length > 0})
+      }
+      else{
         const result = await createExperience(experienceData)
         if(result[0].insertId){
           const success = 'خاطره شما با موفقیت ثبت شد.بعد از تایید در صفحه اصلی قایل مشاهده است.'
           // req.flash('success',success)
           // res.redirect('../../myExperience.html')
-          res.redirect('experiences/showExperience' , {layout:false,success,hasError:errors.length>0})
+          return res.render('experiences/showExperience',{layout:false,success,hasError:errors.length > 0})
         }
        
-        // res.send({
-        //   success:'true',
-        //   message:`The new Experience saved by Id ${result[0].insertId}`
-        // })
-        // res.end()
       }
 
     } catch (error) {
