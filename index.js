@@ -1,18 +1,9 @@
 import dotenv from "dotenv";
 import app from './bootstrap/index.js'
 
-import {
-  addNewExperience,
-  loadExperience,
-} from "./public/assets/JS/src/services.js";
-
 dotenv.config()
 
 const port = process.env.APP_PORT;
-const experiencesList = [];
-
-const _loadExperience = await loadExperience();
-experiencesList.push(..._loadExperience);
 
 app.get('/test1',(req,res)=>{
   res.send({
