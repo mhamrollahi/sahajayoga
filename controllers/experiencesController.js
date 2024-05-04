@@ -1,5 +1,5 @@
 // import {testData,index} from "../models/experienceModel.js";
-import {list,createExperience,testData} from "../models/experienceModel.js";
+import {list,createExperience,testData, deleteExperience} from "../models/experienceModel.js";
 import path from "path";
 import { fileURLToPath } from "url";
 import { experienceCreateValidators } from "../validators/experiences.js";
@@ -27,7 +27,7 @@ class experienceController {
   }
 
 
- async createExperience(req,res){
+  async createExperience(req,res){
 
    try {
       const experienceData ={
@@ -44,15 +44,12 @@ class experienceController {
         // req.flash('errors',errors)
        return res.render('experiences/showExperience',{layout:false,errors,hasError:errors.length > 0})
       }
-      else{
-        const result = await createExperience(experienceData)
-        if(result[0].insertId){
-          const success = 'خاطره شما با موفقیت ثبت شد.بعد از تایید در صفحه اصلی قایل مشاهده است.'
+      const result = await createExperience(experienceData)
+      if(result[0].insertId){
+        const success = 'خاطره شما با موفقیت ثبت شد.بعد از تایید در صفحه اصلی قایل مشاهده است.'
           // req.flash('success',success)
           // res.redirect('../../myExperience.html')
-          return res.render('experiences/showExperience',{layout:false,success,hasError:errors.length > 0})
-        }
-       
+        return res.render('experiences/showExperience',{layout:false,success,hasError:errors.length > 0})
       }
 
     } catch (error) {
@@ -67,8 +64,24 @@ class experienceController {
       console.log(error)      
     }
   }
-}
 
+
+  async remove(req,res){
+    try {
+      const _id = req.params.expId
+      if(parseInt(_id)===0){
+        return res.redirect('experience/list')
+      }
+      const result = await deleteExperience(_id)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+
+
+
+}
 
 
 export default new experienceController();

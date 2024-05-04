@@ -63,8 +63,8 @@
                     {{else}} <button type="button" class="btn btn-danger btn-sm" title='کلیک کنید فعال می‌شود.'>غیرفعال</button>{{/if}} </td>
                   <td class="text-center col-md-1">
                     <div class="table-action-buttons">
-                      <a class="edit button button-box button-xs button-info" href="#" title="اصلاح خاطره..." ><i class="zmdi zmdi-edit"></i></a>
-                      <a class="delete button button-box button-xs button-danger" href="#" title="حذف خاطره ..." ><i class="zmdi zmdi-delete"></i></a>
+                      <a class="edit button button-box button-xs button-info" href="#" onclick="return confirm('آیا از عملیات حذف مطمين هستید؟');" title="اصلاح خاطره..." ><i class="zmdi zmdi-edit"></i></a>
+                      <a class="delete button button-box button-xs button-danger" id="btnDelete" href="/experience/delete/{{this.id}}"  onclick="return confirmDelete()"  title="حذف خاطره ..." ><i class="zmdi zmdi-delete"></i></a>
                     </div>
                   </td>
                 </tr>
@@ -80,10 +80,33 @@
 
 </div>
 <!-- Content Body End -->
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>  
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>  
 
-<script type="text/x-handlebars">
-  Handlebars.registerHelper('loud', function (aString) {
-    return aString.toUpperCase()
-})
+<script>
+  
+  
+  function confirmDelete(){ 
 
+    swal({  
+      title: "هشدار",  
+      text: "آیا از عملیات حذف اطمینان دارید؟؟",  
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#0ec746',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'بله',
+      cancelButtonText: 'خیر',  
+
+    }).then((result)=>{
+      if(result.value){ 
+        return true
+      }else{
+        return false
+      }
+      
+  });    
+  
+ }
+  {{!-- return confirm("Are you sure you want to delete?"); --}}
 </script>
