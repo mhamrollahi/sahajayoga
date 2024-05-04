@@ -63,8 +63,8 @@
                     {{else}} <button type="button" class="btn btn-danger btn-sm" title='کلیک کنید فعال می‌شود.'>غیرفعال</button>{{/if}} </td>
                   <td class="text-center col-md-1">
                     <div class="table-action-buttons">
-                      <a class="edit button button-box button-xs button-info" href="#" onclick="return confirm('آیا از عملیات حذف مطمين هستید؟');" title="اصلاح خاطره..." ><i class="zmdi zmdi-edit"></i></a>
-                      <a class="delete button button-box button-xs button-danger" id="btnDelete" href="/experience/delete/{{this.id}}"  onclick="return confirmDelete()"  title="حذف خاطره ..." ><i class="zmdi zmdi-delete"></i></a>
+                      <a class="edit button button-box button-xs button-info" href="#" onclick="return confirm('آیا از عملیات حذف مطمين هستید؟');"  title="اصلاح خاطره..." ><i class="zmdi zmdi-edit"></i></a>
+                      <a class="delete button button-box button-xs button-danger" id="btnDelete" href="/experience/delete/{{this.id}}" onclick="confirmDelete()"  title="حذف خاطره ..." ><i class="zmdi zmdi-delete"></i></a>
                     </div>
                   </td>
                 </tr>
@@ -96,12 +96,20 @@
       confirmButtonColor: '#0ec746',
       cancelButtonColor: '#d33',
       confirmButtonText: 'بله',
-      cancelButtonText: 'خیر',  
+      cancelButtonText: 'خیر',
+      closeOnConfirm: false,
+      closeOnCancel: false
 
     }).then((result)=>{
       if(result.value){ 
+        console.log(result.value)   
         return true
+       
+        {{!-- document.getElementById('btnDelete').href = '/experience/delete/65'
+        swal("Deleted!", "Your imaginary file has been deleted!", "success"); --}}
+        {{!-- return true --}}
       }else{
+         console.log(result.value) 
         return false
       }
       

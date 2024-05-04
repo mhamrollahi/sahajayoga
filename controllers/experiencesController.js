@@ -73,6 +73,7 @@ class experienceController {
         return res.redirect('experience/list')
       }
       const result = await deleteExperience(_id)
+      res.redirect('/experience/list')
     } catch (error) {
       console.log(error)
     }
