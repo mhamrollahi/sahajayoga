@@ -63,8 +63,8 @@
                     {{else}} <button type="button" class="btn btn-danger btn-sm" title='کلیک کنید فعال می‌شود.'>غیرفعال</button>{{/if}} </td>
                   <td class="text-center col-md-1">
                     <div class="table-action-buttons">
-                      <a class="edit button button-box button-xs button-info" href="#" onclick="return confirm('آیا از عملیات حذف مطمين هستید؟');"  title="اصلاح خاطره..." ><i class="zmdi zmdi-edit"></i></a>
-                      <a class="delete button button-box button-xs button-danger" id="btnDelete" href="/experience/delete/{{this.id}}" onclick="confirmDelete()"  title="حذف خاطره ..." ><i class="zmdi zmdi-delete"></i></a>
+                      <a class="edit button button-box button-xs button-info" href="#"  onclick="confirmDelete()" title="اصلاح خاطره..." ><i class="zmdi zmdi-edit"></i></a>
+                      <a class="delete button button-box button-xs button-danger" id="btnDelete" href="/experience/delete/{{this.id}}"onclick="return confirm('آیا از عملیات حذف مطمين هستید؟');"   title="حذف خاطره ..." ><i class="zmdi zmdi-delete"></i></a>
                     </div>
                   </td>
                 </tr>
@@ -84,7 +84,10 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>  
 
 <script>
-  
+  {{!-- const btnDelete = document.getElementById('btnDelete')
+  btnDelete.addEventListener('click',(e)=>{
+    e.preventDefault()
+  }) --}}
   
   function confirmDelete(){ 
 
