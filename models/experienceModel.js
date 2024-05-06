@@ -33,6 +33,20 @@ export async function deleteExperience(experienceID){
 
 }
 
+export async function activeOrNotActive(experienceID , isActive){
+  try {
+    
+    const newIsActive = 1 - isActive
+
+    const [result] = await myDatabase.query('UPDATE EXPERIENCES SET isActive =?  WHERE id=?',[newIsActive,experienceID])
+    console.log(result)
+    return result
+  } catch (error) {
+    console.log(error.message)
+  }
+
+}
+
 export async function editExperience(){
   try {
     

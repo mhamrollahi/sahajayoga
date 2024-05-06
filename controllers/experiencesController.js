@@ -1,5 +1,5 @@
 // import {testData,index} from "../models/experienceModel.js";
-import {list,createExperience,testData, deleteExperience} from "../models/experienceModel.js";
+import {list,createExperience,testData, deleteExperience,activeOrNotActive} from "../models/experienceModel.js";
 import path from "path";
 import { fileURLToPath } from "url";
 import { experienceCreateValidators } from "../validators/experiences.js";
@@ -74,11 +74,28 @@ class experienceController {
       }
       const result = await deleteExperience(_id)
       res.redirect('/experience/list')
+      
     } catch (error) {
       console.log(error)
     }
   }
 
+  async activeOrNotActive(req,res){
+    try {
+      
+      const _id = req.params.expId
+      const _isActive = req.params.isActive
+      if(parseInt(_id)===0){
+        return res.redirect('experience/list')
+      }
+
+      const result = await activeOrNotActive(_id,_isActive)
+      res.redirect('/experience/list')
+
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
 
 

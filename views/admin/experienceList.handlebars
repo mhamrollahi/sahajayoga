@@ -59,12 +59,13 @@
                   <td class="td-table col-md-4">{{this.Description}}</td>
                   <td class="col-md-1 td-table">{{this.Email}}</td>
                   <td class="col-md-1 text-center">{{#if this.isActive}} 
-                    <button type="button" class="btn btn-success btn-sm" title='کلیک کنید غیر فعال می‌شود.'>فعال</button> 
-                    {{else}} <button type="button" class="btn btn-danger btn-sm" title='کلیک کنید فعال می‌شود.'>غیرفعال</button>{{/if}} </td>
+                    <a  class="btn btn-success btn-sm"  href="/experience/active/{{this.id}}&{{this.isActive}}" title='کلیک کنید غیر فعال می‌شود.'>فعال</a> 
+                    {{else}} <a  class="btn btn-danger btn-sm" href="/experience/active/{{this.id}}&{{this.isActive}}" title='کلیک کنید فعال می‌شود.'>غیرفعال</a>{{/if}} </td>
                   <td class="text-center col-md-1">
                     <div class="table-action-buttons">
-                      <a class="edit button button-box button-xs button-info" href="#"  onclick="confirmDelete()" title="اصلاح خاطره..." ><i class="zmdi zmdi-edit"></i></a>
-                      <a class="delete button button-box button-xs button-danger" id="btnDelete" href="/experience/delete/{{this.id}}"onclick="return confirm('آیا از عملیات حذف مطمين هستید؟');"   title="حذف خاطره ..." ><i class="zmdi zmdi-delete"></i></a>
+                      <a class="edit button button-box button-xs button-info" href="#"  title="اصلاح خاطره..." ><i class="zmdi zmdi-edit"></i></a>
+                      <a class="delete button button-box button-xs button-danger" id="btnDelete" href="/experience/delete/{{this.id}}" 
+                        onclick="return confirm('آیا از عملیات حذف مطمين هستید؟');"   title="حذف خاطره ..." ><i class="zmdi zmdi-delete"></i></a>
                     </div>
                   </td>
                 </tr>
