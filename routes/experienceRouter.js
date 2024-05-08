@@ -16,6 +16,8 @@ router.post("/create", experiencesController.createExperience);
 
 router.get('/delete/:expId', experiencesController.remove)
 
+router.get('/edit/:expId', experiencesController.edit)
+
 router.get('/active/:expId&:isActive', experiencesController.activeOrNotActive)
 
 // router.get("/showExperience", experiencesController.showExperience);

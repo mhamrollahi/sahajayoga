@@ -1,3 +1,4 @@
+import dbConfig from '../configs/dbConfig.js'
 import myDatabase from '../configs/dbConfig.js'
 import { experienceCreateValidators } from '../validators/experiences.js'
 
@@ -45,6 +46,16 @@ export async function activeOrNotActive(experienceID , isActive){
     console.log(error.message)
   }
 
+}
+
+export async function findById(_id){
+  try {
+    const [rows,fields] = await myDatabase.query('SELECT * FROM EXPERIENCES WHERE id = ?  LIMIT 1',[_id])
+    return rows.length > 0 ? rows[0] : false 
+
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 export async function editExperience(){

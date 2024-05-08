@@ -63,7 +63,7 @@
                     {{else}} <a  class="btn btn-danger btn-sm" href="/experience/active/{{this.id}}&{{this.isActive}}" title='کلیک کنید فعال می‌شود.'>غیرفعال</a>{{/if}} </td>
                   <td class="text-center col-md-1">
                     <div class="table-action-buttons">
-                      <a class="edit button button-box button-xs button-info" href="#"  title="اصلاح خاطره..." ><i class="zmdi zmdi-edit"></i></a>
+                      <a class="edit button button-box button-xs button-info" href="/experience/edit/{{this.id}}"  title="اصلاح خاطره..." ><i class="zmdi zmdi-edit"></i></a>
                       <a class="delete button button-box button-xs button-danger" id="btnDelete" href="/experience/delete/{{this.id}}" 
                         onclick="return confirm('آیا از عملیات حذف مطمين هستید؟');"   title="حذف خاطره ..." ><i class="zmdi zmdi-delete"></i></a>
                     </div>
