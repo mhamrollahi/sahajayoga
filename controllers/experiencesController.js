@@ -1,5 +1,5 @@
 // import {testData,index} from "../models/experienceModel.js";
-import {list,createExperience,testData, deleteExperience,activeOrNotActive, findById} from "../models/experienceModel.js";
+import {list,createExperience,testData, deleteExperience,activeOrNotActive, findById,editExperience} from "../models/experienceModel.js";
 import path from "path";
 import { fileURLToPath } from "url";
 import { experienceCreateValidators } from "../validators/experiences.js";
@@ -108,6 +108,31 @@ class experienceController {
       const experienceData = await findById(_id)
       
       res.render('admin/experienceEdit',{layout:'admin',experienceData})
+
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  
+  async update(req,res){
+    try {
+      console.log('---------------------------  in update method ...')
+      const _id = req.params.expId
+      if(parseInt(_id)===0){
+            return res.redirect('experience/list')
+      }
+      const experienceData ={
+        fullName: req.body.txtFullname,
+        Email: req.body.txtEmail,
+        Title: req.body.txtSubject,
+        Description: req.body.txtExperience,
+        updated_at:new Date()
+      }
+
+      const result = editExperience(_id,experienceData)
+      return res.redirect('../../experience/list')
+
+  
     } catch (error) {
       console.log(error)
     }

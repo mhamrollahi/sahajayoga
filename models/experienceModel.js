@@ -25,9 +25,8 @@ export async function createExperience(experienceData){
 
 export async function deleteExperience(experienceID){
   try {
-    const [result] = await myDatabase.query('DELETE FROM EXPERIENCES WHERE id=?',[experienceID])
-    console.log(result)
-    return result
+    const [result] = await myDatabase.query('DELETE FROM EXPERIENCES WHERE id=? LIMIT 1',[experienceID])
+    return result.affectedRows > 0 
   } catch (error) {
     console.log(error.message)
   }
@@ -39,9 +38,8 @@ export async function activeOrNotActive(experienceID , isActive){
     
     const newIsActive = 1 - isActive
 
-    const [result] = await myDatabase.query('UPDATE EXPERIENCES SET isActive =?  WHERE id=?',[newIsActive,experienceID])
-    console.log(result)
-    return result
+    const [result] = await myDatabase.query('UPDATE EXPERIENCES SET isActive =?  WHERE id=? LIMIT 1 ',[newIsActive,experienceID])
+    return result.affectedRows > 0 
   } catch (error) {
     console.log(error.message)
   }
@@ -58,11 +56,13 @@ export async function findById(_id){
   }
 }
 
-export async function editExperience(){
+export async function editExperience(experienceID,updateFields){
   try {
+    const [result] = await myDatabase.query('UPDATE EXPERIENCES SET ?  WHERE id=? LIMIT 1 ',[updateFields,experienceID])
+    return result.affectedRows > 0 
     
   } catch (error) {
-    
+    console.log(error)    
   }
 }
 
