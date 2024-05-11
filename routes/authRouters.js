@@ -1,31 +1,23 @@
 import express from "express";
+import authController from '../controllers/authController.js'
+
 import path from "path";
 import { fileURLToPath } from "url";
-
-const authRouter = express.Router();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const router = express.Router();
+router.use(express.static(path.join(__dirname, "../public")));
 
-authRouter.get("/login", (req, res) => {
-  res.sendFile(path.join(__dirname,'..','..','/public/auth/login.html'))
-});
 
-authRouter.post("/login", (req, res) => {});
+router.get("/login",authController.showLogin);
 
-authRouter.get("/register", (req, res) => {
-  res.sendFile(path.join(__dirname,'..','..','/public/auth/register.html'))
-});
+router.post("/login",authController.doLogin);
 
-authRouter.post("/register", (req, res) => {});
+router.get("/register",authController.showRegister);
 
-authRouter.get("/reset-password", (req, res) => {});
+router.post("/register",authController.doRegister);
 
-authRouter.post("/reset-password", (req, res) => {});
 
-authRouter.get("/active", (req, res) => {
-  res.sendFile(path.join(__dirname,'..','..','/public/auth/userActive.html'))
-});
-
-export default authRouter;
+export default router;

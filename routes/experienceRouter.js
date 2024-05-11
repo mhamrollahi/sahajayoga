@@ -24,6 +24,6 @@ router.get('/active/:expId&:isActive', experiencesController.activeOrNotActive)
 
 // router.get("/showExperience", experiencesController.showExperience);
 
-router.get("/test", experiencesController.test);
+// router.get("/test", experiencesController.test);
 
 export default router

@@ -1,15 +1,7 @@
-import dbConfig from '../configs/dbConfig.js'
 import myDatabase from '../configs/dbConfig.js'
-import { experienceCreateValidators } from '../validators/experiences.js'
-
-console.log('in experience Model file ...')
 
 export async function list(){
-
-  // console.log('in index function in experience Model ...')
-  
   const [rows,fields] = await myDatabase.query('SELECT * FROM experiences ORDER BY created_at DESC')
-  // console.log('in index function in experience Model ...',_list)
   return rows
 }
 

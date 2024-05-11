@@ -1,5 +1,10 @@
-// import {testData,index} from "../models/experienceModel.js";
-import {list,createExperience,testData, deleteExperience,activeOrNotActive, findById,editExperience} from "../models/experienceModel.js";
+import {
+  list,
+  createExperience,testData, 
+  deleteExperience,activeOrNotActive, 
+  findById,
+  editExperience} 
+  from "../models/experienceModel.js";
 import path from "path";
 import { fileURLToPath } from "url";
 import { experienceCreateValidators } from "../validators/experiences.js";
@@ -15,15 +20,6 @@ class experienceController {
     
     const allExperiences = await list()
     res.render('admin/experiencelist',{layout:'admin',allExperiences})
-  }
-
-  test(req, res) {
-    console.log('in experience Controller ...')
-    res.send({
-      success: true,
-      message: "from experience Controller test Route .... Damam",
-      data_from_model: testData,
-    });
   }
 
 
@@ -116,7 +112,6 @@ class experienceController {
   
   async update(req,res){
     try {
-      console.log('---------------------------  in update method ...')
       const _id = req.params.expId
       if(parseInt(_id)===0){
             return res.redirect('experience/list')
