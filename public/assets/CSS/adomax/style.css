@@ -11778,11 +11778,12 @@ body.side-header-green .side-header .side-header-close {
 .login-register-wrap {
   padding: 0 15px;
 }
-
+.login-register-form-wrap .content h1{
+}
 /*Login & Resister BG*/
-.login-register-bg {
-  /* background-image: url(../images/bg/login-register-bg.jpg); */
-  background-image: url('../../Images/adomax/bg');
+.login-register-bg {    
+  background-image: url('../../../assets/Images/adomax/bg/login-register-bg.jpg');
+  /* background-image: url('../Images/adomax/bg'); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -11809,7 +11810,7 @@ body.side-header-green .side-header .side-header-close {
 }
 
 .login-register-bg .content h1 {
-  font-weight: 300;
+  font-weight: 700;
   line-height: 1;
   margin-bottom: 15px;
   color: #ffffff;
