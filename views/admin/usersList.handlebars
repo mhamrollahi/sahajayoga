@@ -1,0 +1,111 @@
+<!-- Content Body Start -->
+<div class="content-body">
+  <!-- Page Headings Start -->
+  <div class="row justify-content-between align-items-center">
+    <!-- Page Heading Start -->
+    <div class="col-12 col-lg-auto mb-10">
+      <div class="page-heading">
+        <h3>لیست تمامی کاربران سایت</h3>
+      </div>
+    </div>
+    <!-- Page Heading End -->
+
+  </div>
+  <!-- Page Headings End -->
+
+  <div class="row mbn-30">
+    <!-- Revenue Statistics Chart Start -->
+    <div class="col-md-12 mb-30">
+      <div class="box">
+        <div class="box-body table-responsive">
+          <table
+            class="table table table-striped table-hover table-bordered mb-0"
+          >
+            <!-- Table Head Start -->
+            <thead>
+              <tr class="table-primary d-flex">
+                <th class="col-md-1">ردیف</th>
+                <th class="col-md-3">نام و نام خانوادگی </th>
+                <th class="col-md-2">نام کاربری</th>
+                <th class="col-md-2">پسورد</th>
+                <th class="col-md-1">سطح دسترسی</th>
+                <th class="col-md-2">تاریخ ایجاد</th>
+                <th class="text-center col-md-1">عملیات</th>
+              </tr>
+            </thead>
+            <!-- Table Head End -->
+
+            <!-- Table Body Start -->
+            <tbody>
+              {{#each usersData}}
+                <tr class="d-flex">
+                  <td class="col-md-1">{{this.id}}</td>
+                  <td class="td-table col-md-3">{{this.fullName}}</td>
+                  <td class="td-table col-md-2"><a href="/users/edit/{{this.id}}" target="_blank">{{this.email}}</a></td>
+                  <td class="td-table col-md-2">{{this.password}}</td>
+                  <td class="col-md-1 ">{{this.roleId}}</td>
+                  <td class="col-md-2 td-table">{{this.created_at_persian}}</td>
+                  {{!-- <td class="col-md-1 text-center">{{#if this.isActive}} 
+                    <a  class="btn btn-success btn-sm"  href="/users/active/{{this.id}}&{{this.isActive}}" title='کلیک کنید غیر فعال می‌شود.'>فعال</a> 
+                    {{else}} <a  class="btn btn-danger btn-sm" href="/users/active/{{this.id}}&{{this.isActive}}" title='کلیک کنید فعال می‌شود.'>غیرفعال</a>{{/if}} </td> --}}
+                  <td class="text-center col-md-1">
+                    <div class="table-action-buttons">
+                      <a class="edit button button-box button-xs button-info" href="/experience/edit/{{this.id}}"  title="اصلاح خاطره..." ><i class="zmdi zmdi-edit"></i></a>
+                      <a class="delete button button-box button-xs button-danger" id="btnDelete" href="/experience/delete/{{this.id}}" 
+                        onclick="return confirm('آیا از عملیات حذف مطمين هستید؟');"   title="حذف خاطره ..." ><i class="zmdi zmdi-delete"></i></a>
+                    </div>
+                  </td>
+                </tr>
+              {{/each}}
+            </tbody>
+            <!-- Table Body End -->
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Revenue Statistics Chart End -->
+  </div>
+
+</div>
+<!-- Content Body End -->
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>  
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>  
+
+<script>
+  {{!-- const btnDelete = document.getElementById('btnDelete')
+  btnDelete.addEventListener('click',(e)=>{
+    e.preventDefault()
+  }) --}}
+  
+  function confirmDelete(){ 
+
+    swal({  
+      title: "هشدار",  
+      text: "آیا از عملیات حذف اطمینان دارید؟؟",  
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#0ec746',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'بله',
+      cancelButtonText: 'خیر',
+      closeOnConfirm: false,
+      closeOnCancel: false
+
+    }).then((result)=>{
+      if(result.value){ 
+        console.log(result.value)   
+        return true
+       
+        {{!-- document.getElementById('btnDelete').href = '/experience/delete/65'
+        swal("Deleted!", "Your imaginary file has been deleted!", "success"); --}}
+        {{!-- return true --}}
+      }else{
+         console.log(result.value) 
+        return false
+      }
+      
+  });    
+  
+ }
+  {{!-- return confirm("Are you sure you want to delete?"); --}}
+</script>
