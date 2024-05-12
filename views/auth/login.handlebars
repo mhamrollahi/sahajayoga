@@ -11,14 +11,14 @@
           استفاده از طراحان گرافیک است. .</p>
       </div>
       <div class="login-register-form">
-        <form action="#">
+        <form action="./login" method="POST">
           <div class="row">
-            <div class="col-12 mb-20"><input
+            <div class="col-12 mb-20"><input name="email"
                 class="form-control"
-                type="text"
+                type="email"
                 placeholder="ایمیل"
               /></div>
-            <div class="col-12 mb-20"><input
+            <div class="col-12 mb-20"><input name="password"
                 class="form-control"
                 type="password"
                 placeholder="رمز عبور"
@@ -26,13 +26,13 @@
             <div class="col-12 mb-20"><label
                 for="remember"
                 class="adomx-checkbox-2"
-              ><input id="remember" type="checkbox" /><i class="icon"></i>مرا به
+              ><input name="remeber-me" id="remember" type="checkbox" /><i class="icon"></i>مرا به
                 خاطر داشته باش.</label></div>
             <div class="col-12">
               <div class="row justify-content-between">
                 <div class="col-auto mb-15"><a href="#">فراموشی رمز عبور؟</a></div>
                 <div class="col-auto mb-15">آیا حساب کاربری ندارید؟
-                  <a href="register.html">هم اکنون ایجاد کنید.</a></div>
+                  <a href="./register">هم اکنون ایجاد کنید.</a></div>
               </div>
             </div>
             <div class="col-12 mt-10"><button

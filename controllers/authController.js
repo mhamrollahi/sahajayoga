@@ -1,5 +1,5 @@
-// import {} from '../models/authModel.js'
 
+import authService from '../services/authService.js'
 
 class authController{
   async showLogin(req,res){
@@ -12,7 +12,12 @@ class authController{
 
   async doLogin(req,res){
     try {
-      
+      const {email,password} = req.body
+
+      const isValidUser = await authService.login(email)
+
+      res.send(req.body)
+
     } catch (error) {
       console.log(error)
     }
