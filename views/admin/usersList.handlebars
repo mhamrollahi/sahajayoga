@@ -17,7 +17,7 @@
     <!-- Revenue Statistics Chart Start -->
     <div class="col-md-12 mb-30">
       <div class="box">
-        <a href="/user/create" class="btn btn-success btn-sm m-2 text-left"  style="position: absolute;left: 35px;top:-30px">ایجاد کاربر جدید</a>
+        <a href="/user/new" class="btn btn-success btn-sm m-2 text-left"  style="position: absolute;left: 35px;top:-30px">ایجاد کاربر جدید</a>
         <div class="box-body table-responsive">
           <table
             class="table table table-striped table-hover table-bordered mb-0"
@@ -51,8 +51,8 @@
                     {{else}} <a  class="btn btn-danger btn-sm" href="/users/active/{{this.id}}&{{this.isActive}}" title='کلیک کنید فعال می‌شود.'>غیرفعال</a>{{/if}} </td> --}}
                   <td class="text-center col-md-1">
                     <div class="table-action-buttons">
-                      <a class="edit button button-box button-xs button-info" href="/experience/edit/{{this.id}}"  title="اصلاح خاطره..." ><i class="zmdi zmdi-edit"></i></a>
-                      <a class="delete button button-box button-xs button-danger" id="btnDelete" href="/experience/delete/{{this.id}}" 
+                      <a class="edit button button-box button-xs button-info" href="/user/edit/{{this.id}}"  title="اصلاح خاطره..." ><i class="zmdi zmdi-edit"></i></a>
+                      <a class="delete button button-box button-xs button-danger" id="btnDelete" href="/user/delete/{{this.id}}" 
                         onclick="return confirm('آیا از عملیات حذف مطمين هستید؟');"   title="حذف خاطره ..." ><i class="zmdi zmdi-delete"></i></a>
                     </div>
                   </td>

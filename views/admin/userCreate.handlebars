@@ -24,32 +24,23 @@
 
             <div class="form-floating mb-3">
               <input type="email" class="form-control" id="txtEmail" name="email"  placeholder="name@example.com" required>
-              <label for="email" class="mandatory">آدرس پست الکترونیکی</label>
+              <label for="email" class="mandatory"> پست الکترونیکی</label>
               <small class="errMessage" data-err="formatted" hidden>فرمت پست الکترونیکی صحیح نمی‌باشد.</small>
               <small class="errMessage" data-err="mandatory" hidden> پست الکترونیکی اجباری می باشد. </small>
             </div>
 
+
             <div class="form-floating mb-3">
-              <textarea class="form-control txt-experience"  id="txtExperience" name="txtExperience" rows="3" minlength="30" required
-                placeholder="متن خاطره یا تجربه خود را اینجا بنویسید ...">{{experienceData.Description}}
-                </textarea>
-              <label for="txtExperience" class="mandatory">متن تجربه / خاطره خود را اینجا بنویسید...</label>
-              <small class="errMessage" data-err="formatted" hidden>متن تجربه / عنوان باید بیش از 30 کاراکتر
-                باشد.</small>
-              <small class="errMessage" data-err="mandatory" hidden> متن تجربه/خاطره اجباری می باشد. </small>
+              <input type="password" class="form-control" id="password" name="password" minlength="3" 
+                placeholder="کلمه عبور خود را اینجا بنویسید."  title="کلمه عبور خود را اینجا بنویسید...."
+                autocomplete="off" autofocus="true" required>
+              <label for="password" class="mandatory">کلمه عبور  </label>
+              <small class="errMessage" data-err="formatted" hidden> کلمه عبور باید بیش از 3 کاراکتر باشد.</small>
+              <small class="errMessage" data-err="mandatory" hidden> کلمه عبور اجباری می باشد. </small>
             </div>
 
-            <div class="col-12 my-2 text-center d-flex align-items-center captcha">
-              <div class="captcha-img">
-                <img class="img-fluid" src="../../assets/Images/captcha-bg.png" alt="captcha background image"><span
-                  id="captchaTitle">کلمه روبرو را بنویسید:</span><span id="captchaValue"></span>
-              </div>
-
-              <button class="btnReload"><i class="fas fa-redo-alt"></i></button>
-              <input type="text" class="form-control" id="captchaInput" maxlength="3" >
-            </div>
             <div class="col-12 my-2 text-center">
-              <button class="btn btn-success  custom-btn" type="submit" id="btnSubmit">اصلاح خاطره</button>
+              <button class="btn btn-success  custom-btn" type="submit" id="btnSubmit">ثبت کاربر</button>
               <button class="btn btn-secondary custom-btn" type="reset" id="btnCancel">انصراف</button>
             </div>
           </form>

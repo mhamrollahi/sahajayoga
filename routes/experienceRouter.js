@@ -15,7 +15,7 @@ router.post('/update/:expId', experiencesController.update)
 
 router.get('/active/:expId&:isActive', experiencesController.activeOrNotActive)
 
-// router.get("/showExperience", experiencesController.showExperience);
+router.get("/showExperience", experiencesController.showExperience);
 
 
 export default router
