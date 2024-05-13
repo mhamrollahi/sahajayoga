@@ -20,21 +20,21 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 app.use(bodyParser.urlencoded({ urlencoded: false }));
 app.use(bodyParser.json());
-// app.use(cookieParser())
-// app.use(session({
-//   secret: 'sfsfst43423423900fdf',
-//   resave:true,
-//   saveUninitialized:true,
-//   cookie:{maxAge:60000}}))
+app.use(cookieParser())
+app.use(session({
+  secret: 'sfsfst43423423900fdf',
+  resave:true,
+  saveUninitialized:true,
+  cookie:{maxAge:60000}}))
 
-// app.use(flash())
+app.use(flash())
 
 app.use(loggerMiddleware)
 
 app.engine('handlebars',engine())
 app.set('view engine','handlebars')
 app.set('views', path.join(__dirname,'../views'));
-
+ 
 app.use(router)
 
 

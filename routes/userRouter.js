@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/list',usersController.list)
 
-router.get('/new',usersController.create)
+router.get('/create',usersController.create)
 
 router.post("/store", usersController.store);
 

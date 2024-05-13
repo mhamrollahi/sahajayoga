@@ -6,12 +6,13 @@ class usersController{
   
   async list(req,res){
     try {
+      const success = req.flash('success')
       const usersData =await findAll()
       const presentedUser = usersData.map(users=>{
         users.created_at_persian = toPersianDate(users.created_at)
         return users
       })
-      res.render('admin/usersList',{layout:'admin',usersData:presentedUser})
+      res.render('admin/usersList',{layout:'admin',usersData:presentedUser,success})
 
     } catch (error) {
       console.log(error);
@@ -21,7 +22,9 @@ class usersController{
 
   async create(req,res){
     try {
-      res.render('admin/userCreate',{layout:'admin'})
+      const errors = req.flash('errors')
+
+      res.render('admin/userCreate',{layout:'admin',hasError:errors.length>0,errors})
     } catch (error) {
       console.log(error);
     }
@@ -36,22 +39,18 @@ class usersController{
       }
       
       const errors = userCreateValidators(userData)
-      // console.log(errors);
+      
+
       if(errors.length > 0 ){
-        // req.flash('errors',errors)
-       return res.render('admin/userCreate',{layout:'admin',errors,hasError:errors.length > 0})
+        req.flash('errors',errors)
+        return res.redirect('../user/create')
       }
+
       const result = await createUser(userData)
       if(result[0].insertId){
-        const success = 'خاطره شما با موفقیت ثبت شد.بعد از تایید در صفحه اصلی قایل مشاهده است.'
-          // req.flash('success',success) 
-        const usersData1 =await findAll()
-        const presentedUser = usersData1.map(users=>{
-        users.created_at_persian = toPersianDate(users.created_at)
-        return users
-        })
-          // res.redirect('../user/list',{success,hasError:errors.length > 0})
-        return res.render('admin/usersList',{layout:'admin',success,hasError:errors.length > 0,usersData:presentedUser})
+        const success = 'کاربر شما با موفقیت ثبت شد.'
+        req.flash('success',success)
+        return res.redirect('../user/list')
       }
 
     } catch (error) {
