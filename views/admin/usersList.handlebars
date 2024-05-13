@@ -18,6 +18,12 @@
     <div class="col-md-12 mb-30">
       <div class="box">
         <a href="/user/new" class="btn btn-success btn-sm m-2 text-left"  style="position: absolute;left: 35px;top:-30px">ایجاد کاربر جدید</a>
+        {{#if hasError}}
+        {{else}}
+          <div class=" text-center"  style="position: absolute;right: 435px;top:-20px;">
+            <h4 class="successMessage">{{success}}</h4>
+          </div>
+        {{/if}}
         <div class="box-body table-responsive">
           <table
             class="table table table-striped table-hover table-bordered mb-0"

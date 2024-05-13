@@ -2,7 +2,7 @@ import myDatabase from '../configs/dbConfig.js'
 
 export  async function findAll(){
   try {
-    const [rows] = await myDatabase.query(`SELECT * FROM users`)
+    const [rows] = await myDatabase.query(`SELECT * FROM users ORDER BY created_at DESC`)
     
     return rows
 
@@ -21,4 +21,13 @@ export async function findByEmail(email){
   } catch (error) {
     console.log(error);
   }
+}
+export async function createUser(userData){
+  try {
+    const result = await myDatabase.query('INSERT INTO users SET ?',[userData])
+    return result
+  } catch (error) {
+    console.log(error.message)
+  }
+
 }

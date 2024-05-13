@@ -7,7 +7,7 @@ router.get('/list',usersController.list)
 
 router.get('/new',usersController.create)
 
-router.post("/create", usersController.createUser);
+router.post("/store", usersController.store);
 
 // router.get('/delete/:userId', usersController.remove)
 

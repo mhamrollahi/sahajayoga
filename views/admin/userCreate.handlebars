@@ -11,7 +11,15 @@
     <h3>کاربر جدید</h3>
     <div class="row">
       <div class="col-12 col-sm-12 col-md-12">
-          <form method="POST" action="./create" class="row g-3 needs-validation">
+          <form method="POST" action="./store" class="row g-3 needs-validation">
+            {{#if hasError}}
+              <div class="alert alert-danger">
+                {{#each errors}}
+                  <small class="errMessage">{{this}}</small><br>
+                {{/each}}
+              </div>
+             
+            {{/if}}
 
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="txtSubject" name="fullName" minlength="10" 
@@ -41,7 +49,7 @@
 
             <div class="col-12 my-2 text-center">
               <button class="btn btn-success  custom-btn" type="submit" id="btnSubmit">ثبت کاربر</button>
-              <button class="btn btn-secondary custom-btn" type="reset" id="btnCancel">انصراف</button>
+              <a class="btn btn-secondary custom-btn" type="reset" id="btnCancel" href="./list">انصراف</a>
             </div>
           </form>
       </div>
