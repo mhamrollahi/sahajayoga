@@ -1,4 +1,5 @@
 import myDatabase from '../configs/dbConfig.js'
+import { hashPassword } from '../services/hashService.js'
 
 export  async function findAll(){
   try {
@@ -24,6 +25,8 @@ export async function findByEmail(email){
 }
 export async function createUser(userData){
   try {
+    userData.password = hashPassword(userData.password)
+    
     const result = await myDatabase.query('INSERT INTO users SET ?',[userData])
     return result
   } catch (error) {

@@ -1,7 +1,6 @@
-export function userCreateValidators(request ){
+export function userCreateValidators(request){
 
   const errors = []
-
   if(request.fullName===''){
     errors.push('نام کاربری نمی‌تواند خالی باشد.')
   }
@@ -15,3 +14,4 @@ export function userCreateValidators(request ){
   return errors
   
 }
+

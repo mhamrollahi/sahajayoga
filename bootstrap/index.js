@@ -4,6 +4,8 @@ import { engine } from 'express-handlebars';
 import path from "path";
 import { fileURLToPath } from "url";
 import loggerMiddleware from "../middleware.js";
+import renderMiddleware from '../middlewares/renderMiddleware.js'
+
 import router  from "../routes/index.js";
 import cookieParser from 'cookie-parser';
 import session from 'express-session';
@@ -30,6 +32,7 @@ app.use(session({
 app.use(flash())
 
 app.use(loggerMiddleware)
+app.use(renderMiddleware)
 
 app.engine('handlebars',engine())
 app.set('view engine','handlebars')
