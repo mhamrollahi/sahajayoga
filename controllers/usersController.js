@@ -1,11 +1,12 @@
 import {createUser, findAll,findByEmail} from '../models/usersModel.js'
 import {toPersianDate} from '../services/dateService.js'
 import {userCreateValidators} from '../validators/user.js'
-
+import { hashPassword } from '../services/hashService.js'
 class usersController{
   
   async list(req,res){
     try {
+      
       const success = req.flash('success')
       const usersData =await findAll()
       const presentedUser = usersData.map(users=>{
@@ -35,7 +36,7 @@ class usersController{
       const userData ={
         fullName: req.body.fullName,
         email: req.body.email,
-        password: req.body.password,
+        password: hashPassword(req.body.password),
       }
       
       const errors = userCreateValidators(userData)
