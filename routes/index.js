@@ -1,6 +1,7 @@
 import experienceRouter from './experienceRouter.js'
 import authRouter from './authRouters.js'
 import userRouter from './userRouter.js'
+import authMiddleware from '../middlewares/authMiddleware.js'
 
 import path from "path";
 import { fileURLToPath } from "url";
@@ -14,8 +15,8 @@ const router = express.Router()
 
 router.use(express.static(path.join(__dirname, "../public")));
 
-router.use('/experience',experienceRouter)
+router.use('/experience',[authMiddleware],experienceRouter)
 router.use('/auth',authRouter)
-router.use('/user',userRouter)
+router.use('/user',[authMiddleware],userRouter)
 
 export default router

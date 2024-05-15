@@ -1,10 +1,11 @@
 
-import authService from '../services/authService.js'
+import login from '../services/authService.js'
+import UserRole from '../models/userRole.js'
 
 class authController{
   async showLogin(req,res){
     try {
-      res.render('auth/login',{layout:'auth'})
+      res.newRender('auth/login',{layout:'auth'})
     } catch (error) {
       console.log(error)
     }
@@ -14,9 +15,14 @@ class authController{
     try {
       const {email,password} = req.body
 
-      const isValidUser = await authService.login(email)
-
-      res.send(req.body)
+      const user = await login(email,password)
+      if(!user){
+        req.flash('errors','نام کاربری یا کلمه عبور نادرست می باشد.')
+        return res.redirect('/auth/login')
+      }
+      req.session.user = user
+      const pathToRedirect = user.roleId === UserRole.ADMIN ? '../experience/list' : '/'
+      return res.redirect(pathToRedirect)
 
     } catch (error) {
       console.log(error)

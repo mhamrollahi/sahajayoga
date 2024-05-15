@@ -1,12 +1,16 @@
 import { findByEmail } from "../models/authModel.js"
+import { comparePassword } from "./hashService.js"
 
-export default async function  login(email){
+export default async function  login(email,plainePassword){
   try {
-    const user = findByEmail(email)
+    const user = await findByEmail(email)
+    
+    
     if(!user){
       return false
     }
-    return user
+    const {password} = user
+    return comparePassword(plainePassword,password) ? user : false
 
   } catch (error) {
     console.log(error)

@@ -18,8 +18,10 @@ class experienceController {
 
   async list(req, res) {
     
+    
     const allExperiences = await list()
-    res.render('admin/experiencelist',{layout:'admin',allExperiences})
+    
+    res.adminRender('admin/experiencelist',{layout:'admin',allExperiences})
   }
 
 
