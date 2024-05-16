@@ -15,6 +15,6 @@ router.post("/store", usersController.store);
 
 // router.post('/update/:userId', usersController.update)
 
-// router.get('/active/:userId&:isActive', usersController.activeOrNotActive)
+router.get('/active/:userId&:isActive', usersController.activeOrNotActive)
 
 export default router

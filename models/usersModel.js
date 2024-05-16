@@ -34,3 +34,19 @@ export async function createUser(userData){
   }
 
 }
+
+export async function activeOrNotActive(userId , isActive){
+  try {
+    
+    const newIsActive = 1 - isActive
+    
+    const [result] = await myDatabase.query('UPDATE USERS SET isActive =?  WHERE id=? LIMIT 1 ',[newIsActive,userId])
+    
+    console.log(result)
+
+    return result.affectedRows > 0 
+  } catch (error) {
+    console.log(error.message)
+  }
+
+}

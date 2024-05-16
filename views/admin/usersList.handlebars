@@ -34,9 +34,10 @@
             <thead>
               <tr class="table-primary d-flex">
                 <th class="col-md-1">ردیف</th>
-                <th class="col-md-3">نام و نام خانوادگی </th>
+                <th class="col-md-2">نام و نام خانوادگی </th>
                 <th class="col-md-2">نام کاربری</th>
                 <th class="col-md-2">پسورد</th>
+                <th class="col-md-1">فعال/غیرفعال</th>
                 <th class="col-md-1">سطح دسترسی</th>
                 <th class="col-md-2">تاریخ ایجاد</th>
                 <th class="text-center col-md-1">عملیات</th>
@@ -49,14 +50,14 @@
               {{#each usersData}}
                 <tr class="d-flex">
                   <td class="col-md-1">{{this.id}}</td>
-                  <td class="td-table col-md-3"><a href="/users/edit/{{this.id}}" target="_blank">{{this.fullName}}</a></td>
+                  <td class="td-table col-md-2"><a href="/user/edit/{{this.id}}" target="_blank">{{this.fullName}}</a></td>
                   <td class="td-table col-md-2">{{this.email}}</td>
                   <td class="td-table col-md-2">{{this.password}}</td>
+                  <td class="col-md-1 text-center">{{#if this.isActive}} 
+                    <a  class="btn btn-success btn-sm"  href="/user/active/{{this.id}}&{{this.isActive}}" title='کلیک کنید غیر فعال می‌شود.'>فعال</a> 
+                    {{else}} <a  class="btn btn-danger btn-sm" href="/user/active/{{this.id}}&{{this.isActive}}" title='کلیک کنید فعال می‌شود.'>غیرفعال</a>{{/if}} </td>
                   <td class="col-md-1 ">{{this.roleId}}</td>
                   <td class="col-md-2 td-table">{{this.created_at_persian}}</td>
-                  {{!-- <td class="col-md-1 text-center">{{#if this.isActive}} 
-                    <a  class="btn btn-success btn-sm"  href="/users/active/{{this.id}}&{{this.isActive}}" title='کلیک کنید غیر فعال می‌شود.'>فعال</a> 
-                    {{else}} <a  class="btn btn-danger btn-sm" href="/users/active/{{this.id}}&{{this.isActive}}" title='کلیک کنید فعال می‌شود.'>غیرفعال</a>{{/if}} </td> --}}
                   <td class="text-center col-md-1">
                     <div class="table-action-buttons">
                       <a class="edit button button-box button-xs button-info" href="/user/edit/{{this.id}}"  title="اصلاح خاطره..." ><i class="zmdi zmdi-edit"></i></a>

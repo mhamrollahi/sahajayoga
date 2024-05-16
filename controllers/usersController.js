@@ -1,4 +1,4 @@
-import {createUser, findAll,findByEmail} from '../models/usersModel.js'
+import {createUser, findAll,activeOrNotActive} from '../models/usersModel.js'
 import {toPersianDate} from '../services/dateService.js'
 import {userCreateValidators} from '../validators/user.js'
 
@@ -52,6 +52,23 @@ class usersController{
 
     } catch (error) {
       console.log(error.message);
+    }
+  }
+
+  async activeOrNotActive(req,res){
+    try {
+      
+      const _id = req.params.userId
+      const _isActive = req.params.isActive
+      if(parseInt(_id)===0){
+        return res.redirect('user/list')
+      }
+
+      const result = await activeOrNotActive(_id,_isActive)
+      res.redirect('/user/list')
+
+    } catch (error) {
+      console.log(error);
     }
   }
 
