@@ -1,6 +1,6 @@
-import serviceLogin from "../services/authService.js";
+import serviceLogin, { serviceRegister } from "../services/authService.js";
 import UserRole from "../models/userRole.js";
-import { registerCreateValidators,registerValidators } from "../validators/user.js";
+import { registerCreateValidators,checkUniqueEmailValidators } from "../validators/user.js";
 
 class authController {
   async showLogin(req, res) {
@@ -16,6 +16,7 @@ class authController {
       const { email, password } = req.body;
 
       const user = await serviceLogin(email, password);
+      
       if (!user) {
         req.flash("errors", "نام کاربری یا کلمه عبور نادرست می باشد.");
         return res.redirect("/auth/login");
@@ -43,23 +44,35 @@ class authController {
     try {
       const { email, password,password_confirmation} = req.body;
       const registerData = {
-        email:email,
-        password:password,
+        email,
+        password,
         password_confirmation:password_confirmation
       }
 
       let errors = [] 
+     
       errors = registerCreateValidators(registerData)
       if(errors.length>0){
         req.flash('errors',errors)
         return res.redirect('./register')
       }
 
-      errors = registerValidators(registerData)
-      if(errors.length>0){
+      errors = await checkUniqueEmailValidators(registerData)
+      if(errors.length > 0){
         req.flash('errors',errors)
-        return res.redirect('auth/register')
+        return res.redirect('./register')
       }
+      
+      const newUser = await serviceRegister(email,password)
+      
+      console.log(newUser)
+
+      if(!newUser){
+        req.flash('errors','در حال حاضر امکان ثبت نام شما وجود ندارد...!')
+        return res.redirect('./register')
+      }
+      req.flash('success','ثبت نام با موفقیت انجام شد، لطفا وارد صفحه لاگین شوید.')
+      return res.redirect('./register')
 
       // const user = await serviceLogin(email, password);
       // if (!user) {

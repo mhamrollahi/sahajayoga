@@ -12,13 +12,13 @@
        {{#if hasError}}
           <div class="alert alert-danger">
             {{#each errors}}
-              <small class="errMessage">{{this}}</small><br>
+              <small class="errMessage">{{this}}</small>
             {{/each}}
           </div>
         {{/if}}
        {{#if success}}
           <div class="alert alert-success">
-            <small class="successMessage">{{this}}</small><br>
+            <small class="successMessage">{{success}}</small>
           </div>
         {{/if}}
 
@@ -33,12 +33,12 @@
             <div class="col-12 mb-20"><input
                 class="form-control" name="password"
                 type="password"
-                placeholder="رمز عبور"
+                placeholder="کلمه عبور"
               /></div>
             <div class="col-12 mb-20"><input
                 class="form-control" name="password_confirmation"
                 type="password"
-                placeholder="تایید رمز عبور"
+                placeholder="تایید کلمه عبور"
               /></div>
             <div class="col-12">
               <div class="row justify-content-between">
