@@ -37,7 +37,6 @@ class usersController{
       }
       
       const errors = userCreateValidators(userData)
-      
 
       if(errors.length > 0 ){
         req.flash('errors',errors)
