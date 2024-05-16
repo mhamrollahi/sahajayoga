@@ -159,11 +159,13 @@
                   <small class="errMessage">{{this}}</small><br>
                 {{/each}}
               </div>
-            {{else}}
+            {{/if}}
+            {{#if success}}
               <div class="alert alert-success text-center">
                 <small class="successMessage">{{success}}</small>
               </div>
             {{/if}}
+           
           
 
             
@@ -298,7 +300,6 @@
   <script src="../assets/JS/jquery-3.2.1.min.js"></script>
   <script src="../assets/JS/aos.js"></script>
   <script src="../assets/JS/main.js"></script>
-  <script src="../assets/JS/src/myExperience.js"></script>
 
 </body>
 

@@ -15,7 +15,7 @@ const router = express.Router()
 
 router.use(express.static(path.join(__dirname, "../public")));
 
-router.use('/experience',[authMiddleware],experienceRouter)
+router.use('/experience',experienceRouter)
 router.use('/auth',authRouter)
 router.use('/user',[authMiddleware],userRouter)
 

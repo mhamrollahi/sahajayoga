@@ -39,15 +39,15 @@ class experienceController {
       // console.log(errors);
 
       if(errors.length > 0 ){
-        // req.flash('errors',errors)
-       return res.render('experiences/showExperience',{layout:false,errors,hasError:errors.length > 0})
+        req.flash('errors',errors)
+       return res.redirect('../experience/showExperience')
       }
       const result = await createExperience(experienceData)
       if(result[0].insertId){
         const success = 'خاطره شما با موفقیت ثبت شد.بعد از تایید در صفحه اصلی قایل مشاهده است.'
-          // req.flash('success',success)
+          req.flash('success',success)
           // res.redirect('../../myExperience.html')
-        return res.render('experiences/showExperience',{layout:false,success,hasError:errors.length > 0})
+        return res.redirect('../experience/showExperience')
       }
 
     } catch (error) {
@@ -57,7 +57,7 @@ class experienceController {
 
   showExperience(req,res){
     try {
-      res.render('experiences/showExperience',{layout:false,errors,hasError})
+      res.newRender('experience/showExperience',{layout:false})
     } catch (error) {
       console.log(error)      
     }
