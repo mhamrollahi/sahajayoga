@@ -93,7 +93,7 @@ errMessageFormatted.forEach((value, key) => {
 
 const txtSubject = document.querySelector("#txtSubject");
 const txtEmail = document.querySelector("#txtEmail");
-// const txtExperience = document.querySelector('#txtExperience')
+const txtExperience = document.querySelector('#txtExperience')
 const txtFullname = document.querySelector("#txtFullname");
 
 txtSubject.addEventListener("input", (e) => {
@@ -134,7 +134,7 @@ txtEmail.addEventListener("input", (e) => {
   target.setCustomValidity("");
   errMessageMandatory[1].hidden = true;
 
-  console.log(target.validity);
+  // console.log(target.validity);
 
   if (target.validity.typeMismatch) {
     //txtEmail Error
