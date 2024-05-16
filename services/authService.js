@@ -1,9 +1,9 @@
-import { findByEmail } from "../models/authModel.js";
+import { findByEmail, findByEmailActiveUser } from "../models/authModel.js";
 import UserRole from "../models/userRole.js";
 import { createUser } from "../models/usersModel.js";
 import { comparePassword } from "./hashService.js";
 
-export default async function serviceLogin(email, plainPassword) {
+export async function serviceLogin(email, plainPassword) {
   try {
     const user = await findByEmail(email);
 
@@ -12,6 +12,23 @@ export default async function serviceLogin(email, plainPassword) {
     }
     const { password } = user;
     return comparePassword(plainPassword, password) ? user : false;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export  async function serviceLoginByActiveUser(email) {
+  try {
+    const user = await findByEmailActiveUser(email);
+    
+    console.log(!user)
+
+    if (!user) {
+      return false;
+    }
+    
+    return user
+
   } catch (error) {
     console.log(error);
   }

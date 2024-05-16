@@ -1,4 +1,4 @@
-import serviceLogin, { serviceRegister } from "../services/authService.js";
+import { serviceLogin, serviceRegister,serviceLoginByActiveUser } from "../services/authService.js";
 import UserRole from "../models/userRole.js";
 import { registerCreateValidators,checkUniqueEmailValidators } from "../validators/user.js";
 
@@ -15,13 +15,19 @@ class authController {
     try {
       const { email, password } = req.body;
 
-      const user = await serviceLogin(email, password);
+      let user = await serviceLogin(email, password);
       
       if (!user) {
         req.flash("errors", "نام کاربری یا کلمه عبور نادرست می باشد.");
         return res.redirect("/auth/login");
       }
       
+      user = await serviceLoginByActiveUser(email)
+      if(!user){
+        req.flash('errors','این کاربر فعال نیست ، لطفا منتظر بمانید...')
+        return res.redirect('./login')
+      }
+
       req.session.user = user;
 
       const pathToRedirect =
