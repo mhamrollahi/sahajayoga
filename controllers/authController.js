@@ -31,7 +31,7 @@ class authController{
 
   async showRegister(req,res){
     try {
-      
+      res.newRender('auth/register',{layout:'auth'})
     } catch (error) {
       console.log(error)
     }

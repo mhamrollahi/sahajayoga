@@ -69,21 +69,31 @@
 /*-- Google Font --*/
 /*-- Common Style --*/
 
-@font-face {
+/* @font-face {
 	font-family: IRANSans;
 	font-style: normal;
 	font-weight: bold;
 	src:url('../../Fonts/adomax/font/IRANSansWeb_Light.eot');
-	src: url('../../Fonts/adomax/font/IRANSansWeb_Lightd41d.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-		 url('../../Fonts/adomax/font/IRANSansWeb_Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-		 url('../../Fonts/adomax/font/IRANSansWeb_Light.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+	src: url('../../Fonts/adomax/font/IRANSansWeb_Lightd41d.eot?#iefix') format('embedded-opentype'),  
+		 url('../../Fonts/adomax/font/IRANSansWeb_Light.woff2') format('woff2'),
+		 url('../../Fonts/adomax/font/IRANSansWeb_Light.woff') format('woff'),  
 		 url('../../Fonts/adomax/font/IRANSansWeb_Light.ttf') format('truetype');
-}
+} */
+@font-face {
+  font-family: Vazeir;
+  src: url(../../Fonts/Vazir-Medium.eot) format("eot"),
+    url(../../Fonts/Vazir-Medium.woff) format("woff"),
+    url(../../Fonts/Vazir-Medium.woff2) format("woff2");
 
+  font-style: normal;
+  font-weight: 700;
+}
+*,
 body {
     font-weight: normal;
     font-style: normal;
-	font-family:IRANSans;
+	/* font-family:IRANSans; */
+	font-family:IRANSansXFaNum;
     direction: rtl;
 }
 
@@ -103,7 +113,7 @@ body {
   font-style: normal;
   font-weight: normal;
   visibility: visible;
-  font-family: IRANSans;
+  font-family: IRANSansXFaNum;
   color: #666666;
   position: relative;
 }
@@ -113,7 +123,7 @@ body[dir="rtl"] {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: IRANSans;
+  font-family: IRANSansXFaNum;
   color: #343434;
   font-weight: 600;
   margin-top: 0;
@@ -4610,7 +4620,7 @@ label.inline:last-child {
   background-color: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 4px;
-  font-family: IRANSans;
+  font-family: IRANSansXFaNum;
   font-size: 14px;
   line-height: 24px;
   padding: 10px 20px;
@@ -5426,7 +5436,7 @@ input[type="checkbox"], input[type="radio"] {
   background-color: transparent;
   border: 1px solid #dddddd;
   border-radius: 4px;
-  font-family: IRANSans;
+  font-family: IRANSansXFaNum;
   font-size: 14px;
   line-height: 24px;
   padding: 10px 20px;
