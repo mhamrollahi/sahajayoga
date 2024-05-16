@@ -100,7 +100,7 @@ class experienceController {
     try {
       const _id = req.params.expId
       if(parseInt(_id)===0){
-            return res.redirect('experience/list')
+        return res.redirect('experience/list')
       }
 
       const experienceData = await findById(_id)

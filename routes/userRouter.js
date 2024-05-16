@@ -11,9 +11,9 @@ router.post("/store", usersController.store);
 
 // router.get('/delete/:userId', usersController.remove)
 
-// router.get('/edit/:userId', usersController.edit)
+router.get('/edit/:userId', usersController.edit)
 
-// router.post('/update/:userId', usersController.update)
+router.post('/update/:userId', usersController.update)
 
 router.get('/active/:userId&:isActive', usersController.activeOrNotActive)
 

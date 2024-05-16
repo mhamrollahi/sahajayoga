@@ -12,6 +12,17 @@ export  async function findAll(){
   }
 }
 
+export  async function findById(userId){
+  try {
+    const [rows] = await myDatabase.query(`SELECT * FROM users  WHERE id = ? LIMIT 1`,userId)
+    
+    return rows.length > 0 ? rows[0] : false 
+
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export async function findByEmail(email){
   try {
     
@@ -48,5 +59,17 @@ export async function activeOrNotActive(userId , isActive){
   } catch (error) {
     console.log(error.message)
   }
+}
 
+export async function editUser(userID,updateFields){
+  try {
+    const [result] = await myDatabase.query('UPDATE USERS SET ?  WHERE id=? LIMIT 1 ',[updateFields,userID])
+    
+    console.log(result)
+
+    return result.affectedRows > 0 
+    
+  } catch (error) {
+    console.log(error)    
+  }
 }

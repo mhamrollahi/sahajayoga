@@ -40,7 +40,7 @@ export async function serviceRegister(email,password){
       fullName : 'ناشناس',
       email,
       password,
-      roleId:UserRole.USER
+      roleId:UserRole.NEWER
     })
 
     return result

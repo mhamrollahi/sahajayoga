@@ -5,10 +5,12 @@
 
       <div class="content">
         <h1 style="font-weight:500;font-size:38px">  ورود به سایت</h1>
-
-        {{#if hasError}}
-          <p class="alert alert-danger">{{errors}}</p>
+         {{#if hasError}}
+          <div class="alert alert-danger">
+              <small class="errMessage">{{errors}}</small>
+          </div>
         {{/if}}
+       
       </div>
       <div class="login-register-form">
         <form action="./login" method="POST">
@@ -16,7 +18,7 @@
             <div class="col-12 mb-20"><input name="email"
                 class="form-control"
                 type="email"
-                placeholder="ایمیل"
+                placeholder="ایمیل" autofocus="true"
               /></div>
             <div class="col-12 mb-20"><input name="password"
                 class="form-control"

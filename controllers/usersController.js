@@ -1,7 +1,7 @@
-import {createUser, findAll,activeOrNotActive} from '../models/usersModel.js'
+import {createUser, findAll,activeOrNotActive,findById,editUser} from '../models/usersModel.js'
 import {toPersianDate} from '../services/dateService.js'
 import {userCreateValidators} from '../validators/user.js'
-
+import UserRole from '../models/userRole.js'
 class usersController{
   
   async list(req,res){
@@ -72,6 +72,47 @@ class usersController{
     }
   }
 
+  async edit(req,res){
+    try {
+      const _id = req.params.userId
+      if(parseInt(_id)===0){
+        return res.redirect('user/list')
+      }
+
+      const userData = await findById(_id)
+      
+      console.log(userData)
+
+      res.adminRender('admin/userEdit',{userData})
+
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  
+  async update(req,res){
+    try {
+      const _id = req.params.userId
+      if(parseInt(_id)===0){
+            return res.redirect('user/list')
+      }
+      const userData ={
+        fullName: req.body.fullName,
+        roleId: UserRole.USER,
+        updated_at:new Date()
+      }
+
+      const result = editUser(_id,userData)
+      return res.redirect('../../user/list')
+
+  
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+
 }
+
 
 export default new usersController()

@@ -29,10 +29,32 @@ class authController {
       }
 
       req.session.user = user;
+      let pathToRedirect = ''
+      
+      switch(user.roleId){
 
-      const pathToRedirect =
-        user.roleId === UserRole.ADMIN ? "../user/list" : "/";
+        case UserRole.NEWER:
+          pathToRedirect = `../user/edit/${user.id}`
+          break
+          
+        case UserRole.USER:
+          pathToRedirect = '/'
+          break
+            
+        case UserRole.WRITER:
+          pathToRedirect = '/'
+          break
+              
+        case UserRole.ADMIN:
+          pathToRedirect = '../user/list'
+          break
+
+        default:
+          pathToRedirect = '/'
+      }
+
       return res.redirect(pathToRedirect);
+
     } catch (error) {
       console.log(error);
     }
@@ -79,16 +101,6 @@ class authController {
       }
       req.flash('success','ثبت نام با موفقیت انجام شد، لطفا وارد صفحه لاگین شوید.')
       return res.redirect('./register')
-
-      // const user = await serviceLogin(email, password);
-      // if (!user) {
-      //   req.flash("errors", "نام کاربری یا کلمه عبور نادرست می باشد.");
-      //   return res.redirect("/auth/login");
-      // }
-      // req.session.user = user;
-      // const pathToRedirect =
-      //   user.roleId === UserRole.ADMIN ? "../experience/list" : "/";
-
 
     } catch (error) {
       console.log(error);
