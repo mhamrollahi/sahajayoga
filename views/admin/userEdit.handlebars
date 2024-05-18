@@ -36,7 +36,7 @@
             </div>
 
             <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="txtEmail" name="email"  placeholder="name@example.com" value={{userData.email}} readonly>
+              <input type="email" class="form-control" id="txtEmail" name="email"  placeholder="name@example.com" value={{userData.email}} disabled>
               <label for="email" class="mandatory"> پست الکترونیکی</label>
               <small class="errMessage" data-err="formatted" hidden>فرمت پست الکترونیکی صحیح نمی‌باشد.</small>
               <small class="errMessage" data-err="mandatory" hidden> پست الکترونیکی اجباری می باشد. </small>
@@ -44,7 +44,7 @@
 
 
             <div class="form-floating mb-3">
-              <input type="password" class="form-control" id="password" name="password" minlength="3" readonly
+              <input type="password" class="form-control" id="password" name="password" minlength="3"  disabled
                 placeholder="کلمه عبور خود را اینجا بنویسید."  title="کلمه عبور خود را اینجا بنویسید...."
                 autocomplete="off" autofocus="true" value={{userData.password}}>
               <label for="password" class="mandatory">کلمه عبور  </label>
@@ -54,7 +54,7 @@
 
             <div class="col-12 my-2 text-center">
               <button class="btn btn-success  custom-btn" type="submit" id="btnSubmit">اصلاح کاربر</button>
-              <a class="btn btn-secondary custom-btn" type="reset" id="btnCancel" href="./list">انصراف</a>
+              <a class="btn btn-secondary custom-btn" type="reset" id="btnCancel" href="../list">انصراف</a>
             </div>
           </form>
       </div>

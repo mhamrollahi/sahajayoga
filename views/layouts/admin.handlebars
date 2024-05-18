@@ -251,15 +251,15 @@
                                             <img src="assets/images/adomax/avatar/avatar-1.jpg" alt="">
                                             <span class="status"></span>
                                             </span>
-                                            <span class="name">محمد حسن امراللهی</span>
+                                            <span class="name">{{user.fullName}}</span>
                                             </span>
                                         </a>
 
                                         <!-- Dropdown -->
                                         <div class="adomx-dropdown-menu dropdown-menu-user">
                                             <div class="head">
-                                                <h5 class="name"><a href="#">محمد حسن امراللهی</a></h5>
-                                                <a class="mail" href="#">mh.amrollahi@gmail.com</a>
+                                                <h5 class="name"><a href="#">{{user.fullName}}</a></h5>
+                                                <a class="mail" href="#">{{user.email}}</a>
                                             </div>
                                             <div class="body">
                                                 <ul>
@@ -271,10 +271,6 @@
                                                     <li><a href="#"><i class="zmdi zmdi-settings"></i>تنظیمات</a></li>
                                                     <li><a href="#"><i class="zmdi zmdi-lock-open"></i>خروج</a></li>
                                                 </ul>
-                                                {{!-- <ul>
-                                                    <li><a href="#"><i class="zmdi zmdi-paypal"></i>پرداخت ها</a></li>
-                                                    <li><a href="#"><i class="zmdi zmdi-google-pages"></i>صورتحساب</a></li>
-                                                </ul> --}}
                                             </div>
                                         </div>
 

@@ -105,7 +105,7 @@ class experienceController {
 
       const experienceData = await findById(_id)
       
-      res.render('admin/experienceEdit',{layout:'admin',experienceData})
+      res.adminRender('admin/experienceEdit',{experienceData})
 
     } catch (error) {
       console.log(error)

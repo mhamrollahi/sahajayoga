@@ -29,6 +29,7 @@ class authController {
       }
 
       req.session.user = user;
+      
       let pathToRedirect = ''
       
       switch(user.roleId){
