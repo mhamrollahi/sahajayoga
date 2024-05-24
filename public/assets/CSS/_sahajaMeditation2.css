@@ -1,0 +1,121 @@
+.sahaja-meditation2-section-wrapper {
+  text-align: justify;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+}
+.sahaja-meditation2-section-wrapper .header-title h1 {
+  color: #6e6c6c;
+  font-size: 26px;
+  text-shadow: 1px 1px #ff0000;
+  width: 950px;
+  line-height: 60px;
+  user-select: none;
+  position: absolute;
+  text-align: center;
+}
+
+.sahaja-meditation2-section-wrapper .header-title h1#sub1 {
+  top: 10px;
+  margin: 10px;
+  padding-top: 10px;
+}
+
+.sahaja-meditation2-section-wrapper .header-title h1#sub2 {
+  top: 210px;
+  right: 20px;
+}
+.sahaja-meditation2-section-wrapper .header-title h1#sub3 {
+  top: 400px;
+  right: 80px;
+}
+
+.img-header-medt {
+  min-height: 85vh;
+  width: 100%;
+}
+
+.img-header-medt.overlay{
+  filter: brightness(.75);
+}
+
+.sahaja-meditation2-section-wrapper .animeh1 {
+  font-size: 20px;
+  width: 100%;
+  color: red;
+
+  position: relative;
+  top: 200px;
+  right: -1000px;
+
+  animation-name: sahajtext1;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+@keyframes sahajtext1 {
+  0% {
+    right: -200px;
+  }
+  25% {
+    right: 50px;
+  }
+  50% {
+    right: 70px;
+  }
+  75% {
+    right: 100px;
+  }
+  100% {
+    right: 120px;
+    display: none;
+  }
+}
+
+.sahaja-meditation-section-wrapper h3 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding: 10px 40px;
+  color: var(--main-color-pink);
+  font-size: 30px;
+  text-align: center;
+}
+
+.sahaja-meditation-section-wrapper .right-sec p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: justify;
+}
+
+.sahaja-meditation-section-wrapper .right-sec p a {
+  font-weight: 600;
+}
+.sahaja-meditation-section-wrapper .right-sec p a:hover {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.sahaja-meditation-section-wrapper img {
+  margin-top: 10px;
+  border-radius: 28px;
+}
+.sahaja-meditation-section-wrapper .img-title p {
+  font-size: 14px;
+  text-align: center;
+  padding-top: 20px;
+  font-weight: 500;
+  color: var(--main-color-pink);
+}
+
+@media screen and (max-width: 670px) {
+  .sahaja-meditation-section-wrapper .right-sec h3 {
+    font-size: 24px;
+  }
+
+  .sahaja-meditation-section-wrapper .right-sec p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+}
