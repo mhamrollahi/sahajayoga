@@ -2,15 +2,17 @@
   text-align: justify;
   /* background-color: rgba(0, 0, 0, 0.3); */
 }
-.sahaja-meditation2-section-wrapper .header-title h1 {
-  color: #6e6c6c;
-  font-size: 26px;
-  text-shadow: 1px 1px #ff0000;
-  width: 950px;
+.sahaja-meditation2-section-wrapper h2 {
+  color: #454040;
+  font-size: 30px;
+  text-shadow: 1px 1px 5px #ec4343;
   line-height: 60px;
   user-select: none;
-  position: absolute;
   text-align: center;
+  position: relative;
+  bottom: 200px;
+  left: 150px;
+  margin-bottom: 25px;
 }
 
 .sahaja-meditation2-section-wrapper .header-title h1#sub1 {
