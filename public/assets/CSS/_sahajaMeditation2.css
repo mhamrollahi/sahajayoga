@@ -10,25 +10,10 @@
   user-select: none;
   text-align: center;
   position: relative;
-  bottom: 200px;
+  bottom: 150px;
   left: 150px;
   margin-bottom: 25px;
-  font-weight: bolder
-}
-
-.sahaja-meditation2-section-wrapper .header-title h1#sub1 {
-  top: 10px;
-  margin: 10px;
-  padding-top: 10px;
-}
-
-.sahaja-meditation2-section-wrapper .header-title h1#sub2 {
-  top: 210px;
-  right: 20px;
-}
-.sahaja-meditation2-section-wrapper .header-title h1#sub3 {
-  top: 400px;
-  right: 80px;
+  font-weight: bolder;
 }
 
 .img-header-medt {
@@ -36,8 +21,8 @@
   width: 100%;
 }
 
-.img-header-medt.overlay{
-  filter: brightness(.75);
+.img-header-medt.overlay {
+  filter: brightness(0.75);
 }
 
 .sahaja-meditation2-section-wrapper .animeh1 {
@@ -75,50 +60,12 @@
   }
 }
 
-.sahaja-meditation-section-wrapper h3 {
-  margin-top: 20px;
-  margin-bottom: 15px;
-  padding: 10px 40px;
-  color: var(--main-color-pink);
-  font-size: 30px;
-  text-align: center;
-}
-
-.sahaja-meditation-section-wrapper .right-sec p {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 36px;
-  text-align: justify;
-}
-
-.sahaja-meditation-section-wrapper .right-sec p a {
-  font-weight: 600;
-}
-.sahaja-meditation-section-wrapper .right-sec p a:hover {
-  font-weight: 700;
-  font-style: italic;
-}
-
-.sahaja-meditation-section-wrapper img {
-  margin-top: 10px;
-  border-radius: 28px;
-}
-.sahaja-meditation-section-wrapper .img-title p {
-  font-size: 14px;
-  text-align: center;
-  padding-top: 20px;
-  font-weight: 500;
-  color: var(--main-color-pink);
-}
-
-@media screen and (max-width: 670px) {
-  .sahaja-meditation-section-wrapper .right-sec h3 {
-    font-size: 24px;
-  }
-
-  .sahaja-meditation-section-wrapper .right-sec p {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 32px;
-  }
+@media screen and (min-width:500px) and (max-width: 1200px) {
+    .sahaja-meditation2-section-wrapper h2 {
+      font-size: 19px;
+      bottom: 0px;
+      left: 0;
+      line-height: 50px;
+      margin: 0;
+    }
 }
