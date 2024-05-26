@@ -13,7 +13,7 @@ import express from 'express'
 
 const router = express.Router()
 
-router.use(express.static(path.join(__dirname, "../public")));
+// router.use(express.static(path.join(__dirname, "../public")));
 
 router.use('/experience',experienceRouter)
 router.use('/auth',authRouter)
