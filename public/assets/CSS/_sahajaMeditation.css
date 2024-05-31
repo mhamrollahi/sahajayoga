@@ -71,3 +71,79 @@
     line-height: 32px;
   }
 }
+
+
+/* for what is sahaj meditation and whta not  */
+
+.sahaja-meditation2-section-wrapper {
+  text-align: justify;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+}
+.sahaja-meditation2-section-wrapper h2 {
+  color: #454040;
+  font-size: 30px;
+  text-shadow: 1px 1px 5px #ec4343;
+  line-height: 60px;
+  user-select: none;
+  text-align: center;
+  position: relative;
+  bottom: 150px;
+  left: 150px;
+  margin-bottom: 25px;
+  font-weight: bolder;
+}
+
+.img-header-medt {
+  min-height: 85vh;
+  width: 100%;
+}
+
+.img-header-medt.overlay {
+  filter: brightness(0.75);
+}
+
+.sahaja-meditation2-section-wrapper .animeh1 {
+  font-size: 20px;
+  width: 100%;
+  color: red;
+
+  position: relative;
+  top: 200px;
+  right: -1000px;
+
+  animation-name: sahajtext1;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+@keyframes sahajtext1 {
+  0% {
+    right: -200px;
+  }
+  25% {
+    right: 50px;
+  }
+  50% {
+    right: 70px;
+  }
+  75% {
+    right: 100px;
+  }
+  100% {
+    right: 120px;
+    display: none;
+  }
+}
+
+@media screen and (min-width:500px) and (max-width: 1200px) {
+    .sahaja-meditation2-section-wrapper h2 {
+      font-size: 19px;
+      bottom: 0px;
+      left: 0;
+      line-height: 50px;
+      margin: 0;
+    }
+}
+
