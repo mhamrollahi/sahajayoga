@@ -26,7 +26,12 @@ app.use((req,res,next)=>{
     options = {...options,layout:'admin',hasError,errors,success,user}
     res.render(template,options)
   }
-
+  
+  res.frontRender = (template,options)=>{
+    options = {...options,layout:'main',hasError,errors,success}
+    res.render(template,options)
+  }
+  
   next()
 })
 
