@@ -24,23 +24,28 @@
   font-weight: 500;
   color:var(--main-color-pink);
 }
+.leftside-chanel-section-wrapper .right-sec-leftside p {
+  font-size: 20px;
+  line-height: 40px;
+}
 
 .background_left_side_chanel{
   margin-top: -20px;
-  background: linear-gradient(270deg, #ffffff 40%, #73b8e6d5 100%);
+  background: linear-gradient(-270deg, #ffffff 40%, #73b8e6d5 100%);
 }
 
 .sec-paksazei-leftside span{
   color:#0404a1;
   font-size: 22px;
   display: block;
+  font-weight: 500;
 }
 .sec-paksazei-leftside p{
   padding-right: 30px;
   padding-top: 8px;
 }
 .sec-paksazei-leftside span::before{
-   font-family: "Font Awesome 5 Free";
+   font-family: "FontAwesome";
    content: "\f14a";
    display: inline-block;
    padding-left: 4px;
