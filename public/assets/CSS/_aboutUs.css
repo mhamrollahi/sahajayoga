@@ -1,58 +1,27 @@
 .img-header-about-us {
-  min-height: 90vh;
+  min-height: 140vh;
   width: 100%;
 }
 
 .overlay {
   width: 100%;
-  min-height: 86vh;
+  min-height: 140vh;
   background-color: rgba(0, 0, 0, 0.95);
 }
 .about-us-section-wrapper .header-title {
   color: #fff;
 }
 .about-us-section-wrapper .header-title p {
-  margin: 20px;
+  margin: 20px 10px;
   padding: 15px;
-  font-size: 24px;
+  font-size: 22px;
   text-shadow: 2px 1px #c85013;
   width: 90%;
   height: 100%;
   line-height: 55px;
   user-select: none;
   text-align: justify;
-  font-weight: 500;
-}
-
-.about-us-section-wrapper .more-info {
-  display: inline-block;
-  background-color: var(--main-color-pink);
-  /* background-color:#ddb9bb; */
-  color: var(--main-font-color);
-  border: 1px solid var(--main-border-color);
-  font-size: 18px;
-  padding: 5px 60px;
-  font-weight: bold;
-  transition: 0.5s ease-in;
-  top: 280px;
-  right: 330px;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-.about-us-section-wrapper .more-info::before {
-  content: "";
-  width: 0%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background-color: #f7ebf3;
-  z-index: -1;
-  transition: all 0.7s ease-in;
-}
-.about-us-section-wrapper .more-info:hover::before {
-  width: 100%;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 678px) {
