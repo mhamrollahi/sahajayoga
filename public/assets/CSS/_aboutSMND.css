@@ -70,6 +70,26 @@
   min-width: 600px;
   text-align: center;
 }
+.award-section span{
+  font-size: 22px;
+  text-align: right;
+  margin-bottom: 15px;
+  display: block;
+  border-bottom: 1px solid rgb(235, 228, 228);
+  padding-bottom: 10px;
+}
+.award-section span::before{
+  font-family: "FontAwesome";
+  content: "\f06b";
+  display: inline-block;
+  padding-left: 4px;
+  vertical-align: middle;
+  font-weight: 600;
+  font-size: 24px;
+  color: #fad501;
+  position: relative;
+  top: -4px;
+}
 
 .shape-shrimataji {
   overflow: hidden;
