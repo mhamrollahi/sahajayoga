@@ -107,6 +107,16 @@ class authController {
       console.log(error);
     }
   }
+
+  async logout(req,res){
+    try {
+      req.session.destroy(error => {
+        return res.redirect('/')
+      })
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
 
 export default new authController();

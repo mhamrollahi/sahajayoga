@@ -11,5 +11,7 @@ router.get("/register",authController.showRegister);
 
 router.post("/register",authController.doRegister);
 
+router.get('/logout',authController.logout)
+
 
 export default router;

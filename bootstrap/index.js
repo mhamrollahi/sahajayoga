@@ -28,7 +28,10 @@ app.use(session({
   secret: 'sfsfst43423423900fdf',
   resave:true,
   saveUninitialized:true,
-  cookie:{maxAge:60000}}))
+  cookie:{maxAge:60000},
+  unset:'destroy'
+
+}))
 
 app.use(flash())
 
