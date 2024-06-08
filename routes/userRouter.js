@@ -9,7 +9,7 @@ router.get('/create',usersController.create)
 
 router.post("/store", usersController.store);
 
-// router.get('/delete/:userId', usersController.remove)
+router.get('/delete/:userId', usersController.remove)
 
 router.get('/edit/:userId', usersController.edit)
 

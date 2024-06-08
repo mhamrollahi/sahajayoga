@@ -73,3 +73,14 @@ export async function editUser(userID,updateFields){
     console.log(error)    
   }
 }
+
+export async function deleteUser(userId){
+  
+  try {
+    const [result] = await myDatabase.query('DELETE FROM USERS WHERE id = ? LIMIT 1',[userId])
+    return result.affectedRows > 0 
+  } catch (error) {
+    console.log(error)
+  }
+
+}

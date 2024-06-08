@@ -1,4 +1,4 @@
-import {createUser, findAll,activeOrNotActive,findById,editUser} from '../models/usersModel.js'
+import {createUser, findAll,activeOrNotActive,findById,editUser, deleteUser} from '../models/usersModel.js'
 import {toPersianDate} from '../services/dateService.js'
 import {userCreateValidators} from '../validators/user.js'
 import UserRole from '../models/userRole.js'
@@ -106,6 +106,19 @@ class usersController{
       return res.redirect('../../user/list')
 
   
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  async remove(req,res){
+    try {
+      const _id = req.params.userId
+      if(parseInt(_id)===0){
+        return res.redirect('user/list')
+      }
+      const result = await deleteUser(_id)
+      res.redirect('/user/list')
     } catch (error) {
       console.log(error)
     }
