@@ -286,9 +286,9 @@ END -- HEADER Image Section style */
 /* This style for Section of MENU  */
 
 .nav-section-wrapper {
-  padding-top: 2px;
   background-color: #f8edeb;
-  /* background-color: #dbd7d7; */
+  position: sticky;
+  top: 0;
   z-index: 999;
 }
 
