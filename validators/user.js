@@ -1,5 +1,18 @@
 import { findByEmail } from "../models/authModel.js"
 
+export function loginValidators(request){
+  const errors = []
+  
+  if(request.email===''){
+    errors.push(' ایمیل نمی‌تواند خالی باشد!!')
+  }
+  if(request.password===''){
+    errors.push('پسورد نمی‌تواند خالی باشد!!')
+  }
+
+  return errors
+}
+
 export function userCreateValidators(request){
 
   const errors = []

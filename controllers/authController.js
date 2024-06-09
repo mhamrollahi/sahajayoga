@@ -1,6 +1,6 @@
 import { serviceLogin, serviceRegister,serviceLoginByActiveUser } from "../services/authService.js";
 import UserRole from "../models/userRole.js";
-import { registerCreateValidators,checkUniqueEmailValidators } from "../validators/user.js";
+import { registerCreateValidators,checkUniqueEmailValidators, loginValidators } from "../validators/user.js";
 
 class authController {
   async showLogin(req, res) {
@@ -14,6 +14,14 @@ class authController {
   async doLogin(req, res) {
     try {
       const { email, password } = req.body;
+
+      let errors = []
+      errors = loginValidators(req.body)
+
+      if(errors.length>0){
+        req.flash('errors',errors)
+        return res.redirect('./login')
+      }
 
       let user = await serviceLogin(email, password);
       
