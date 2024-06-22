@@ -1,137 +1,186 @@
-//myExperince javascript Code - Start
-const errMessageMandatory = document.querySelectorAll("[data-err='mandatory']");
-const errMessageFormatted = document.querySelectorAll("[data-err='formatted']");
-const btnCancel = document.querySelector("#btnCancel");
-const btnSubmit = document.querySelector("#btnSubmit");
+// //myExperince javascript Code - Start
+// const errMessageMandatory = document.querySelectorAll("[data-err='mandatory']");
+// const errMessageFormatted = document.querySelectorAll("[data-err='formatted']");
+// const btnCancel = document.querySelector("#btnCancel");
+// const btnSubmit = document.querySelector("#btnSubmit");
 
-const captchaValue = document.querySelector("#captchaValue");
-const captchaInput = document.querySelector("#captchaInput");
+// const captchaValue = document.querySelector("#captchaValue");
+// const captchaInput = document.querySelector("#captchaInput");
 
-errMessageMandatory.forEach((value, key) => {
-  value.hidden = true;
-});
-errMessageFormatted.forEach((value, key) => {
-  value.hidden = true;
-});
+// errMessageMandatory.forEach((value, key) => {
+//   value.hidden = true;
+// });
+// errMessageFormatted.forEach((value, key) => {
+//   value.hidden = true;
+// });
 
-const txtSubject = document.querySelector("#txtSubject");
-const txtEmail = document.querySelector("#txtEmail");
-const txtExperience = document.querySelector('#txtExperience')
-const txtFullname = document.querySelector("#txtFullname");
+// const txtSubject = document.querySelector("#txtSubject");
+// const txtEmail = document.querySelector("#txtEmail");
+// const txtExperience = document.querySelector('#txtExperience')
+// const txtFullname = document.querySelector("#txtFullname");
 
-txtSubject.addEventListener("input", (e) => {
-  const { target } = e;
+// txtSubject.addEventListener("input", (e) => {
+//   const { target } = e;
 
-  target.setCustomValidity("");
-  errMessageMandatory[0].hidden = true;
+//   target.setCustomValidity("");
+//   errMessageMandatory[0].hidden = true;
 
-  if (target.validity.tooShort) {
-    //txtSubject Error
-    errMessageFormatted[0].hidden = false;
-    target.setCustomValidity(" عنوان باید بیش از 10 کاراکتر باشد");
-  } else {
-    errMessageFormatted[0].hidden = true;
-    target.setCustomValidity("");
-  }
-});
+//   if (target.validity.tooShort) {
+//     //txtSubject Error
+//     errMessageFormatted[0].hidden = false;
+//     target.setCustomValidity(" عنوان باید بیش از 10 کاراکتر باشد");
+//   } else {
+//     errMessageFormatted[0].hidden = true;
+//     target.setCustomValidity("");
+//   }
+// });
 
-txtSubject.addEventListener("invalid", (e) => {
-  const { target } = e;
+// txtSubject.addEventListener("invalid", (e) => {
+//   const { target } = e;
 
-  if (target.validity.valueMissing) {
-    target.setCustomValidity("لطفا عنوان را وارد کنید");
-    errMessageMandatory[0].hidden = false;
-  }
-});
+//   if (target.validity.valueMissing) {
+//     target.setCustomValidity("لطفا عنوان را وارد کنید");
+//     errMessageMandatory[0].hidden = false;
+//   }
+// });
 
-txtEmail.addEventListener("invalid", (e) => {
-  const { target } = e;
-  if (target.validity.valueMissing) {
-    target.setCustomValidity("لطفا پست الکترونیکی را وارد کنید");
-    errMessageMandatory[1].hidden = false;
-  }
-});
+// txtEmail.addEventListener("invalid", (e) => {
+//   const { target } = e;
+//   if (target.validity.valueMissing) {
+//     target.setCustomValidity("لطفا پست الکترونیکی را وارد کنید");
+//     errMessageMandatory[1].hidden = false;
+//   }
+// });
 
-txtEmail.addEventListener("input", (e) => {
-  const { target } = e;
+// txtEmail.addEventListener("input", (e) => {
+//   const { target } = e;
 
-  target.setCustomValidity("");
-  errMessageMandatory[1].hidden = true;
+//   target.setCustomValidity("");
+//   errMessageMandatory[1].hidden = true;
 
-  // console.log(target.validity);
+//   // console.log(target.validity);
 
-  if (target.validity.typeMismatch) {
-    //txtEmail Error
-    errMessageFormatted[1].hidden = false;
-    errMessageMandatory[1].hidden = true;
-    target.setCustomValidity("فرمت پست الکترونیکی درست نمی باشد.");
-    return;
-  } else {
-    errMessageFormatted[1].hidden = true;
-    errMessageMandatory[1].hidden = true;
-    target.setCustomValidity("");
-  }
-});
+//   if (target.validity.typeMismatch) {
+//     //txtEmail Error
+//     errMessageFormatted[1].hidden = false;
+//     errMessageMandatory[1].hidden = true;
+//     target.setCustomValidity("فرمت پست الکترونیکی درست نمی باشد.");
+//     return;
+//   } else {
+//     errMessageFormatted[1].hidden = true;
+//     errMessageMandatory[1].hidden = true;
+//     target.setCustomValidity("");
+//   }
+// });
 
-txtExperience.addEventListener("input", (e) => {
-  const { target } = e;
+// txtExperience.addEventListener("input", (e) => {
+//   const { target } = e;
 
-  target.setCustomValidity("");
-  errMessageMandatory[2].hidden = true;
+//   target.setCustomValidity("");
+//   errMessageMandatory[2].hidden = true;
 
-  if (target.validity.tooShort) {
-    //txtExperience Error
-    errMessageFormatted[2].hidden = false;
-    target.setCustomValidity("متن خاطره / تجربه باید بیش از 40 کاراکتر باشد");
-  } else {
-    errMessageFormatted[2].hidden = true;
-    target.setCustomValidity("");
-  }
-});
+//   if (target.validity.tooShort) {
+//     //txtExperience Error
+//     errMessageFormatted[2].hidden = false;
+//     target.setCustomValidity("متن خاطره / تجربه باید بیش از 40 کاراکتر باشد");
+//   } else {
+//     errMessageFormatted[2].hidden = true;
+//     target.setCustomValidity("");
+//   }
+// });
 
-txtExperience.addEventListener("invalid", (e) => {
-  const { target } = e;
+// txtExperience.addEventListener("invalid", (e) => {
+//   const { target } = e;
 
-  if (target.validity.valueMissing) {
-    target.setCustomValidity("لطفا تجربه یا خاطره خود را وارد کنید");
-    errMessageMandatory[2].hidden = false;
-  }
-});
+//   if (target.validity.valueMissing) {
+//     target.setCustomValidity("لطفا تجربه یا خاطره خود را وارد کنید");
+//     errMessageMandatory[2].hidden = false;
+//   }
+// });
 
-captchaInput.addEventListener("invalid", (e) => {
-  const { target } = e;
+// captchaInput.addEventListener("invalid", (e) => {
+//   const { target } = e;
 
-  if (target.validity.valueMissing) {
-    target.setCustomValidity("لطفا عبارت کپچا را وارد کنید.");
-  } else {
-    target.setCustomValidity("");
-  }
-});
+//   if (target.validity.valueMissing) {
+//     target.setCustomValidity("لطفا عبارت کپچا را وارد کنید.");
+//   } else {
+//     target.setCustomValidity("");
+//   }
+// });
 
-btnCancel.addEventListener("click", (e) => {
-  errMessageMandatory.forEach((val, key) => {
-    val.hidden = true;
-  });
+// btnCancel.addEventListener("click", (e) => {
+//   errMessageMandatory.forEach((val, key) => {
+//     val.hidden = true;
+//   });
 
-  errMessageFormatted.forEach((val, key) => {
-    val.hidden = true;
-  });
-});
+//   errMessageFormatted.forEach((val, key) => {
+//     val.hidden = true;
+//   });
+// });
+
+'use strict'
+
+const frm = frmExperience
+
+const errMessages = {
+  badInput : () => 'badInput',
+  customError : () => 'customError',
+  patternMismatch : (target) =>  'فرمت وارد شده اشتباه می‌باشد.',
+  rangeOverflow : () => 'rangeOverflow',
+  rangeUnderflow : () => 'rangeUnderflow',
+  stepMismatch : () => 'stepMismatch',
+  tooLong : (target) => `حداکثر تعداد ${target.maxLength} کاراکتر را باید وارد کنید!` ,
+  tooShort :(target) => `حداقل تعداد ${target.minLength} کاراکتر را باید وارد کنید!` ,
+  typeMismatch : (target)=> `فرمت ${target.dataset.farsiname} نادرست می‌باشد.` ,
+  // valid : () => 'valid',
+  valueMissing : () => 'مقدار مورد نظر اجباری می‌باشد.',
+}
+
+const validityKeys = Object.keys(errMessages)
+  
+frm.addEventListener('input', (e) => { showErrors(e) })
+
+function showErrors(e){
+  const {target} = e
+  
+  const errorsEL = target.parentElement.querySelectorAll('.errMessage')
+
+  errorsEL.forEach(el=>{
+    el.remove()
+  })
+ 
+  validityKeys.forEach(key => {
+    if(target.validity[key]){
+      appendError(target,key)
+    }
+  })
+}
+
+function appendError(target,key){
+  const errorEl = document.createElement('small');
+  errorEl.innerText = errMessages[key](target);
+  errorEl.classList.add('errMessage');
+  target.parentElement.appendChild(errorEl);
+}
+
+
 
 //Save New Record ....
 btnSubmit.addEventListener("click", (e) => {
+  e.preventDefault()
  
   try {
     if (checkValidCaptcha()) {
       console.log("inside a function submit ...");
       return;
     }
-    e.preventDefault()
 
   } catch (err) {
     throw err;
   }
 });
+
+
 
 //CAPTCHA VALIDATION :
 //Start *********************
