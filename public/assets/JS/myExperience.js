@@ -51,6 +51,7 @@ txtEmail.addEventListener("invalid", (e) => {
     errMessageMandatory[1].hidden = false;
   }
 });
+
 txtEmail.addEventListener("input", (e) => {
   const { target } = e;
 
@@ -87,6 +88,7 @@ txtExperience.addEventListener("input", (e) => {
     target.setCustomValidity("");
   }
 });
+
 txtExperience.addEventListener("invalid", (e) => {
   const { target } = e;
 
