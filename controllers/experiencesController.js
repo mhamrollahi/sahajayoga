@@ -44,7 +44,7 @@ class experienceController {
       }
       const result = await createExperience(experienceData)
       if(result[0].insertId){
-        const success = 'خاطره شما با موفقیت ثبت شد.بعد از تایید در صفحه اصلی قایل مشاهده است.'
+        const success = 'خاطره شما با موفقیت ثبت شد.بعد از تایید در صفحه اصلی قابل مشاهده است.'
           req.flash('success',success)
           // res.redirect('../../myExperience.html')
         return res.redirect('../experience/showExperience')

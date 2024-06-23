@@ -28,7 +28,7 @@ app.use(session({
   secret: 'sfsfst43423423900fdf',
   resave:true,
   saveUninitialized:true,
-  cookie:{maxAge:60000},
+  cookie:{maxAge:120000},
   unset:'destroy'
 
 }))
