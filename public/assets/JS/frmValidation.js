@@ -1,5 +1,6 @@
 
 'use strict'
+
 const frm = document.querySelector('[data-validation]')
 const inputs =document.querySelectorAll('input, textarea')
 
@@ -7,7 +8,7 @@ console.log(frm.checkValidity())
 
 const errMessages = {
   badInput : () => 'badInput',
-  customError : () => 'customError',
+  // customError : () => 'customError',
   patternMismatch : (target) =>  'فرمت وارد شده اشتباه می‌باشد.',
   rangeOverflow : () => 'rangeOverflow',
   rangeUnderflow : () => 'rangeUnderflow',
@@ -20,23 +21,24 @@ const errMessages = {
 
 const validityKeys = Object.keys(errMessages)
   
-// frm.addEventListener('input', (e) => { showErrors(e) })
+frm.addEventListener('input', (e) => { showErrors(e) })
 
-// function showErrors(e){
-//   const {target} = e
+function showErrors(e){
+  const {target} = e
   
-//   const errorsEL = target.parentElement.querySelectorAll('.errMessage')
+  const errorsEL = target.parentElement.querySelectorAll('.errMessage')
+  // target.setCustomValidity('')
 
-//   errorsEL.forEach(el=>{
-//     el.remove()
-//   })
+  errorsEL.forEach(el=>{
+    el.remove()
+  })
 
-//   validityKeys.forEach(key => {
-//     if(target.validity[key]){
-//       appendError(target,key)
-//     }
-//   })
-// }
+  validityKeys.forEach(key => {
+    if(target.validity[key]){
+      appendError(target,key)
+    }
+  })
+}
 
 function appendError(target,key){
   const errorEl = document.createElement('small');
@@ -45,15 +47,35 @@ function appendError(target,key){
   target.parentElement.appendChild(errorEl);
 }
 
+function setCustomValidityMessage(target,key){
+  target.setCustomValidity(errMessages[key](target))
+}
+
 inputs.forEach(function(input){
   input.addEventListener('invalid',function(event){
     // event.preventDefault()
+    const {target} = event
 
-    if(input.validity.valueMissing){
-      console.log('test')
-      input.setCustomValidity('لطفا این فیلد را پر کنید!')
-    }else{
-      input.setCustomValidity('')
+    // validityKeys.forEach(key=>{
+      
+    //   console.log(target.validity[key])
+      
+    //   if(target.validity[key]){
+    //     setCustomValidityMessage(target,key)
+    //   }
+    // })
+
+    if(target.validity.valueMissing){
+      target.setCustomValidity('لطفا این فیلد را پر کنید!')
+    }else if(target.validity.typeMismatch){
+      target.setCustomValidity(`لطفا فرمت ${target.dataset.farsiname} را درست وارد کنید!`)
+    }else if(target.validity.tooShort){
+      target.setCustomValidity(`حداقل تعداد ${target.minLength} کاراکتر را باید وارد کنید!` ,)
+    }else if(target.validity.tooLong){
+      target.setCustomValidity(`حداکثر تعداد ${target.maxLength} کاراکتر را باید وارد کنید!` ,)
+    }
+    else{
+      target.setCustomValidity('')
     }
     
   })
