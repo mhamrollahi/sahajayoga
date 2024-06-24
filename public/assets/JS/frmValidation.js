@@ -1,6 +1,8 @@
 
 'use strict'
 const frm = document.querySelector('[data-validation]')
+const inputs =document.querySelectorAll('input, textarea')
+
 console.log(frm.checkValidity())
 
 const errMessages = {
@@ -18,23 +20,23 @@ const errMessages = {
 
 const validityKeys = Object.keys(errMessages)
   
-frm.addEventListener('input', (e) => { showErrors(e) })
+// frm.addEventListener('input', (e) => { showErrors(e) })
 
-function showErrors(e){
-  const {target} = e
+// function showErrors(e){
+//   const {target} = e
   
-  const errorsEL = target.parentElement.querySelectorAll('.errMessage')
+//   const errorsEL = target.parentElement.querySelectorAll('.errMessage')
 
-  errorsEL.forEach(el=>{
-    el.remove()
-  })
+//   errorsEL.forEach(el=>{
+//     el.remove()
+//   })
 
-  validityKeys.forEach(key => {
-    if(target.validity[key]){
-      appendError(target,key)
-    }
-  })
-}
+//   validityKeys.forEach(key => {
+//     if(target.validity[key]){
+//       appendError(target,key)
+//     }
+//   })
+// }
 
 function appendError(target,key){
   const errorEl = document.createElement('small');
@@ -42,3 +44,18 @@ function appendError(target,key){
   errorEl.classList.add('errMessage');
   target.parentElement.appendChild(errorEl);
 }
+
+inputs.forEach(function(input){
+  input.addEventListener('invalid',function(event){
+    // event.preventDefault()
+
+    if(input.validity.valueMissing){
+      console.log('test')
+      input.setCustomValidity('لطفا این فیلد را پر کنید!')
+    }else{
+      input.setCustomValidity('')
+    }
+    
+  })
+  
+})
