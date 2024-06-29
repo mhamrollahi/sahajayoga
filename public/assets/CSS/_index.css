@@ -350,12 +350,14 @@ END -- MENU Section style */
 
 .newsbj-section-wrapper .card .card-overlay p {
   color: var(--main-color-font);
-  font-size: 20px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 95%;
   text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+  text-shadow: 1px 1px 1px #ccc;
 }
 .newsbj-section-wrapper .card img {
   transition: all 0.6s ease-in;
@@ -444,32 +446,32 @@ END -- Counter Section style */
 }
 
 #selfFreedomLog::before {
-  content: url(/assets/Images/Thumbnail/Ashnai-32.jpg);
+  content: url(../../assets/Images/Thumbnail/Ashnai-32.jpg);
   padding-left: 5px;
   vertical-align: -12px;
 }
 #selfAwarenessLog::before {
-  content: url(/assets/Images/Thumbnail/Tajrobeh.jpg);
+  content: url(../../assets/Images/Thumbnail/Tajrobeh.jpg);
   padding-left: 4px;
   vertical-align: -9px;
 }
 #sahajaMeditationLog::before {
-  content: url(/assets/Images/Thumbnail/Important-med-25.jpg);
+  content: url(../../assets/Images/Thumbnail/Important-med-25.jpg);
   padding-left: 4px;
   vertical-align: 0px;
 }
 #subtleSystemLog::before {
-  content: url(/assets/Images/Thumbnail/subtleSystem32.jpg);
+  content: url(../../assets/Images/Thumbnail/subtleSystem32.jpg);
   padding-left: 4px;
   vertical-align: -9px;
 }
 #important-med5::before {
-  content: url(/assets/Images/Thumbnail/Log1.png);
+  content: url(../../assets/Images/Thumbnail/Log1.png);
   padding-left: 4px;
   vertical-align: -9px;
 }
 #important-med6::before {
-  content: url(/assets/Images/Thumbnail/Log1.png);
+  content: url(../../assets/Images/Thumbnail/Log1.png);
   padding-left: 4px;
   vertical-align: -9px;
 }
