@@ -94,12 +94,8 @@
 }
 
 .img-header-medt {
-  min-height: 85vh;
+  min-height: 83vh;
   width: 100%;
-}
-
-.img-header-medt.overlay {
-  filter: brightness(0.75);
 }
 
 .sahaja-meditation2-section-wrapper .animeh1 {
