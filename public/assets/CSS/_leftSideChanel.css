@@ -24,6 +24,14 @@
   font-weight: 500;
   color:var(--main-color-pink);
 }
+.leftside-chanel-section-wrapper .right-sec-leftside a {
+  font-weight: 600;
+}
+.leftside-chanel-section-wrapper .right-sec-leftside a:hover {
+  font-style: italic;
+  font-weight: 700;
+}
+
 .leftside-chanel-section-wrapper .right-sec-leftside p {
   font-size: 20px;
   line-height: 40px;
@@ -32,6 +40,11 @@
 .background_left_side_chanel{
   margin-top: -20px;
   background: linear-gradient(-270deg, #ffffff 40%, #73b8e6d5 100%);
+}
+
+.background_right_side_chanel{
+  margin-top: -20px;
+  background: linear-gradient(-270deg, #ffffff 40%, #ecee65d5 100%);
 }
 
 .sec-paksazei-leftside span{
