@@ -292,7 +292,7 @@ img {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 100%;
+  /* min-height: 100%; */
 }
 
 @media only screen and (max-width: 575px) {
@@ -12571,7 +12571,7 @@ body.side-header-green .side-header .side-header-close {
 /*----------------------------------------*/
 /*Wrror 1 & 2 Wrapper*/
 .error-wrap, .error-wrap-2 {
-  min-height: 100vh;
+  min-height: 50vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12638,7 +12638,8 @@ body.side-header-green .side-header .side-header-close {
 
 /*Wrror 2 Wrapper*/
 .error-wrap-2 {
-  background-image: url(../../images/error/error-2.png);
+  min-height: 83vh;
+  background-image: url(../../images/error/error-under-construction.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -12656,16 +12657,29 @@ body.side-header-green .side-header .side-header-close {
   color: #ffffff;
   text-shadow: 20px 0 20px rgba(0, 0, 0, 0.1);
 }
+.error-wrap-2 .btn-err-under-construction{
+  position: relative; 
+  top: 150px;
+  right: 300px;
+  font-size: 20px;
+}
 
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .error-wrap-2 .error-content .display-1 {
     font-size: 240px;
   }
+  
 }
 
 @media only screen and (max-width: 767px) {
   .error-wrap-2 .error-content .display-1 {
     font-size: 200px;
+  }
+  .error-wrap-2 .btn-err-under-construction{
+    position: relative; 
+    top: 90px;
+    right: 10px;
+    font-size: 15px;
   }
 }
 
