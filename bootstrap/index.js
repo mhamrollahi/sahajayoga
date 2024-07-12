@@ -3,9 +3,11 @@ import bodyParser from "body-parser";
 import { engine } from 'express-handlebars';
 import path from "path";
 import { fileURLToPath } from "url";
+
 import loggerMiddleware from "../middlewares/loggerMiddleware.js";
 import renderMiddleware from '../middlewares/renderMiddleware.js'
-
+import error404Middleware from '../middlewares/errorHandlerMiddleware.js'
+import exceptionMiddleware from '../middlewares/exceptionMiddleware.js';
 
 import router  from "../routes/index.js";
 import cookieParser from 'cookie-parser';
@@ -35,6 +37,8 @@ app.use(session({
 
 app.use(flash())
 
+// app.use(exceptionMiddleware)
+
 app.use(loggerMiddleware)
 app.use(renderMiddleware)
 
@@ -44,5 +48,7 @@ app.set('views', path.join(__dirname,'../views'));
 
 app.use(router)
 
+app.use(exceptionMiddleware)
+app.use(error404Middleware)
 
 export default app

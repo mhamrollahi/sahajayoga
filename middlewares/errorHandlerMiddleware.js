@@ -1,3 +1,9 @@
-export const errorHandlerMiddleware = (error,req,res,next)=>{
-  return res.status(400).send(error.message)
+const errorHandlerMiddleware = (req,res,next)=>{
+  res.status(404).send({
+    code:'Not Fund',
+    status:404,
+    message:'requested resource not be fund!... , '
+  })
 }
+
+export default errorHandlerMiddleware
