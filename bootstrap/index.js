@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import { engine } from 'express-handlebars';
 import path from "path";
 import { fileURLToPath } from "url";
-import loggerMiddleware from "../middleware.js";
+import loggerMiddleware from "../middlewares/loggerMiddleware.js";
 import renderMiddleware from '../middlewares/renderMiddleware.js'
 
 
