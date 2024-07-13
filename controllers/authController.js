@@ -11,21 +11,22 @@ import {
 } from "../validators/user.js";
 
 class authController {
-  async showLogin(req, res) {
+  async showLogin(req, res,next) {
 
-    const users = userModel.list();
     
     try {
       res.newRender("auth/login", { layout: "auth" });
     } catch (error) {
-      console.log(error);
+      next(error)
     }
     
   }
-
-  async doLogin(req, res) {
-
+  
+  async doLogin(req, res,next) {
+    
     try {
+      const users = userModel.list();
+      
       const { email, password } = req.body;
 
       let errors = [];
@@ -76,7 +77,7 @@ class authController {
 
       return res.redirect(pathToRedirect);
     } catch (error) {
-      console.log(error);
+      next(error)
     }
   }
 
