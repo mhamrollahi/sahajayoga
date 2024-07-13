@@ -27,17 +27,14 @@ app.use(bodyParser.urlencoded({ urlencoded: false }));
 app.use(bodyParser.json());
 app.use(cookieParser())
 app.use(session({
-  secret: 'sfsfst43423423900fdf',
+  secret: 'jaiShriKubera',
   resave:true,
   saveUninitialized:true,
   cookie:{maxAge:120000},
   unset:'destroy'
-
 }))
 
 app.use(flash())
-
-// app.use(exceptionMiddleware)
 
 app.use(loggerMiddleware)
 app.use(renderMiddleware)
@@ -49,6 +46,7 @@ app.set('views', path.join(__dirname,'../views'));
 app.use(router)
 
 app.use(exceptionMiddleware)
+
 app.use(error404Middleware)
 
 export default app

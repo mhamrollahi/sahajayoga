@@ -1,4 +1,7 @@
 const exception = (error,req,res,next)=>{
+  
+  console.log('exception Error ....')
+  
   const status = req.status || 500
   res.send({
     code : 'Exception Error',
