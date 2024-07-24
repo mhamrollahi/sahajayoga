@@ -465,10 +465,10 @@ END -- Counter Section style */
   padding-left: 4px;
   vertical-align: -9px;
 }
-#important-med5::before {
-  content: url(../../assets/Images/Thumbnail/Log1.png);
+#benefitMeditation-log::before {
+  content: url(../../assets/Images/Thumbnail/benefit-32.bmp);
   padding-left: 4px;
-  vertical-align: -9px;
+  vertical-align: -15px;
 }
 #important-med6::before {
   content: url(../../assets/Images/Thumbnail/Log1.png);

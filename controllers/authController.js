@@ -25,7 +25,7 @@ class authController {
   async doLogin(req, res,next) {
     
     try {
-      const users = userModel.list();
+      // const users = userModel.list();
       
       const { email, password } = req.body;
 
