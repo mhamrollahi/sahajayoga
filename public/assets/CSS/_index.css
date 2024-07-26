@@ -331,8 +331,12 @@ END -- MENU Section style */
   font-size: 40px;
   padding-bottom: 20px;
 }
+.newsbj-section-wrapper .card{
+  transition: .6s ease;
+}
 .newsbj-section-wrapper .card:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  transform: translateY(-20px);
   /* box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) */
 }
 
