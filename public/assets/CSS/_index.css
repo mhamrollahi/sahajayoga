@@ -797,30 +797,59 @@ END -- FOOTER Section style */
 }
 
 .about-jsm-section-wrapper1 .text-shri-mataji{
-  position: relative;
-  top: -750px;
+  position: absolute;
+  top: 100px;
   width: 50%;
-  right: 850px;
+  right: 700px;
 }
 
-@media  screen  and (max-width:768px){
+
+.about-jsm-section-wrapper1 .text-shri-mataji h4{
+  position: absolute;
+  top: 30px;
+  right:-10px;
+  width: 100%;
+  text-align: center;
+}
+
+.about-jsm-section-wrapper1 .text-shri-mataji p{
+  position: absolute;
+  top: 90px;
+  right:0px;
+  max-width: 90%;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: justify;
+}
+
+@media  screen  and (max-width:1024px){
   .about-jsm-section-wrapper1 .text-shri-mataji{
-    /* position: relative; */
+    position: relative;
+    right: 10px;
     color: blue ;
     top: 0px;
+    width: 90%;
+    text-align: justify;
+    padding: 10px 4px;
   }
-  
+  .about-jsm-section-wrapper1 .text-shri-mataji p{
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+
+@media  screen  and (min-width:1025px) and (max-width:1300px)  {
+    .about-jsm-section-wrapper1 .text-shri-mataji{
+        color: red;
+        right: 550px;
+        font-size: 14px;
+        line-height: 30px;
+        width: 45%;
+    }
 }
 
 
-
-
-
-.about-jsm-section-wrapper .text-shri-mataji{
-  position:absolute;
-}
-
-.about-jsm-section-wrapper .text-shri-mataji p a{
+.about-jsm-section-wrapper1 .text-shri-mataji p a{
   /* position: absolute; */
   left: 350px;
   bottom: -20px;
@@ -832,42 +861,13 @@ END -- FOOTER Section style */
   border: 1px solid var(--main-border-color);
   transition: all .4s ease-in;
 }
-.about-jsm-section-wrapper .text-shri-mataji p a:hover{
+.about-jsm-section-wrapper1 .text-shri-mataji p a:hover{
   background-color:var(--bg-color-hover-a);
   color: var(--main-font-color);
 }
 
-.about-jsm-section-wrapper .text-shri-mataji h4{
-  position: relative;
-  top: -750px;
-  right:600px;
-  width: 60%;
-  text-align: center;
-}
 
-.about-jsm-section-wrapper .text-shri-mataji p{
-  position: relative;
-  top: -720px;
-  right:880px;
-  max-width: 50%;
-  font-size: 20px;
-  line-height: 50px;
-  text-align: justify;
-}
 
-@media  screen  and (max-width:768px){
-  .about-jsm-section-wrapper .about-jsm-left-side{
-      margin-top: 10px;
-      font-size: .9rem;
-  }
-  .about-jsm-section-wrapper .about-jsm-left-side h4{
-      font-size: 1.2rem;
-  }
-  .about-jsm-section-wrapper .about-jsm-left-side p a{
-      font-size:.8rem ;
-      padding: 1px 8px;
-  }
-}
 /* *********************************************************************************************************
 END -- About SMJ Section style */
 
