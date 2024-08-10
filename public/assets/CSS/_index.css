@@ -792,66 +792,35 @@ END -- FOOTER Section style */
 /* Start -- About SMJ Section style
 ********************************************************************************************************* */
 .about-jsm-section-wrapper1{
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .about-jsm-section-wrapper1 .text-shri-mataji{
   position: absolute;
   top: 100px;
-  width: 50%;
-  right: 700px;
+  width: 55%;
+  right: 660px;
 }
 
 
 .about-jsm-section-wrapper1 .text-shri-mataji h4{
   position: absolute;
-  top: 30px;
-  right:130px;
-  width: 100%;
+  top: 65px;
+  right:210px;
   text-align: center;
+  text-shadow:1px 1px 1px #d291bc;
+  font-weight: 500;
 }
 
 .about-jsm-section-wrapper1 .text-shri-mataji p{
   position: absolute;
   top: 150px;
   right:210px;
-  width: 90%;
-  font-size: 20px;
-  line-height: 50px;
+  font-size: 16px;
+  line-height: 45px;
   text-align: justify;
 }
-
-@media  screen  and (max-width:1024px){
-  .about-jsm-section-wrapper1 .text-shri-mataji{
-    /* position: absolute; */
-    display: flex;
-    flex-direction: column;
-    right: 10px;
-    color: blue ;
-    top: 250px;
-    /* width: 90%; */
-    text-align: justify;
-    padding: 10px 4px;
-    z-index: 100;
-  }
-
-  .about-jsm-section-wrapper1 .text-shri-mataji p{
-    font-size: 15px;
-    line-height: 30px;
-  }
-}
-
-/* @media  screen  and (min-width:1025px) and (max-width:1300px)  {
-    .about-jsm-section-wrapper1 .text-shri-mataji{
-        color: red;
-        right: 550px;
-        font-size: 14px;
-        line-height: 30px;
-        width: 45%;
-    }
-} */
-
 
 .about-jsm-section-wrapper1 .text-shri-mataji p a{
   /* position: absolute; */
@@ -868,6 +837,62 @@ END -- FOOTER Section style */
 .about-jsm-section-wrapper1 .text-shri-mataji p a:hover{
   background-color:var(--bg-color-hover-a);
   color: var(--main-font-color);
+}
+
+@media screen and (max-width:1500px) and (min-width:1260px) {
+  .about-jsm-section-wrapper1 .text-shri-mataji{
+    color: red;
+    right:550px ;
+  }
+}
+
+@media screen and (max-width:1259px) and (min-width:980px) {
+  .about-jsm-section-wrapper1 .text-shri-mataji{
+    color: green;
+    right:550px ;
+    right: 400px;
+    top: 0px;
+  }
+  .about-jsm-section-wrapper1 .text-shri-mataji p{
+    font-size: 14x;
+    top: 130px;
+    line-height: 30px;
+  }
+}
+
+
+@media screen and (max-width:979px) and (min-width : 750px) {
+  .about-jsm-section-wrapper1 .text-shri-mataji{
+    color: blue;
+    right:550px ;
+    right: 300px;
+    top: 0px;
+  }
+  .about-jsm-section-wrapper1 .text-shri-mataji p{
+    font-size: 12x;
+    top: 80px;
+    line-height: 30px;
+  }
+  .about-jsm-section-wrapper1 .text-shri-mataji h4{
+    font-size: 2x;
+    top: 20px;
+    line-height: 30px;
+  }
+  .about-jsm-section-wrapper1 .text-shri-mataji p.text-hide2{
+    display: none;
+  }
+}
+
+@media screen and (max-width : 749px) {
+  .about-jsm-section-wrapper1 .text-shri-mataji{
+    color: red;
+    right: 100px;
+    width: 100%;
+    top: 0;
+  }
+  .about-jsm-section-wrapper1 .text-shri-mataji p.text-hide1{
+    display: none;
+  }
 }
 
 
