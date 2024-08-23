@@ -1,11 +1,13 @@
 {
   "liveServer.settings.port": 5503,
   "editor.tabSize": 2,
-  "editor.fontFamily": "\"Operator Mono lig Light\"",
+  "editor.fontFamily": "'Operator Mono lig Light'",
+  "editor.fontLigatures": true,
   "editor.detectIndentation": true,
   "editor.insertSpaces": true,
   "cSpell.words": [
     "myexperince"
   ],
-  "editor.fontSize": 15
+  "editor.fontSize": 15,
+  "editor.fontWeight": "500", 
 }
