@@ -18,7 +18,7 @@ export async function serviceLogin(email, plainPassword) {
 }
 
 export  async function serviceLoginByActiveUser(email) {
-  try {
+   try {
     const user = await findByEmailActiveUser(email);
     
     console.log(!user)

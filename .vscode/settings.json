@@ -1,8 +1,11 @@
 {
   "liveServer.settings.port": 5503,
   "editor.tabSize": 2,
-  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontFamily": "\"Operator Mono lig Light\"",
   "editor.detectIndentation": true,
   "editor.insertSpaces": true,
-  "cSpell.words": ["myexperince"]
+  "cSpell.words": [
+    "myexperince"
+  ],
+  "editor.fontSize": 15
 }
